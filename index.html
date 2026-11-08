@@ -349,7 +349,212 @@ const GLOSS=[
  {w:'der Grenzsteuersatz',g:'die Grenzsteuersätze',u:'гранична ставка',s:'Скільки податку припадає на наступні 100 CHF доходу. За нею рахують економію від Abzug.',x:'Ihr Grenzsteuersatz liegt bei rund 20 %.',day:9},
  {w:'der Durchschnittssteuersatz',g:'die Durchschnittssteuersätze',u:'середня ставка',s:'Весь податок поділити на весь дохід.',x:'Der Durchschnittssteuersatz beträgt rund 11 %.',day:9},
  {w:'die kalte Progression',g:'—',u:'вища сходинка лише через інфляцію',s:'Зарплата зросла через інфляцію, а купівельна спроможність ні. Сходинки періодично коригують.',x:'Der Kanton gleicht die kalte Progression periodisch aus.',day:9},
- {w:'die Steuerbelastung',g:'die Steuerbelastungen',u:'податкове навантаження',s:'Скільки податку людина платить загалом або у відсотках від доходу.',x:'Die Steuerbelastung ist je nach Gemeinde unterschiedlich.',day:9}
+ {w:'die Steuerbelastung',g:'die Steuerbelastungen',u:'податкове навантаження',s:'Скільки податку людина платить загалом або у відсотках від доходу.',x:'Die Steuerbelastung ist je nach Gemeinde unterschiedlich.',day:9},
+{w:'der Tarifcode',g:'die Tarifcodes',u:'код тарифу Quellensteuer',s:'Буква + кількість дітей + церква, напр. A0N, C2Y.',x:'Bitte prüfen Sie den Tarifcode auf Ihrer Lohnabrechnung.',day:10},
+ {w:'der Quellensteuertarif',g:'die Quellensteuertarife',u:'тариф Quellensteuer',s:'Таблиця, за якою роботодавець утримує податок із зарплати.',x:'Der Arbeitgeber hat den falschen Quellensteuertarif angewendet.',day:10},
+ {w:'der Lohnausweis',g:'die Lohnausweise',u:'річна довідка про зарплату',s:'Офіційна форма від роботодавця. Ziffer 11 — Nettolohn, Ziffer 12 — утримана QSt.',x:'Gemäss Lohnausweis, Ziffer 12, wurden CHF 5’800 Quellensteuer abgezogen.',day:10},
+ {w:'die Lohnabrechnung',g:'die Lohnabrechnungen',u:'щомісячний розрахунковий лист',s:'Показує брутто, внески, QSt і нетто за місяць.',x:'Auf der Lohnabrechnung steht der Code A0N.',day:10},
+ {w:'der Antrag',g:'die Anträge',u:'заява, клопотання',s:'Офіційне прохання до установи, напр. на NOV.',x:'Der Antrag muss bis 31. März eingereicht werden.',day:10},
+ {w:'beantragen',g:'beantragte, beantragt',u:'подавати заяву на щось',s:'Офіційно просити, напр. NOV чи Fristerstreckung.',x:'Wir beantragen für Sie die nachträgliche ordentliche Veranlagung.',day:10},
+ {w:'die Rückerstattung',g:'die Rückerstattungen',u:'повернення коштів',s:'Гроші, які повертає Steueramt, напр. зайву QSt або VST.',x:'Die Rückerstattung erfolgt nach der Veranlagung.',day:10},
+ {w:'die Nachzahlung der Quellensteuer',g:'—',u:'доплата Quellensteuer',s:'Якщо за NOV податок вищий, ніж утримана QSt.',x:'Wegen Ihrer Nebeneinkünfte ergibt sich eine Nachzahlung.',day:10},
+ {w:'von Amtes wegen',g:'—',u:'за ініціативою установи (автоматично)',s:'Установа діє сама, без заяви. Напр. обов’язкова NOV від 120’000.',x:'Ab CHF 120’000 erfolgt die NOV von Amtes wegen.',day:10},
+ {w:'die Grenze',g:'die Grenzen',u:'поріг, межа',s:'Сума, понад яку діє правило.',x:'Die Grenze von CHF 120’000 wurde überschritten.',day:10},
+ {w:'die gemeinsame Veranlagung',g:'—',u:'спільне оподаткування',s:'Подружжя подає одну декларацію; доходи й майно додають.',x:'Ehegatten werden gemeinsam veranlagt.',day:11},
+ {w:'der Ehegatte',g:'die Ehegatten',u:'чоловік / дружина',s:'Офіційне слово для члена подружжя.',x:'Beide Ehegatten müssen die Steuererklärung unterschreiben.',day:11},
+ {w:'das Konkubinat',g:'die Konkubinate',u:'спільне життя без шлюбу',s:'Кожен партнер подає окрему декларацію.',x:'Im Konkubinat wird jede Person einzeln besteuert.',day:11},
+ {w:'der Kinderabzug',g:'die Kinderabzüge',u:'відрахування на дитину',s:'ZH 9’300, Bund 6’800 на дитину (2025).',x:'Für zwei Kinder beträgt der Kinderabzug CHF 18’600.',day:11},
+ {w:'die Kinderdrittbetreuungskosten',g:'Pl.',u:'витрати на Kita / няню',s:'Дитина до 14 років. ZH до 25’000, Bund до 25’800 на дитину.',x:'Bitte senden Sie uns die Belege für die Kinderdrittbetreuungskosten.',day:11},
+ {w:'der Sonderabzug bei Erwerbstätigkeit beider Ehegatten',g:'—',u:'відрахування, коли працюють обоє',s:'ZH до 6’100; Bund 50 % меншого доходу, 8’600–14’100.',x:'Da beide arbeiten, steht Ihnen der Sonderabzug zu.',day:11},
+ {w:'der Unterhaltsbeitrag',g:'die Unterhaltsbeiträge',u:'аліментний платіж',s:'Платник відраховує, отримувач декларує як дохід (колишній партнер, неповнолітні діти).',x:'Die Unterhaltsbeiträge an Ihre Ex-Frau sind abzugsfähig.',day:11},
+ {w:'die Alimente',g:'Pl.',u:'аліменти',s:'Розмовне слово для Unterhaltsbeiträge.',x:'Erhalten Sie Alimente für die Kinder?',day:11},
+ {w:'der Unterstützungsabzug',g:'die Unterstützungsabzüge',u:'відрахування за утримувану особу',s:'Якщо утримуєте людину, яка не може себе забезпечити. ZH 2’800, Bund 6’800.',x:'Für die Unterstützung Ihrer Mutter beantragen wir den Unterstützungsabzug.',day:11},
+ {w:'getrennt leben',g:'—',u:'жити окремо (роз’їхатися)',s:'Подружжя, що живе окремо, подає дві декларації за весь рік.',x:'Seit Juli 2025 leben die Ehegatten getrennt.',day:11},
+ {w:'die Liegenschaft',g:'die Liegenschaften',u:'нерухомість',s:'Будинок, квартира, ділянка.',x:'Bitte füllen Sie das Liegenschaftenverzeichnis aus.',day:12},
+ {w:'der Eigenmietwert',g:'die Eigenmietwerte',u:'уявна орендна плата за власне житло',s:'Оподатковується як дохід (до кінця 2028).',x:'Der Eigenmietwert beträgt gemäss Bewertung CHF 25’000.',day:12},
+ {w:'die Hypothek',g:'die Hypotheken',u:'іпотека',s:'Кредит під заставу нерухомості. Сума на 31.12 — борг.',x:'Die Hypothek beträgt per 31.12.2025 CHF 400’000.',day:12},
+ {w:'der Hypothekarzins',g:'die Hypothekarzinsen',u:'відсотки за іпотекою',s:'Abzug як Schuldzinsen.',x:'Die Hypothekarzinsen 2025 betragen CHF 6’000.',day:12},
+ {w:'die Unterhaltskosten',g:'Pl.',u:'витрати на утримання / ремонт',s:'Відраховуються лише ті, що зберігають вартість. Pauschale або фактичні.',x:'Wir machen die effektiven Unterhaltskosten geltend.',day:12},
+ {w:'werterhaltend',g:'Adj.',u:'що зберігає вартість',s:'Заміна старого на подібне. Відраховується.',x:'Der Ersatz der Küche ist werterhaltend.',day:12},
+ {w:'wertvermehrend',g:'Adj.',u:'що збільшує вартість',s:'Нове, чого не було. Не відраховується.',x:'Der neue Wintergarten ist wertvermehrend.',day:12},
+ {w:'der Pauschalabzug',g:'die Pauschalabzüge',u:'відрахування без чеків (Pauschale)',s:'Для нерухомості ZH: 20 % Eigenmietwert / орендного доходу.',x:'Der Pauschalabzug ist hier günstiger.',day:12},
+ {w:'die Grundstückgewinnsteuer',g:'—',u:'податок на прибуток від продажу нерухомості',s:'У ZH стягує громада. Знижка за довге володіння.',x:'Beim Verkauf fällt eine Grundstückgewinnsteuer an.',day:12},
+ {w:'die Besitzesdauer',g:'—',u:'строк володіння',s:'Впливає на Grundstückgewinnsteuer: від 5 років — знижка.',x:'Bei einer Besitzesdauer von 20 Jahren reduziert sich die Steuer um 50 %.',day:12},
+ {w:'die Dividende',g:'die Dividenden',u:'дивіденд',s:'Виплата прибутку акціонерам. Декларують брутто.',x:'Die Dividende beträgt brutto CHF 800.',day:13},
+ {w:'der Zins',g:'die Zinsen',u:'відсоток (дохід або плата)',s:'Відсотки на рахунку — дохід; відсотки за кредитом — Abzug.',x:'Die Zinsen auf dem Sparkonto betragen CHF 150.',day:13},
+ {w:'der Bruttoertrag',g:'die Bruttoerträge',u:'дохід брутто',s:'Дохід до утримання VST.',x:'Bitte deklarieren Sie den Bruttoertrag.',day:13},
+ {w:'die Verrechnungssteuer zurückfordern',g:'—',u:'вимагати повернення VST',s:'Через Wertschriftenverzeichnis у декларації.',x:'Mit der Steuererklärung fordern Sie die Verrechnungssteuer zurück.',day:13},
+ {w:'der Kapitalgewinn',g:'die Kapitalgewinne',u:'прибуток від продажу',s:'Приватно — не оподатковується.',x:'Private Kapitalgewinne sind steuerfrei.',day:13},
+ {w:'der Kapitalverlust',g:'die Kapitalverluste',u:'збиток від продажу',s:'Приватно — не відраховується.',x:'Kapitalverluste können nicht abgezogen werden.',day:13},
+ {w:'die qualifizierte Beteiligung',g:'die qualifizierten Beteiligungen',u:'частка від 10 %',s:'Дивіденди оподатковуються частково: ZH −50 %, Bund −30 %.',x:'Die Dividende stammt aus einer qualifizierten Beteiligung.',day:13},
+ {w:'thesaurierend',g:'Adj.',u:'що реінвестує дохід (фонд)',s:'Дохід не виплачується, але однаково оподатковується.',x:'Auch thesaurierende Fonds haben steuerbare Erträge.',day:13},
+ {w:'ausschüttend',g:'Adj.',u:'що виплачує дохід (фонд)',s:'Фонд виплачує дохід інвесторам.',x:'Der ETF ist ausschüttend.',day:13},
+ {w:'das Staking',g:'—',u:'винагорода за блокування крипти',s:'Може бути оподатковуваним доходом. Уточнюйте в досвідченого колеги.',x:'Staking-Erträge sind als Einkommen zu deklarieren.',day:13},
+ {w:'die Kontrolle',g:'die Kontrollen',u:'перевірка',s:'Перевірка роботи іншої людини.',x:'Die Steuererklärung ist bereit zur Kontrolle.',day:14},
+ {w:'das Vier-Augen-Prinzip',g:'—',u:'принцип «чотирьох очей»',s:'Кожну роботу перевіряє друга людина.',x:'Bei uns gilt das Vier-Augen-Prinzip.',day:14},
+ {w:'die Abweichung',g:'die Abweichungen',u:'відхилення',s:'Різниця між очікуваним і фактичним.',x:'Gegenüber dem Vorjahr gibt es eine grosse Abweichung.',day:14},
+ {w:'der Vorjahresvergleich',g:'die Vorjahresvergleiche',u:'порівняння з минулим роком',s:'Аналітична перевірка: великі зміни потребують пояснення.',x:'Der Vorjahresvergleich zeigt einen Fehler beim Vermögen.',day:14},
+ {w:'plausibel',g:'Adj.',u:'правдоподібний, логічний',s:'Цифри узгоджуються між собою.',x:'Die Vermögenszunahme ist nicht plausibel.',day:14},
+ {w:'die Korrektur',g:'die Korrekturen',u:'виправлення',s:'Зміна помилкової цифри.',x:'Bitte nimm diese Korrekturen vor.',day:14},
+ {w:'der Hinweis',g:'die Hinweise',u:'підказка, зауваження',s:'Коротке зауваження колезі або клієнту.',x:'Danke für den Hinweis!',day:14},
+ {w:'übersehen',g:'übersah, übersehen',u:'пропустити, не помітити',s:'Не побачити помилку.',x:'Das habe ich übersehen.',day:14},
+ {w:'überprüfen',g:'überprüfte, überprüft',u:'перевіряти',s:'Ретельно контролювати.',x:'Kannst du bitte die Zahlen überprüfen?',day:14},
+ {w:'die Unterschrift',g:'die Unterschriften',u:'підпис',s:'Клієнт підписує декларацію сам; у подружжя — обоє.',x:'Ohne Unterschrift ist die Steuererklärung nicht gültig.',day:14},
+{w:'die Bilanz',g:'die Bilanzen',u:'баланс',s:'«Фото» фірми на 31.12: Aktiven = Passiven.',x:'Die Bilanz per 31.12.2025 ist ausgeglichen.',day:15},
+ {w:'die Erfolgsrechnung',g:'die Erfolgsrechnungen',u:'звіт про прибутки й збитки',s:'«Фільм» за рік: Ertrag − Aufwand = Gewinn.',x:'Die Erfolgsrechnung zeigt einen Gewinn von CHF 15’000.',day:15},
+ {w:'die Aktiven',g:'Pl.',u:'активи (що фірма має)',s:'Гроші, Debitoren, запаси, обладнання.',x:'Die Aktiven betragen CHF 55’000.',day:15},
+ {w:'die Passiven',g:'Pl.',u:'пасиви (звідки гроші)',s:'Fremdkapital + Eigenkapital.',x:'Auf der Passivseite stehen die Kreditoren.',day:15},
+ {w:'das Eigenkapital',g:'—',u:'власний капітал',s:'Aktiven − Fremdkapital.',x:'Der Gewinn erhöht das Eigenkapital.',day:15},
+ {w:'das Fremdkapital',g:'—',u:'позиковий капітал (борги)',s:'Kreditoren, кредити, резерви.',x:'Das Fremdkapital beträgt CHF 29’000.',day:15},
+ {w:'das Umlaufvermögen',g:'—',u:'оборотні активи',s:'Швидко стає грошима: каса, банк, Debitoren, запаси.',x:'Die Debitoren gehören zum Umlaufvermögen.',day:15},
+ {w:'das Anlagevermögen',g:'—',u:'необоротні активи',s:'Довгострокове: меблі, машини, нерухомість.',x:'Das Fahrzeug gehört zum Anlagevermögen.',day:15},
+ {w:'der Ertrag',g:'die Erträge',u:'дохід, виручка',s:'Записується в Haben.',x:'Der Ertrag aus Dienstleistungen beträgt CHF 180’000.',day:15},
+ {w:'der Aufwand',g:'die Aufwände',u:'витрата',s:'Записується в Soll.',x:'Der Personalaufwand ist gestiegen.',day:15},
+ {w:'das Soll',g:'—',u:'дебет (ліва сторона)',s:'Збільшення Aktiven, Aufwand.',x:'Die Bank steht im Soll.',day:16},
+ {w:'das Haben',g:'—',u:'кредит (права сторона)',s:'Збільшення Passiven, Ertrag.',x:'Der Ertrag wird im Haben gebucht.',day:16},
+ {w:'der Buchungssatz',g:'die Buchungssätze',u:'бухгалтерська проводка',s:'«Soll an Haben, сума».',x:'Der Buchungssatz lautet: Bank an Debitoren 3’000.',day:16},
+ {w:'buchen',g:'buchte, gebucht',u:'проводити (в обліку)',s:'Записати операцію в бухгалтерію.',x:'Hast du die Rechnung schon gebucht?',day:16},
+ {w:'das Konto',g:'die Konten',u:'рахунок (бухгалтерський або банківський)',s:'Кожен має номер у Kontenplan.',x:'Bitte buche das auf Konto 6500.',day:16},
+ {w:'der Kontenplan',g:'die Kontenpläne',u:'план рахунків',s:'Список усіх рахунків клієнта з номерами.',x:'Im Kontenplan des Kunden heisst das Konto anders.',day:16},
+ {w:'der Kontenrahmen KMU',g:'—',u:'типовий план рахунків для малих фірм',s:'Класи 1–9: 1 Aktiven, 2 Passiven, 3 Ertrag, 4–6 Aufwand.',x:'Die meisten Kunden verwenden den Kontenrahmen KMU.',day:16},
+ {w:'der Beleg',g:'die Belege',u:'первинний документ',s:'Рахунок, чек, виписка. Без нього немає проводки.',x:'Ohne Beleg keine Buchung.',day:16},
+ {w:'das Journal',g:'die Journale',u:'журнал проводок',s:'Усі проводки за датою.',x:'Im Journal finde ich die Buchung nicht.',day:16},
+ {w:'der Saldo',g:'die Saldi',u:'залишок рахунку',s:'Різниця між Soll і Haben.',x:'Der Saldo des Bankkontos stimmt mit dem Auszug überein.',day:16},
+ {w:'der Debitor',g:'die Debitoren',u:'дебітор (клієнт, що винен)',s:'Aktiv. Клієнти, які ще мають заплатити.',x:'Der Debitor hat die Rechnung noch nicht bezahlt.',day:17},
+ {w:'der Kreditor',g:'die Kreditoren',u:'кредитор (кому винні ми)',s:'Passiv. Постачальники, яким фірма має заплатити.',x:'Die Kreditoren werden Ende Monat bezahlt.',day:17},
+ {w:'die offene Posten-Liste (OP-Liste)',g:'—',u:'список неоплачених рахунків',s:'Перевіряють регулярно, щоб знайти прострочені.',x:'Bitte schick mir die aktuelle OP-Liste.',day:17},
+ {w:'die Zahlungsfrist',g:'die Zahlungsfristen',u:'строк оплати',s:'Часто 30 днів.',x:'Die Zahlungsfrist beträgt 30 Tage.',day:17},
+ {w:'fällig',g:'Adj.',u:'з настанням строку оплати',s:'Рахунок треба оплатити до цієї дати.',x:'Die Rechnung ist am 31. März fällig.',day:17},
+ {w:'überfällig',g:'Adj.',u:'прострочений',s:'Строк минув, оплати немає.',x:'Die Rechnung ist seit zwei Monaten überfällig.',day:17},
+ {w:'die Zahlungserinnerung',g:'die Zahlungserinnerungen',u:'нагадування про оплату',s:'Дружній перший крок перед Mahnung.',x:'Wir senden zuerst eine Zahlungserinnerung.',day:17},
+ {w:'die Betreibung',g:'die Betreibungen',u:'примусове стягнення боргу',s:'Через Betreibungsamt. Запис у реєстрі.',x:'Ohne Zahlung leiten wir die Betreibung ein.',day:17},
+ {w:'das Skonto',g:'die Skonti',u:'знижка за швидку оплату',s:'Напр. 2 % при оплаті за 10 днів.',x:'Bei Zahlung innert 10 Tagen gewähren wir 2 % Skonto.',day:17},
+ {w:'das Delkredere',g:'—',u:'резерв на сумнівні борги клієнтів',s:'Робиться на кінець року.',x:'Auf den Debitoren bilden wir ein Delkredere.',day:17},
+ {w:'die Vorsteuer',g:'—',u:'вхідна MWST (з покупок)',s:'Віднімається від MWST продажів. Рахунок 1170.',x:'Die Vorsteuer kann nur mit korrekter Rechnung abgezogen werden.',day:18},
+ {w:'die Umsatzsteuer',g:'—',u:'MWST з продажів',s:'MWST, яку фірма нарахувала клієнтам.',x:'Die Umsatzsteuer im ersten Quartal beträgt CHF 2’430.',day:18},
+ {w:'der Normalsatz',g:'—',u:'стандартна ставка',s:'8.1 % з 2024.',x:'Für Beratung gilt der Normalsatz.',day:18},
+ {w:'der reduzierte Satz',g:'—',u:'знижена ставка',s:'2.6 %: їжа, книги, ліки.',x:'Lebensmittel unterliegen dem reduzierten Satz.',day:18},
+ {w:'die Saldosteuersatzmethode',g:'—',u:'спрощений метод MWST',s:'Оборот × галузева ставка, без Vorsteuer. До 5’024’000 обороту.',x:'Der Kunde rechnet nach der Saldosteuersatzmethode ab.',day:18},
+ {w:'die effektive Methode',g:'—',u:'звичайний метод MWST',s:'MWST продажів − Vorsteuer.',x:'Bei der effektiven Methode wird die Vorsteuer abgezogen.',day:18},
+ {w:'die MWST-Nummer',g:'die MWST-Nummern',u:'номер платника MWST',s:'CHE-123.456.789 MWST. Потрібен у рахунку.',x:'Auf der Rechnung fehlt die MWST-Nummer.',day:18},
+ {w:'die MWST-Abrechnung',g:'die MWST-Abrechnungen',u:'декларація MWST',s:'Звіт для ESTV: щокварталу (effektiv) або раз на пів року (Saldo).',x:'Die MWST-Abrechnung für Q1 ist bis Ende Mai fällig.',day:18},
+ {w:'die Bezugsteuer',g:'—',u:'MWST на послуги з-за кордону',s:'Фірма нараховує її сама.',x:'Auf die Software aus den USA fällt Bezugsteuer an.',day:18},
+ {w:'der Bruttolohn',g:'die Bruttolöhne',u:'зарплата брутто',s:'До всіх внесків і податків.',x:'Der Bruttolohn beträgt CHF 6’000 pro Monat.',day:19},
+ {w:'die AHV',g:'—',u:'державне пенсійне страхування',s:'Разом з IV/EO 10.6 % (2026), навпіл.',x:'Die AHV-Beiträge werden direkt vom Lohn abgezogen.',day:19},
+ {w:'die ALV',g:'—',u:'страхування від безробіття',s:'2.2 % до 148’200 на рік (2026), навпіл.',x:'Die ALV wird bis CHF 148’200 erhoben.',day:19},
+ {w:'die BVG / Pensionskasse',g:'—',u:'професійна пенсійна каса (2-й стовп)',s:'Обов’язкова від річної зарплати 22’680 (2026).',x:'Der Arbeitgeber zahlt mindestens die Hälfte der BVG-Beiträge.',day:19},
+ {w:'der Koordinationsabzug',g:'—',u:'координаційне відрахування BVG',s:'Віднімають від зарплати для BVG: 26’460 (2026).',x:'Nach Abzug des Koordinationsabzugs ist der versicherte Lohn CHF 45’540.',day:19},
+ {w:'die UVG',g:'—',u:'страхування від нещасних випадків',s:'BU — роботодавець, NBU — працівник.',x:'Die UVG-Prämien werden vom Versicherer festgelegt.',day:19},
+ {w:'der Nichtberufsunfall (NBU)',g:'—',u:'нещасний випадок поза роботою',s:'Внесок зазвичай платить працівник.',x:'Der NBU-Abzug beträgt 1.2 %.',day:19},
+ {w:'die Familienausgleichskasse (FAK)',g:'—',u:'каса сімейних виплат',s:'Платить роботодавець; виплачує Kinderzulagen.',x:'Die Kinderzulagen werden über die FAK ausbezahlt.',day:19},
+ {w:'der Arbeitgeberbeitrag',g:'die Arbeitgeberbeiträge',u:'внесок роботодавця',s:'Частка соцвнесків, яку платить фірма.',x:'Der Arbeitgeberbeitrag zur AHV beträgt 5.3 %.',day:19},
+ {w:'der Jahresabschluss',g:'die Jahresabschlüsse',u:'річне закриття',s:'Bilanz і Erfolgsrechnung на 31.12 з корективами.',x:'Für den Jahresabschluss benötigen wir alle Kontoauszüge.',day:20},
+ {w:'die Abschreibung',g:'die Abschreibungen',u:'амортизація',s:'Зменшення вартості речей за роки.',x:'Die Abschreibung auf dem Fahrzeug beträgt CHF 8’000.',day:20},
+ {w:'linear',g:'Adj.',u:'лінійно (однакова сума щороку)',s:'Ціна ÷ роки.',x:'Wir schreiben linear über fünf Jahre ab.',day:20},
+ {w:'degressiv',g:'Adj.',u:'дегресивно (відсоток від залишку)',s:'Спершу більше, потім менше.',x:'Die EDV wird degressiv abgeschrieben.',day:20},
+ {w:'die Rückstellung',g:'die Rückstellungen',u:'резерв на майбутню витрату',s:'Для реального, ймовірного ризику.',x:'Für den Rechtsfall bilden wir eine Rückstellung.',day:20},
+ {w:'die Abgrenzung',g:'die Abgrenzungen',u:'розмежування по роках',s:'Кожна витрата й дохід — у свій рік.',x:'Die Miete Januar muss abgegrenzt werden.',day:20},
+ {w:'die transitorischen Aktiven',g:'Pl.',u:'витрати майбутніх періодів',s:'Заплатили наперед за наступний рік.',x:'Die vorausbezahlte Versicherung buchen wir als transitorische Aktiven.',day:20},
+ {w:'die transitorischen Passiven',g:'Pl.',u:'нараховані витрати',s:'Витрата цього року, рахунок прийде пізніше.',x:'Die Dezember-Stromrechnung erfassen wir als transitorische Passiven.',day:20},
+ {w:'das Inventar',g:'die Inventare',u:'інвентаризація, перелік запасів',s:'Підрахунок запасів на 31.12.',x:'Bitte senden Sie uns das Inventar per 31.12.',day:20},
+ {w:'die Bewertung',g:'die Bewertungen',u:'оцінка',s:'Визначення вартості активу.',x:'Die Bewertung der Waren erfolgt zum Einstandspreis.',day:20},
+ {w:'die Belegprüfung',g:'—',u:'перевірка документів',s:'Чи справжній, повний, правильний, не двічі.',x:'Bei der Belegprüfung ist mir ein Fehler aufgefallen.',day:21},
+ {w:'der Kassenbeleg',g:'die Kassenbelege',u:'касовий чек',s:'Підтвердження оплати готівкою.',x:'Auf dem Kassenbeleg fehlt die Beschreibung.',day:21},
+ {w:'die Quittung',g:'die Quittungen',u:'квитанція',s:'Підтвердження отримання грошей.',x:'Bitte bewahren Sie die Quittung auf.',day:21},
+ {w:'doppelt erfasst',g:'—',u:'внесено двічі',s:'Той самий рахунок проведено два рази.',x:'Die Rechnung 5512 wurde doppelt erfasst.',day:21},
+ {w:'die Privatausgabe',g:'die Privatausgaben',u:'приватна витрата',s:'Не витрата фірми.',x:'Das Sofa ist eine Privatausgabe.',day:21},
+ {w:'geschäftsmässig begründet',g:'—',u:'обґрунтовано для бізнесу',s:'Умова, щоб витрата була витратою фірми.',x:'Die Ausgabe ist nicht geschäftsmässig begründet.',day:21},
+ {w:'die Aufbewahrungspflicht',g:'—',u:'обов’язок зберігання',s:'Документи бухгалтерії — 10 років (OR 958f).',x:'Die Aufbewahrungspflicht beträgt zehn Jahre.',day:21},
+ {w:'die Rechnungsnummer',g:'die Rechnungsnummern',u:'номер рахунку',s:'За ним шукаємо дублі.',x:'Bitte gib immer die Rechnungsnummer an.',day:21},
+ {w:'die Gutschrift',g:'die Gutschriften',u:'кредит-нота, зарахування',s:'Документ про зменшення суми рахунку / зарахування на рахунок.',x:'Der Lieferant hat uns eine Gutschrift geschickt.',day:21},
+ {w:'die Stornierung',g:'die Stornierungen',u:'сторнування, скасування',s:'Скасування проводки зустрічною проводкою.',x:'Die falsche Buchung wurde storniert.',day:21},
+{w:'das Einzelunternehmen',g:'die Einzelunternehmen',u:'індивідуальне підприємство',s:'Людина веде бізнес сама; прибуток — її дохід.',x:'Als Einzelunternehmen versteuern Sie den Gewinn privat.',day:22},
+ {w:'die GmbH',g:'die GmbHs',u:'ТОВ',s:'Капітал від 20’000; відповідає майном фірми.',x:'Die GmbH hat ein Stammkapital von CHF 20’000.',day:22},
+ {w:'die AG',g:'die AGs',u:'акціонерне товариство',s:'Капітал від 100’000 (оплатити щонайменше 50’000).',x:'Die AG zahlt eine Dividende an die Aktionäre.',day:22},
+ {w:'das Stammkapital',g:'—',u:'статутний капітал GmbH',s:'Мінімум 20’000.',x:'Das Stammkapital ist voll einbezahlt.',day:22},
+ {w:'das Aktienkapital',g:'—',u:'акціонерний капітал AG',s:'Мінімум 100’000.',x:'Das Aktienkapital beträgt CHF 100’000.',day:22},
+ {w:'die Gewinnsteuer',g:'—',u:'податок на прибуток фірми',s:'Bund 8.5 %; ZH простий 7 % × Steuerfuss (2025).',x:'Die GmbH bezahlt Gewinnsteuer auf CHF 50’000.',day:22},
+ {w:'die Kapitalsteuer',g:'—',u:'податок на капітал фірми',s:'ZH 0.75 ‰ × Steuerfuss.',x:'Die Kapitalsteuer ist im Kanton Zürich tief.',day:22},
+ {w:'die Haftung',g:'—',u:'відповідальність (майнова)',s:'Чим відповідає власник за борги.',x:'Bei der GmbH ist die Haftung beschränkt.',day:22},
+ {w:'die wirtschaftliche Doppelbelastung',g:'—',u:'економічне подвійне оподаткування',s:'Фірма платить з прибутку, власник — з дивіденду.',x:'Die Teilbesteuerung mildert die wirtschaftliche Doppelbelastung.',day:22},
+ {w:'der Gesellschafter',g:'die Gesellschafter',u:'учасник (власник частки) GmbH',s:'Власник частки в GmbH.',x:'Der Gesellschafter bezieht einen Lohn.',day:22},
+ {w:'selbständig erwerbend',g:'—',u:'самозайнятий',s:'Працює на свій ризик, для кількох клієнтів.',x:'Frau Nowak ist selbständig erwerbend.',day:23},
+ {w:'unselbständig erwerbend',g:'—',u:'найманий працівник',s:'Підпорядкований роботодавцю, отримує Lohnausweis.',x:'Als unselbständig Erwerbende erhalten Sie einen Lohnausweis.',day:23},
+ {w:'die SVA',g:'—',u:'соціальна страхова установа (AHV-каса) кантону',s:'У ZH — SVA Zürich; визначає статус самозайнятості.',x:'Bitte melden Sie sich bei der SVA Zürich an.',day:23},
+ {w:'das Unternehmerrisiko',g:'—',u:'підприємницький ризик',s:'Можна втратити гроші; ознака самозайнятості.',x:'Sie tragen kein eigenes Unternehmerrisiko.',day:23},
+ {w:'die Weisungsgebundenheit',g:'—',u:'підпорядкування вказівкам',s:'Ознака найманої роботи.',x:'Die Weisungsgebundenheit spricht für eine Anstellung.',day:23},
+ {w:'der Auftraggeber',g:'die Auftraggeber',u:'замовник',s:'Хто доручає роботу самозайнятому.',x:'Sie arbeiten nur für einen Auftraggeber.',day:23},
+ {w:'die Geschäftsausgabe',g:'die Geschäftsausgaben',u:'витрата бізнесу',s:'Відраховується з виручки, з документом.',x:'Die Druckerpatronen sind eine Geschäftsausgabe.',day:23},
+ {w:'der Privatanteil',g:'die Privatanteile',u:'приватна частка',s:'Частина витрат (напр. авто), що не є бізнесом.',x:'Für das Auto rechnen wir einen Privatanteil auf.',day:23},
+ {w:'die vereinfachte Buchführung',g:'—',u:'спрощений облік',s:'Для Einzelunternehmen з оборотом до 500’000.',x:'Bei CHF 180’000 Umsatz genügt die vereinfachte Buchführung.',day:23},
+ {w:'der Geschäftsabschluss',g:'die Geschäftsabschlüsse',u:'річна звітність бізнесу',s:'Erfolgsrechnung (+ Bilanz) самозайнятого до декларації.',x:'Bitte legen Sie den Geschäftsabschluss bei.',day:23},
+ {w:'die Steueroptimierung',g:'—',u:'законна оптимізація податків',s:'Використання дозволених Abzüge.',x:'Die Einzahlung in die Säule 3a ist legale Steueroptimierung.',day:24},
+ {w:'die Steuerhinterziehung',g:'—',u:'ухилення від податків',s:'Не задекларували дохід / майно. Nachsteuer + штраф.',x:'Das Verschweigen des Kontos wäre Steuerhinterziehung.',day:24},
+ {w:'der Steuerbetrug',g:'—',u:'податкове шахрайство',s:'З фальшивими документами. Кримінальна справа.',x:'Ein gefälschter Lohnausweis ist Steuerbetrug.',day:24},
+ {w:'die Selbstanzeige',g:'die Selbstanzeigen',u:'добровільне визнання',s:'Перший раз — без штрафу, але з Nachsteuer і відсотками.',x:'Der Kunde möchte eine Selbstanzeige einreichen.',day:24},
+ {w:'die Nachsteuer',g:'die Nachsteuern',u:'донарахований податок',s:'Податок за минулі роки на приховане; до 10 років.',x:'Die Nachsteuer wird mit Zins erhoben.',day:24},
+ {w:'straflos',g:'Adj.',u:'без покарання',s:'Перша Selbstanzeige — straflos.',x:'Die erste Selbstanzeige bleibt straflos.',day:24},
+ {w:'die Urkundenfälschung',g:'—',u:'підробка документів',s:'Основа для Steuerbetrug.',x:'Das Ändern des Lohnausweises ist Urkundenfälschung.',day:24},
+ {w:'verschweigen',g:'verschwieg, verschwiegen',u:'приховати, змовчати',s:'Не повідомити про дохід / майно.',x:'Er hat Einkommen verschwiegen.',day:24},
+ {w:'legal',g:'Adj.',u:'законний',s:'Відповідає закону.',x:'Diese Optimierung ist legal.',day:24},
+ {w:'das Doppelbesteuerungsabkommen (DBA)',g:'die DBA',u:'угода про уникнення подвійного оподаткування',s:'Визначає, яка країна має право оподатковувати.',x:'Gemäss DBA wird die Wohnung in der Ukraine besteuert.',day:25},
+ {w:'die Ansässigkeit',g:'—',u:'резидентство',s:'Де людина вважається податковим резидентом.',x:'Die Ansässigkeit liegt in der Schweiz.',day:25},
+ {w:'der Wohnsitzstaat',g:'die Wohnsitzstaaten',u:'країна проживання',s:'Країна резидентства.',x:'Der Wohnsitzstaat ist die Schweiz.',day:25},
+ {w:'der Quellenstaat',g:'die Quellenstaaten',u:'країна джерела доходу',s:'Де виник дохід.',x:'Der Quellenstaat erhebt eine Quellensteuer auf die Dividende.',day:25},
+ {w:'die unbeschränkte Steuerpflicht',g:'—',u:'необмежений податковий обов’язок',s:'Резидент декларує весь світовий дохід і майно.',x:'Mit Wohnsitz in Zürich sind Sie unbeschränkt steuerpflichtig.',day:25},
+ {w:'der Progressionsvorbehalt',g:'—',u:'застереження про прогресію',s:'Іноземний дохід не оподатковується, але підвищує ставку.',x:'Die ausländischen Mieteinnahmen gelten für den Progressionsvorbehalt.',day:25},
+ {w:'die Steuerausscheidung',g:'—',u:'розподіл податкової бази',s:'Поділ доходу / майна між кантонами або країнами.',x:'Das Steueramt nimmt die Steuerausscheidung vor.',day:25},
+ {w:'ausländische Einkünfte',g:'Pl.',u:'іноземні доходи',s:'Треба декларувати.',x:'Haben Sie ausländische Einkünfte?',day:25},
+ {w:'die Freistellung',g:'—',u:'звільнення (метод DBA)',s:'Дохід оподатковує інша країна; у CH — лише для ставки.',x:'Für ausländische Liegenschaften gilt die Freistellung.',day:25},
+ {w:'die Anrechnung',g:'—',u:'зарахування (податку)',s:'Іноземний податок зараховується до швейцарського.',x:'Die ausländische Quellensteuer kann teilweise angerechnet werden.',day:25},
+ {w:'die Einsprachefrist',g:'—',u:'строк оскарження',s:'30 днів від отримання рішення.',x:'Die Einsprachefrist läuft am 20. November ab.',day:26},
+ {w:'der Rekurs',g:'die Rekurse',u:'скарга (наступна інстанція)',s:'Після Einsprache — до Steuerrekursgericht ZH.',x:'Gegen den Einspracheentscheid ist ein Rekurs möglich.',day:26},
+ {w:'die Beschwerde',g:'die Beschwerden',u:'скарга (для Bund)',s:'Аналог Rekurs для DBSt.',x:'Für die Bundessteuer heisst das Rechtsmittel Beschwerde.',day:26},
+ {w:'der Einschätzungsvorschlag',g:'die Einschätzungsvorschläge',u:'пропозиція оцінки',s:'Steueramt пропонує зміни перед рішенням.',x:'Wir haben einen Einschätzungsvorschlag erhalten.',day:26},
+ {w:'die Begründung',g:'die Begründungen',u:'обґрунтування',s:'Пояснення, чому ми не згодні.',x:'Die Einsprache muss eine Begründung enthalten.',day:26},
+ {w:'das Beweismittel',g:'die Beweismittel',u:'доказ',s:'Документи, що підтверджують позицію.',x:'Als Beweismittel legen wir die Rechnung bei.',day:26},
+ {w:'die Verjährung',g:'—',u:'строк давності',s:'Рішення — 5 (макс. 15) років; Nachsteuer — 10 років.',x:'Das Recht auf Nachsteuer erlischt nach zehn Jahren.',day:26},
+ {w:'die Revision',g:'—',u:'перегляд остаточного рішення',s:'Лише у вузьких випадках (нові факти).',x:'Eine Revision ist nur bei neuen Tatsachen möglich.',day:26},
+ {w:'das Strafverfahren',g:'die Strafverfahren',u:'штрафна процедура',s:'Окрема процедура при підозрі на ухилення.',x:'Das Steueramt hat ein Strafverfahren eröffnet.',day:26},
+ {w:'die Vollmacht',g:'die Vollmachten',u:'довіреність',s:'Дозволяє Treuhand діяти від імені клієнта.',x:'Bitte unterschreiben Sie die Vollmacht.',day:27},
+ {w:'der Mandant',g:'die Mandanten',u:'клієнт (Treuhand)',s:'Людина / фірма, для якої ми працюємо.',x:'Der Mandant hat neue Unterlagen geschickt.',day:27},
+ {w:'das Mandat',g:'die Mandate',u:'доручення, договір із клієнтом',s:'Обсяг роботи для клієнта.',x:'Wir übernehmen das Mandat ab 2026.',day:27},
+ {w:'die Vertraulichkeit',g:'—',u:'конфіденційність',s:'Дані клієнта — лише для роботи.',x:'Vertraulichkeit ist bei uns selbstverständlich.',day:27},
+ {w:'der Datenschutz',g:'—',u:'захист даних',s:'revDSG з 01.09.2023.',x:'Aus Datenschutzgründen senden wir keine Unterlagen per WhatsApp.',day:27},
+ {w:'die Schweigepflicht',g:'—',u:'обов’язок мовчати',s:'З договору; поза роботою не говоримо про клієнтів.',x:'Wir unterstehen der Schweigepflicht.',day:27},
+ {w:'abklären',g:'klärte ab, abgeklärt',u:'з’ясувати',s:'Перевірити й відповісти пізніше.',x:'Ich kläre das ab und melde mich.',day:27},
+ {w:'die Mandatsvereinbarung',g:'die Mandatsvereinbarungen',u:'договір із клієнтом',s:'Що робимо, за скільки, хто відповідає.',x:'Die Mandatsvereinbarung regelt den Umfang.',day:27},
+ {w:'die Phishing-Mail',g:'die Phishing-Mails',u:'шахрайський лист',s:'Не клацати, повідомити IT.',x:'Diese Phishing-Mail sieht aus wie vom Steueramt.',day:27},
+ {w:'vollständig',g:'Adj.',u:'повний',s:'Усі сторінки й документи.',x:'Die Unterlagen sind noch nicht vollständig.',day:27},
+ {w:'die Unterlagen',g:'Pl.',u:'документи',s:'Усі папери клієнта для роботи.',x:'Vielen Dank für Ihre Unterlagen.',day:28},
+ {w:'das Erstgespräch',g:'die Erstgespräche',u:'перша зустріч з клієнтом',s:'Знайомство й збір інформації.',x:'Im Erstgespräch klären wir die Situation.',day:28},
+ {w:'die Checkliste',g:'die Checklisten',u:'контрольний список',s:'Щоб нічого не пропустити.',x:'Ich gehe die Checkliste durch.',day:28},
+ {w:'nachreichen',g:'reichte nach, nachgereicht',u:'донести (пізніше)',s:'Надіслати документи пізніше.',x:'Bitte reichen Sie den Lohnausweis nach.',day:28},
+ {w:'die Frist setzen',g:'—',u:'встановити строк',s:'Дата, до якої клієнт має щось надіслати.',x:'Wir setzen Ihnen eine Frist bis 20. März.',day:28},
+ {w:'die Änderung',g:'die Änderungen',u:'зміна',s:'Нова робота, сім’я, адреса.',x:'Gab es Änderungen seit letztem Jahr?',day:28},
+ {w:'der Umzug',g:'die Umzüge',u:'переїзд',s:'Важлива громада на 31.12.',x:'Nach dem Umzug sind Sie in Winterthur steuerpflichtig.',day:28},
+ {w:'die Erbschaft',g:'die Erbschaften',u:'спадщина',s:'Пояснює зростання майна; потрібні документи.',x:'Das Vermögen stammt aus einer Erbschaft.',day:28},
+ {w:'der Zusatzverdienst',g:'die Zusatzverdienste',u:'додатковий заробіток',s:'Підробіток — теж дохід.',x:'Haben Sie einen Zusatzverdienst?',day:28},
+ {w:'die Priorität',g:'die Prioritäten',u:'пріоритет',s:'Що робити першим.',x:'Was hat heute Priorität?',day:29},
+ {w:'dringend',g:'Adj.',u:'терміновий',s:'Треба зробити зараз.',x:'Die Fristerstreckung ist dringend.',day:29},
+ {w:'wichtig',g:'Adj.',u:'важливий',s:'Має великий вплив, але може бути не терміновим.',x:'Das Archiv ist wichtig, aber nicht dringend.',day:29},
+ {w:'die Aufgabe',g:'die Aufgaben',u:'завдання',s:'Що треба зробити.',x:'Ich habe heute fünf Aufgaben.',day:29},
+ {w:'der Termin',g:'die Termine',u:'зустріч / строк',s:'Запланована зустріч або дата.',x:'Ich habe um 14 Uhr einen Termin mit Herrn Huber.',day:29},
+ {w:'die Pendenz',g:'die Pendenzen',u:'незавершена справа (CH)',s:'Швейцарське слово для «відкритого завдання».',x:'Ich habe noch viele Pendenzen.',day:29},
+ {w:'die Aktennotiz',g:'die Aktennotizen',u:'нотатка в досьє',s:'Коротко після дзвінка / зустрічі.',x:'Bitte mach eine Aktennotiz zum Telefonat.',day:29},
+ {w:'erledigen',g:'erledigte, erledigt',u:'виконати, зробити',s:'Закінчити завдання.',x:'Ich erledige das bis Mittag.',day:29},
+ {w:'delegieren',g:'delegierte, delegiert',u:'доручити іншому',s:'Передати завдання колезі.',x:'Kannst du diese Aufgabe delegieren?',day:29},
+ {w:'der Rückruf',g:'die Rückrufe',u:'зворотний дзвінок',s:'Передзвонити.',x:'Herr Meier wünscht einen Rückruf.',day:29},
+ {w:'der Fachausweis',g:'die Fachausweise',u:'фахове посвідчення (федеральне)',s:'Напр. Fachfrau/Fachmann im Finanz- und Rechnungswesen або Treuhand.',x:'Später möchte ich den Fachausweis Treuhand machen.',day:30},
+ {w:'die Weiterbildung',g:'die Weiterbildungen',u:'підвищення кваліфікації',s:'Курси для кар’єри.',x:'Die Firma unterstützt meine Weiterbildung.',day:30},
+ {w:'die Berufserfahrung',g:'—',u:'досвід роботи',s:'Головне на шляху до Treuhänderin.',x:'Mit mehr Berufserfahrung übernehme ich eigene Mandate.',day:30},
+ {w:'das Praktikum',g:'die Praktika',u:'практика',s:'Початок кар’єри в Treuhand.',x:'Mein Praktikum beginnt im Januar.',day:30},
+ {w:'die Einarbeitung',g:'—',u:'введення в роботу',s:'Перші тижні на новому місці.',x:'Die Einarbeitung dauert etwa einen Monat.',day:30},
+ {w:'die Rückmeldung',g:'die Rückmeldungen',u:'зворотний зв’язок',s:'Відгук про вашу роботу.',x:'Danke für deine Rückmeldung!',day:30},
+ {w:'selbständig arbeiten',g:'—',u:'працювати самостійно',s:'Без постійної допомоги.',x:'Nach der Einarbeitung arbeite ich selbständig.',day:30},
+ {w:'nachfragen',g:'fragte nach, nachgefragt',u:'перепитати, уточнити',s:'Краще спитати, ніж помилитися.',x:'Wenn ich unsicher bin, frage ich nach.',day:30},
+ {w:'die Verantwortung',g:'—',u:'відповідальність',s:'Хто відповідає за результат.',x:'Die Verantwortung trägt die Teamleiterin.',day:30},
+ {w:'der Arbeitsalltag',g:'—',u:'робочі будні',s:'Звичайний робочий день.',x:'Im Arbeitsalltag gibt es viele Fristen.',day:30}
 ];
 
 /* ---------- lessons ---------- */
@@ -1661,7 +1866,1811 @@ const LESSONS={1:{
   {area:'Повторення · День 8',q:'Власне авто куплено 2024 року за 20’000. Що вносимо за 2025 рік?',o:['Нічого, авто не майно','20’000','≈ 12’000','8’000'],a:2,ex:'Повторення з Дня 8: власне авто теж є майном. Зазвичай мінус 40 % на рік від залишку: 20’000 − 8’000 = 12’000.'},
   {area:'Повторення · День 8',q:'Кредит: на 1.1 — 20’000, на 31.12 — 15’000. Яку суму віднімаємо від майна?',o:['20’000','15’000','17’500','35’000'],a:1,ex:'Повторення з Дня 8: борги — це теж «фото» на 31.12.'}
  ]
-}};
+},
+10:{
+ theory:`
+<p class="big">Головна ідея: Quellensteuer — це податок, який роботодавець <b>одразу знімає із зарплати</b>. NOV — це спосіб потім <b>перерахувати точно</b>, як для швейцарця.</p>
+
+<h4>Хто платить Quellensteuer (ZH)</h4>
+<div class="tbl"><table>
+<tr><th>Людина</th><th>Податок</th></tr>
+<tr><td>Дозвіл B, L, S (без C)</td><td>✅ Quellensteuer із зарплати</td></tr>
+<tr><td>Отримала C</td><td>❌ звичайна декларація <b>за весь рік</b></td></tr>
+<tr><td>Одружилася зі швейцарцем або людиною з C</td><td>❌ звичайна декларація <b>за весь рік</b></td></tr>
+</table></div>
+
+<h4>Код тарифу на Lohnabrechnung</h4>
+<p class="small">Приклад: <b>A0N</b> = буква (сімейний стан) + кількість дітей + церква (Y так / N ні).</p>
+<div class="tbl"><table>
+<tr><th>Буква</th><th>Хто</th></tr>
+<tr><td><b>A</b></td><td>самотня людина без дітей</td></tr>
+<tr><td><b>B</b></td><td>подружжя, заробляє один</td></tr>
+<tr><td><b>C</b></td><td>подружжя, заробляють обоє</td></tr>
+<tr><td><b>H</b></td><td>самотня людина з дітьми</td></tr>
+</table></div>
+<p class="small"><b>Перевіряйте код!</b> Неправильний код означає неправильний податок щомісяця.</p>
+
+<h4>NOV: коли рахують «як швейцарцю»</h4>
+<div class="tbl"><table>
+<tr><th></th><th>Обов’язкова</th><th>Добровільна</th></tr>
+<tr><td><b>Коли</b></td><td>брутто понад 120’000; або інший дохід від 3’000; або майно від 80’000 (ledig) / 160’000 (подружжя)</td><td>людина сама просить, щоб врахувати свої Abzüge</td></tr>
+<tr><td><b>Строк</b></td><td>Steueramt надсилає декларацію сам</td><td>заява <b>до 31.03</b> наступного року через ZHservices</td></tr>
+<tr><td><b>Наступні роки</b></td><td colspan="2">NOV <b>щороку</b>, поки людина на Quellensteuer. Назад дороги немає.</td></tr>
+</table></div>
+
+<h4>Приклад: Iryna, статус S, Zürich, 2025</h4>
+<div class="steps">
+ <div><span>Утримано QSt (Lohnausweis, Ziffer 12)</span><b class="num">5’800</b></div>
+ <div><span>Справжній податок за NOV (програма рахує)</span><b class="num">5’011</b></div>
+ <div class="hl"><span>5’800 − 5’011 → <b>повернення</b></span><b class="num">+789</b></div>
+</div>
+<p class="small">Якби різниця була мінусовою, Iryna мала б доплатити. Тому перед добровільною NOV варто прикинути результат.</p>
+
+<h4>Запам’ятайте 3 речі</h4>
+<ol class="remember">
+ <li><span>Добровільна NOV: заява <b>до 31.03</b>. Запізнилися — заяву не розглядають.</span></li>
+ <li><span>Після першої NOV — <b>щороку</b>, поки людина на QSt.</span></li>
+ <li><span>C або шлюб зі швейцарцем / людиною з C → звичайна декларація <b>за весь рік</b>.</span></li>
+</ol>
+<div class="callout level" style="margin-top:14px"><b>Що від вас чекатимуть як від Praktikantin:</b> перевірити код тарифу на Lohnabrechnung, нагадати про строк 31.03 і зібрати документи для NOV.</div>
+<p class="small muted">Джерела: Wegleitung ZH 2025, с. 4–5; Zürcher Steuerbuch Nr. 133.1; Informationsblatt Quellensteuer ZH 2025.</p>`,
+ full:`
+<h4>Що вже «враховано» в Quellensteuer</h4>
+<p>Таблиця QSt уже містить типові відрахування (як Pauschale): Berufsauslagen, страховки, звичайні внески AHV і PK. Тому добровільна NOV вигідна, коли є <b>додаткові</b> витрати: Säule 3a, Einkauf у Pensionskasse, Weiterbildung, Kita, аліменти, великі Fahrkosten.</p>
+<h4>Без NOV, але з виправленням</h4>
+<p>Якщо роботодавець застосував неправильний тариф (наприклад, A замість H), можна попросити <b>рішення про Quellensteuer</b> (Verfügung). Строк — теж до 31 березня наступного року.</p>
+<h4>Подружжя</h4>
+<p>Для обов’язкової NOV достатньо, щоб <b>одна</b> людина з подружжя перевищила 120’000.</p>
+<p class="small muted">Джерела: Zürcher Steuerbuch Nr. 133.1; ESTV, «Besteuerung an der Quelle» (Stand 2025).</p>`,
+ vocab:['der Tarifcode','der Quellensteuertarif','der Lohnausweis','die Lohnabrechnung','der Antrag','beantragen','die Rückerstattung','die Nachzahlung der Quellensteuer','von Amtes wegen','die Grenze'],
+ caseHtml:`
+<p><b>Ситуація:</b> березень 2026. До вас звертаються троє людей (усі в Zürich, податковий рік 2025).</p>
+<ol class="doclist">
+ <li>A · Olena, статус S, ledig, Bruttolohn 62’000, платить 3a 7’000 і Weiterbildung 3’000</li>
+ <li>B · Marco, дозвіл B, одружений, дружина не працює, Bruttolohn 135’000</li>
+ <li>C · Sara, дозвіл B, у листопаді 2025 вийшла заміж за швейцарця</li>
+</ol>
+<p><b>Ваші завдання:</b></p>
+<ol class="small">
+ <li>Для кожного: QSt, NOV обов’язкова, NOV добровільна чи звичайна декларація?</li>
+ <li>Який код тарифу, найімовірніше, у Marco (без дітей, без церкви)?</li>
+ <li>Що порадите Olena і до якої дати?</li>
+</ol>`,
+ caseQs:['Хто що (A, B, C)','Код тарифу Marco','Порада Olena і строк'],
+ caseModel:`
+<div class="tbl"><table>
+<tr><th></th><th>Що</th><th>Чому</th></tr>
+<tr><td>Olena</td><td>QSt, можна <b>добровільну NOV</b></td><td>дохід менше 120’000, але є 3a і Weiterbildung</td></tr>
+<tr><td>Marco</td><td><b>обов’язкова NOV</b></td><td>брутто понад 120’000</td></tr>
+<tr><td>Sara</td><td><b>звичайна декларація за весь 2025</b>, спільно з чоловіком</td><td>шлюб зі швейцарцем</td></tr>
+</table></div>
+<p><b>2.</b> <b>B0N</b>: подружжя, заробляє один, 0 дітей, без церкви.</p>
+<p><b>3.</b> Порахувати орієнтовно (3a й Weiterbildung, імовірно, дадуть повернення) і подати заяву на NOV через ZHservices <b>до 31.03.2026</b>. Попередити: далі NOV буде щороку.</p>
+<p class="small muted">Пастки: Sara «залишається на QSt до шлюбу» — ні, весь рік звичайно; забути, що NOV назавжди.</p>`,
+ deutsch:`
+<p><b>Тема дня: пояснити клієнту, що таке NOV.</b></p>
+<div class="panel" style="font-size:.97rem">
+<p><b>Olena:</b> Bekomme ich Geld zurück, wenn ich eine Steuererklärung mache?<br>
+<b>Sie:</b> <b>Wahrscheinlich ja</b>, weil Sie in die Säule 3a einzahlen. Dafür <b>müssen Sie</b> bis 31. März eine nachträgliche ordentliche Veranlagung <b>beantragen</b>.<br>
+<b>Olena:</b> Muss ich das jedes Jahr machen?<br>
+<b>Sie:</b> Ja. <b>Nach dem ersten Antrag</b> werden Sie jedes Jahr ordentlich veranlagt, <b>solange</b> Sie quellensteuerpflichtig sind.<br>
+<b>Olena:</b> Und wenn ich am Ende mehr zahlen muss?<br>
+<b>Sie:</b> Das <b>kann vorkommen</b>. Darum rechnen wir es vorher grob aus.</p>
+</div>
+<div class="tbl"><table>
+<tr><th>Фраза</th><th>Значення</th></tr>
+<tr><td>Wahrscheinlich ja.</td><td>Найімовірніше, так.</td></tr>
+<tr><td>Sie müssen … beantragen.</td><td>Вам треба подати заяву на …</td></tr>
+<tr><td>solange Sie … sind</td><td>поки ви …</td></tr>
+<tr><td>Das kann vorkommen.</td><td>Таке буває.</td></tr>
+<tr><td>Wir rechnen es vorher grob aus.</td><td>Ми заздалегідь приблизно порахуємо.</td></tr>
+</table></div>
+<p class="small"><b>Граматика:</b> <i>solange</i> (поки) — дієслово в кінці: «…solange Sie quellensteuerpflichtig <b>sind</b>.»</p>
+<h4>Вправа: вставте слово</h4>
+<div id="gapEx" class="gap"></div>
+<div class="row" style="margin-top:8px"><button class="btn ghost" id="gapCheck">Перевірити</button><span id="gapRes" class="muted small"></span></div>`,
+ gaps:[
+  {pre:'Sie müssen die NOV bis 31. März',opts:['beantragen','beantragt','beantragte'],a:0,post:'.'},
+  {pre:'Sie werden jedes Jahr veranlagt, solange Sie quellensteuerpflichtig',opts:['sind','ist','seid'],a:0,post:'.'},
+  {pre:'Das kann',opts:['vorkommen','vorkommt','vorgekommen'],a:0,post:'.'},
+  {pre:'Wir rechnen es vorher grob',opts:['aus','an','ab'],a:0,post:'.'},
+  {pre:'Verspätete Anträge werden nicht',opts:['behandelt','behandeln','behandelte'],a:0,post:'.'}
+ ],
+ check:[
+  {area:'Theorie',q:'Людина з дозволом B просить добровільну NOV за 2025 рік. До якої дати?',o:['31.12.2025','31.03.2026','30.09.2026','Будь-коли'],a:1,ex:'Заяву подають до 31 березня наступного року. Пізніші заяви не розглядають.'},
+  {area:'Theorie',q:'Що означає код C2Y?',o:['Самотня людина, 2 дітей, церква','Подружжя, заробляють обоє, 2 дітей, член церкви','Дозвіл C','Без дітей'],a:1,ex:'C — подружжя з двома доходами, 2 — кількість дітей, Y — член церкви.'},
+  {area:'Theorie',q:'Клієнт з дозволом B отримав C у червні 2025. Як оподатковується 2025 рік?',o:['Пів року QSt, пів року звичайно','Звичайна декларація за весь рік','Лише QSt','Без податку'],a:1,ex:'При отриманні C людина переходить на звичайну декларацію за весь податковий рік.'},
+  {area:'Повторення · День 9',q:'Гранична ставка клієнта ≈ 20 %. Скільки заощадить Abzug 1’000?',o:['1’000','≈ 200','≈ 20','0'],a:1,ex:'Повторення з Дня 9: Abzug зменшує базу. Економія = Abzug × гранична ставка.'},
+  {area:'Повторення · День 9',q:'Що змінюється, коли клієнт переїжджає в іншу громаду ZH?',o:['Тариф','Steuerfuss кантону','Лише відсоток громади','DBSt'],a:2,ex:'Повторення з Дня 9: тариф і Steuerfuss кантону однакові по всьому ZH. Змінюється тільки множник громади.'}
+ ]
+},
+11:{
+ theory:`
+<p class="big">Головна ідея: подружжя — це <b>одна декларація</b>. Доходи й майно обох <b>додають</b>, зате діє нижчий тариф і є додаткові Abzüge.</p>
+
+<h4>Хто подає разом (ZH)</h4>
+<div class="tbl"><table>
+<tr><th>Ситуація</th><th>Декларація</th></tr>
+<tr><td>Одружені, живуть разом</td><td>одна спільна</td></tr>
+<tr><td>Одружилися будь-коли в 2025</td><td>спільна <b>за весь 2025</b></td></tr>
+<tr><td>Розлучилися / роз’їхалися в 2025</td><td>дві окремі <b>за весь 2025</b></td></tr>
+<tr><td>Живуть разом без шлюбу (Konkubinat)</td><td>кожен окремо</td></tr>
+</table></div>
+
+<h4>Сімейні Abzüge 2025</h4>
+<div class="tbl"><table>
+<tr><th>Abzug</th><th class="num">ZH</th><th class="num">Bund</th></tr>
+<tr><td>Kinderabzug (за кожну дитину)</td><td class="num">9’300</td><td class="num">6’800 + 263 з податку</td></tr>
+<tr><td>Страховки подружжя (з PK/3a)</td><td class="num">5’800</td><td class="num">3’700</td></tr>
+<tr><td>+ за кожну дитину</td><td class="num">1’300</td><td class="num">700</td></tr>
+<tr><td>Kita / няня (дитина до 14 років)</td><td class="num">до 25’000</td><td class="num">до 25’800</td></tr>
+<tr><td>Обоє працюють</td><td class="num">до 6’100</td><td class="num">50 % меншого доходу, 8’600–14’100</td></tr>
+</table></div>
+
+<h4>Приклад: обоє працюють</h4>
+<p class="small">Подружжя Meier. Менший дохід (після Berufsauslagen і 3a) — <b>28’000</b>.</p>
+<div class="steps">
+ <div><span>ZH: максимум 6’100, а 28’000 більше</span><b class="num">6’100</b></div>
+ <div class="hl"><span>Bund: 50 % × 28’000 = 14’000 (між 8’600 і 14’100)</span><b class="num">14’000</b></div>
+</div>
+
+<h4>Запам’ятайте 3 речі</h4>
+<ol class="remember">
+ <li><span>Важить ситуація <b>на 31.12</b>: шлюб у грудні → спільно за весь рік.</span></li>
+ <li><span>Обоє працюють → <b>не забудьте</b> Abzug за другий дохід.</span></li>
+ <li><span>Для ZH і Bund — <b>різні</b> суми. Програма рахує обидві.</span></li>
+</ol>
+<div class="callout level" style="margin-top:14px"><b>Що від вас чекатимуть як від Praktikantin:</b> внести дітей, Kita й обидва доходи; помітити, коли змінився сімейний стан.</div>
+<p class="small muted">Джерела: Wegleitung ZH 2025, с. 4, 18, 20–21; ESTV RS 2-210-D-2024.</p>`,
+ full:`
+<h4>Kita: умови</h4>
+<p>Abzug для витрат на догляд третіми особами: дитина молодша 14 років і живе з вами, а витрати пов’язані з роботою, навчанням або непрацездатністю батьків. Лише фактичні витрати, до максимуму за дитину.</p>
+<h4>Аліменти</h4>
+<p>Аліменти колишньому чоловіку / дружині й на неповнолітніх дітей: <b>платник</b> відраховує, <b>отримувач</b> декларує як дохід. Аліменти на дорослих дітей так не працюють.</p>
+<h4>Abzug за утримувану особу</h4>
+<p>Якщо ви утримуєте людину, яка не може себе забезпечити (не дитину й не чоловіка/дружину): ZH 2’800, Bund 6’800.</p>
+<h4>Тариф</h4>
+<p>Подружжя рахують за <de>Verheiratetentarif</de> (у ZH перша сходинка 0 % — до 13’900). Для Bund сім’ї з дітьми мають ще мінус 263 CHF з податку за кожну дитину.</p>
+<p class="small muted">Джерела: Wegleitung ZH 2025; Regierungsratsbeschluss ZH 833/2025; ESTV RS 2-210-D-2024.</p>`,
+ vocab:['die gemeinsame Veranlagung','der Ehegatte','das Konkubinat','der Kinderabzug','die Kinderdrittbetreuungskosten','der Sonderabzug bei Erwerbstätigkeit beider Ehegatten','der Unterhaltsbeitrag','die Alimente','der Unterstützungsabzug','getrennt leben'],
+ caseHtml:`
+<p><b>Ситуація:</b> Herr und Frau Keller, Zürich, Steuererklärung <b>2025</b>.</p>
+<ol class="doclist">
+ <li>Herr Keller: Nettolohn 90’000. Frau Keller: Nettolohn 32’000 (Teilzeit); після її Berufsauslagen і 3a залишається 24’000</li>
+ <li>Діти: Lena (2019) і Tim (2023)</li>
+ <li>Kita für Tim: 16’000; Krankenkasse für alle: 14’000</li>
+ <li>Beide haben Pensionskasse</li>
+</ol>
+<p><b>Ваші завдання:</b></p>
+<ol class="small">
+ <li>Kinderabzug: ZH і Bund.</li>
+ <li>Страховки: максимум ZH і Bund для цієї сім’ї, скільки відраховуємо?</li>
+ <li>Kita і Abzug за другий дохід: ZH і Bund.</li>
+</ol>`,
+ caseQs:['Kinderabzug ZH / Bund','Страховки ZH / Bund','Kita і другий дохід'],
+ caseModel:`
+<p><b>1. Kinderabzug:</b> ZH 2 × 9’300 = <b>18’600</b>. Bund 2 × 6’800 = <b>13’600</b> + пізніше мінус 2 × 263 = 526 з податку.</p>
+<p><b>2. Страховки:</b> ZH 5’800 + 2 × 1’300 = <b>8’400</b>. Bund 3’700 + 2 × 700 = <b>5’100</b>. Сплачено 14’000 → беремо максимуми.</p>
+<p><b>3. Kita:</b> 16’000 (менше за 25’000 / 25’800) → <b>16’000</b> в обох колонках.<br>
+<b>Другий дохід:</b> ZH <b>6’100</b>. Bund: 50 % × 24’000 = <b>12’000</b>.</p>
+<p class="small muted">Пастки: брати страховку як для ledig (2’900); забути надбавку за дітей; рахувати 50 % від брутто замість доходу після Abzüge.</p>`,
+ deutsch:`
+<p><b>Тема дня: питання клієнтам про сім’ю.</b></p>
+<div class="panel" style="font-size:.97rem">
+<p><b>Sie:</b> <b>Hat sich bei Ihnen</b> 2025 familiär <b>etwas geändert</b>?<br>
+<b>Frau Keller:</b> Ja, ich arbeite seit August wieder 40 Prozent.<br>
+<b>Sie:</b> Dann <b>brauchen wir</b> auch Ihren Lohnausweis. <b>Werden</b> die Kinder fremdbetreut?<br>
+<b>Frau Keller:</b> Tim geht in die Kita.<br>
+<b>Sie:</b> Bitte <b>schicken Sie uns</b> die Jahresabrechnung der Kita.</p>
+</div>
+<div class="tbl"><table>
+<tr><th>Фраза</th><th>Значення</th></tr>
+<tr><td>Hat sich familiär etwas geändert?</td><td>Чи змінилося щось у сім’ї?</td></tr>
+<tr><td>Werden die Kinder fremdbetreut?</td><td>Чи доглядає дітей хтось інший (Kita, няня)?</td></tr>
+<tr><td>die Jahresabrechnung der Kita</td><td>річний рахунок від Kita</td></tr>
+<tr><td>Wir brauchen auch …</td><td>Нам також потрібен …</td></tr>
+</table></div>
+<p class="small"><b>Граматика:</b> питання «так/ні» починається з дієслова: «<b>Werden</b> die Kinder fremdbetreut?»</p>
+<h4>Вправа: вставте слово</h4>
+<div id="gapEx" class="gap"></div>
+<div class="row" style="margin-top:8px"><button class="btn ghost" id="gapCheck">Перевірити</button><span id="gapRes" class="muted small"></span></div>`,
+ gaps:[
+  {pre:'Hat sich bei Ihnen familiär etwas',opts:['geändert','ändern','geänderte'],a:0,post:'?'},
+  {pre:'',opts:['Werden','Wird','Wurdest'],a:0,post:'die Kinder fremdbetreut?'},
+  {pre:'Dann brauchen wir auch',opts:['Ihren','Ihr','Ihrem'],a:0,post:'Lohnausweis.'},
+  {pre:'Bitte',opts:['schicken','schickt','geschickt'],a:0,post:'Sie uns die Jahresabrechnung.'},
+  {pre:'Ehegatten werden',opts:['gemeinsam','gemeinsame','gemeinsamer'],a:0,post:'veranlagt.'}
+ ],
+ check:[
+  {area:'Theorie',q:'Пара одружилася 20.12.2025. Як подають за 2025?',o:['Окремо','Спільно за весь 2025','Спільно лише за грудень','На вибір'],a:1,ex:'Шлюб у будь-який день податкового року → спільна декларація за весь рік.'},
+  {area:'Theorie',q:'Менший дохід у подружжі після Abzüge — 5’000. Скільки Abzug за другий дохід у ZH?',o:['6’100','5’000','0','8’600'],a:1,ex:'Максимум 6’100, але не більше за менший дохід. Тому 5’000.'},
+  {area:'Theorie',q:'Пара живе разом без шлюбу, має спільну дитину. Скільки декларацій?',o:['Одна','Дві окремі','Три','Жодної'],a:1,ex:'Konkubinat: кожен подає окремо.'},
+  {area:'Повторення · День 10',q:'Людина з дозволом B вийшла заміж за швейцарця у вересні. Як оподатковується цей рік?',o:['QSt до вересня','Звичайна декларація за весь рік','Лише QSt','NOV за вибором'],a:1,ex:'Повторення з Дня 10: шлюб зі швейцарцем / людиною з C → звичайна декларація за весь рік.'},
+  {area:'Повторення · День 10',q:'Після першої добровільної NOV…',o:['Можна повернутися лише до QSt','NOV буде щороку, поки людина на QSt','Треба просити щороку','Податок не платять'],a:1,ex:'Повторення з Дня 10: назад дороги немає.'}
+ ]
+},
+12:{
+ theory:`
+<p class="big">Головна ідея: власне житло — це <b>дохід + майно + Abzüge</b>. Держава вважає, ніби ви здаєте житло самі собі.</p>
+
+<h4>Власний будинок у декларації (до кінця 2028)</h4>
+<div class="tbl"><table>
+<tr><th>Що</th><th>Кошик</th></tr>
+<tr><td><de>Eigenmietwert</de> (уявна оренда)</td><td>🎬 дохід</td></tr>
+<tr><td>Відсотки іпотеки</td><td>🎬 Abzug</td></tr>
+<tr><td>Ремонт / утримання</td><td>🎬 Abzug</td></tr>
+<tr><td>Вартість будинку (Steuerwert)</td><td>📸 майно</td></tr>
+<tr><td>Іпотека на 31.12</td><td>📸 борги</td></tr>
+</table></div>
+
+<h4>Ремонт: Pauschale або фактичні витрати</h4>
+<div class="tbl"><table>
+<tr><th></th><th>ZH</th><th>Bund</th></tr>
+<tr><td>Pauschale</td><td>20 % від Eigenmietwert</td><td>10 % (будинок до 10 років) / 20 % (старший)</td></tr>
+<tr><td>Фактичні</td><td colspan="2">за чеками. Щороку можна вибирати знову</td></tr>
+</table></div>
+<div class="callout note"><b>Важливо:</b> відраховують лише ремонт, що <b>зберігає</b> вартість (замінили стару кухню). Те, що <b>додає</b> вартість (новий зимовий сад), — ні.</div>
+
+<h4>Приклад: Familie Huber, 2025</h4>
+<div class="steps">
+ <div><span>+ Eigenmietwert</span><b class="num">24’000</b></div>
+ <div><span>− Hypothekarzinsen</span><b class="num">9’000</b></div>
+ <div><span>− Pauschale 20 % (чеків лише на 3’000, тому Pauschale вигідніша)</span><b class="num">4’800</b></div>
+ <div class="hl"><span>= додатковий дохід від будинку</span><b class="num">10’200</b></div>
+</div>
+
+<h4>Продаж: Grundstückgewinnsteuer</h4>
+<p class="small">Прибуток від продажу нерухомості в ZH оподатковує <b>громада</b> окремим податком. Що довше володіли, то менше податку: від <b>5 років</b> — знижка, від <b>20 років</b> — мінус 50 %. Менше 1–2 років — надбавка.</p>
+
+<h4>Запам’ятайте 3 речі</h4>
+<ol class="remember">
+ <li><span>Eigenmietwert — дохід, іпотека й ремонт — Abzüge.</span></li>
+ <li><span>Ремонт, що <b>додає</b> вартість, не відраховується.</span></li>
+ <li><span>Від <b>2029</b> року Eigenmietwert для власного житла скасують (рішення Bundesrat). До кінця 2028 усе як зараз.</span></li>
+</ol>
+<div class="callout level" style="margin-top:14px"><b>Що від вас чекатимуть як від Praktikantin:</b> внести Eigenmietwert з оцінки громади, відсотки з довідки банку і порівняти Pauschale з чеками.</div>
+<p class="small muted">Джерела: Wegleitung ZH 2025, с. 28–30; Zürcher Steuerbuch 225.1 (Grundstückgewinnsteuer); Bundesrat, повідомлення від 01.04.2026.</p>`,
+ full:`
+<h4>Як рахують Eigenmietwert у ZH</h4>
+<p>Будинок: 3,50 % від <i>Land- und Zeitbauwert</i>. Квартира (Stockwerkeigentum): 4,25 %. Оцінку надсилає Gemeindesteueramt. Якщо житло стало завеликим (діти виїхали), у винятках можна просити знижку (<de>Unternutzungsabzug</de>).</p>
+<h4>Grundstückgewinnsteuer ZH: тариф</h4>
+<div class="tbl"><table>
+<tr><th>Ставка</th><th>Частина прибутку</th></tr>
+<tr><td>10 %</td><td>перші 4’000</td></tr>
+<tr><td>15 %</td><td>наступні 6’000</td></tr>
+<tr><td>20 %</td><td>наступні 8’000</td></tr>
+<tr><td>25 %</td><td>наступні 12’000</td></tr>
+<tr><td>30 %</td><td>наступні 20’000</td></tr>
+<tr><td>35 %</td><td>наступні 50’000</td></tr>
+<tr><td>40 %</td><td>понад 100’000</td></tr>
+</table></div>
+<p>Прибуток 50’000 → 11’900. Володіли повних 10 років → мінус 20 % = 9’520. Менше 1 року: +50 %, менше 2 років: +25 %. Прибуток до 5’000 не оподатковується.</p>
+<h4>Після 2028</h4>
+<p>Разом з Eigenmietwert зникнуть і Abzüge за ремонт власного житла. Відсотки за іпотеку будуть обмежені. Кантони можуть запровадити податок на другі (вихідні) квартири.</p>
+<p class="small muted">Джерела: Wegleitung ZH 2025; ZStB 225.1; admin.ch, 01.04.2026.</p>`,
+ vocab:['die Liegenschaft','der Eigenmietwert','die Hypothek','der Hypothekarzins','die Unterhaltskosten','werterhaltend','wertvermehrend','der Pauschalabzug','die Grundstückgewinnsteuer','die Besitzesdauer'],
+ caseHtml:`
+<p><b>Ситуація:</b> Frau Brunner, власний будинок у Zürich (будинку 35 років), декларація <b>2025</b>.</p>
+<ol class="doclist">
+ <li>Eigenmietwert gemäss Bewertung: <b>25’000</b></li>
+ <li>Hypothek per 31.12.2025: <b>400’000</b>; Zinsen 2025: <b>6’000</b></li>
+ <li>Neue Küche (alte ersetzt, gleicher Standard): <b>30’000</b></li>
+ <li>Neuer Wintergarten (vorher nicht vorhanden): <b>40’000</b></li>
+</ol>
+<p><b>Ваші завдання:</b></p>
+<ol class="small">
+ <li>Що з ремонтів можна відрахувати?</li>
+ <li>Pauschale чи фактичні витрати: що вигідніше (ZH)?</li>
+ <li>Скільки додається / віднімається від доходу в ZH загалом?</li>
+</ol>`,
+ caseQs:['Які ремонти відраховуємо','Pauschale чи фактичні','Підсумок для доходу ZH'],
+ caseModel:`
+<p><b>1.</b> Кухня 30’000 — <b>так</b> (зберігає вартість). Зимовий сад 40’000 — <b>ні</b> (додає вартість; він збільшить вартість будинку для майна).</p>
+<p><b>2.</b> Pauschale: 20 % × 25’000 = 5’000. Фактичні: 30’000. → <b>фактичні 30’000</b>.</p>
+<p><b>3.</b> +25’000 − 6’000 − 30’000 = <b>−11’000</b>. Будинок цього року <b>зменшує</b> дохід.</p>
+<p class="small muted">Пастки: відрахувати зимовий сад; автоматично брати Pauschale; забути відсотки іпотеки.</p>`,
+ deutsch:`
+<p><b>Тема дня: питання до власника житла.</b></p>
+<div class="panel" style="font-size:.97rem">
+<p><b>Sie:</b> Haben Sie 2025 <b>Unterhaltsarbeiten</b> am Haus ausgeführt?<br>
+<b>Frau Brunner:</b> Ja, eine neue Küche und einen Wintergarten.<br>
+<b>Sie:</b> Die Küche <b>ist abzugsfähig</b>, weil sie die alte ersetzt. Der Wintergarten <b>ist wertvermehrend</b> und deshalb nicht abzugsfähig.<br>
+<b>Frau Brunner:</b> Schade. Was brauchen Sie noch?<br>
+<b>Sie:</b> Die Zinsbestätigung der Bank <b>per 31. Dezember</b> und alle Rechnungen.</p>
+</div>
+<div class="tbl"><table>
+<tr><th>Фраза</th><th>Значення</th></tr>
+<tr><td>… ist abzugsfähig</td><td>… можна відрахувати</td></tr>
+<tr><td>… ist wertvermehrend</td><td>… збільшує вартість</td></tr>
+<tr><td>die Zinsbestätigung der Bank</td><td>довідка банку про відсотки</td></tr>
+<tr><td>weil sie die alte ersetzt</td><td>бо вона замінює стару</td></tr>
+</table></div>
+<p class="small"><b>Граматика:</b> після <i>weil</i> дієслово в кінці: «…weil sie die alte <b>ersetzt</b>.»</p>
+<h4>Вправа: вставте слово</h4>
+<div id="gapEx" class="gap"></div>
+<div class="row" style="margin-top:8px"><button class="btn ghost" id="gapCheck">Перевірити</button><span id="gapRes" class="muted small"></span></div>`,
+ gaps:[
+  {pre:'Die Küche ist abzugsfähig, weil sie die alte',opts:['ersetzt','ersetzen','ersetzt hat sie'],a:0,post:'.'},
+  {pre:'Der Wintergarten ist',opts:['wertvermehrend','werterhaltend','wertlos'],a:0,post:'.'},
+  {pre:'Bitte senden Sie uns die Zinsbestätigung',opts:['per','um','seit'],a:0,post:'31. Dezember.'},
+  {pre:'Haben Sie Unterhaltsarbeiten',opts:['ausgeführt','ausführen','ausführt'],a:0,post:'?'},
+  {pre:'Der Eigenmietwert ist als Einkommen zu',opts:['versteuern','versteuert','versteuerte'],a:0,post:'.'}
+ ],
+ check:[
+  {area:'Theorie',q:'Eigenmietwert 20’000, чеків на ремонт 2’500 (ZH). Що беремо?',o:['2’500','Pauschale 4’000','0','20’000'],a:1,ex:'Pauschale 20 % × 20’000 = 4’000 більша за 2’500.'},
+  {area:'Theorie',q:'Новий басейн у саду, якого раніше не було. Можна відрахувати?',o:['Так','Ні, він додає вартість','Лише 50 %','Лише в Bund'],a:1,ex:'Wertvermehrende Investitionen не відраховуються.'},
+  {area:'Theorie',q:'Хто стягує Grundstückgewinnsteuer у ZH?',o:['Bund','Kanton','Громада, де нерухомість','Банк'],a:2,ex:'Grundstückgewinnsteuer у ZH стягує громада місцезнаходження.'},
+  {area:'Повторення · День 11',q:'Подружжя з 2 дітьми (ZH, з PK). Максимум страховок?',o:['2’900','5’800','8’400','5’100'],a:2,ex:'Повторення з Дня 11: 5’800 + 2 × 1’300 = 8’400.'},
+  {area:'Повторення · День 8',q:'Іпотека на 1.1 — 410’000, на 31.12 — 400’000. Що в борги?',o:['410’000','400’000','405’000','0'],a:1,ex:'Повторення з Дня 8: борги — «фото» на 31.12.'}
+ ]
+},
+13:{
+ theory:`
+<p class="big">Головна ідея: <b>доходи</b> від заощаджень оподатковуються, а <b>прибуток від продажу</b> акцій приватною особою — ні.</p>
+
+<div class="tbl"><table>
+<tr><th>Що</th><th>Податок?</th></tr>
+<tr><td>Відсотки, дивіденди, дохід фонду</td><td>✅ дохід</td></tr>
+<tr><td>Прибуток від продажу акцій / ETF / Bitcoin (приватно)</td><td>❌ не оподатковується</td></tr>
+<tr><td>Збиток від продажу</td><td>❌ не відраховується</td></tr>
+<tr><td>Вартість на 31.12</td><td>✅ майно</td></tr>
+</table></div>
+
+<h4>Verrechnungssteuer (VST): 35 %</h4>
+<p class="small">Швейцарський банк або компанія одразу забирає <b>35 %</b> швейцарських відсотків і дивідендів. Хто чесно задекларував дохід, отримує ці 35 % назад.</p>
+<div class="steps">
+ <div><span>Дивіденд швейцарської акції брутто</span><b class="num">1’000</b></div>
+ <div><span>− VST 35 %</span><b class="num">350</b></div>
+ <div><span>Клієнт отримав на рахунок</span><b class="num">650</b></div>
+ <div class="hl"><span>У декларацію: <b>1’000</b> (брутто!) → 350 повертають</span><b>✓</b></div>
+</div>
+<p class="small">Відсотки на банківському рахунку до <b>200 CHF</b> на рік VST не мають. Але дохід однаково треба декларувати.</p>
+
+<h4>Wertschriftenverzeichnis: дві колонки</h4>
+<div class="tbl"><table>
+<tr><th>Колонка</th><th>Що</th></tr>
+<tr><td><b>A</b></td><td>з VST: швейцарські акції, фонди, рахунки з відсотками понад 200</td></tr>
+<tr><td><b>B</b></td><td>без VST: іноземні акції й ETF, рахунки з малими відсотками</td></tr>
+</table></div>
+
+<h4>Запам’ятайте 3 речі</h4>
+<ol class="remember">
+ <li><span>Дивіденди — <b>брутто</b>, як у Steuerauszug, а не те, що прийшло на рахунок.</span></li>
+ <li><span>Прибуток від продажу — 0 податку, але <b>майно на 31.12</b> вносимо.</span></li>
+ <li><span>Bitcoin: курс ESTV на 31.12 → майно. Staking / mining — це вже дохід, уточнюйте.</span></li>
+</ol>
+<div class="callout level" style="margin-top:14px"><b>Що від вас чекатимуть як від Praktikantin:</b> імпортувати eSteuerauszug, перевірити колонки A/B і запитати про іноземні рахунки й крипту.</div>
+<p class="small muted">Джерела: Wegleitung ZH 2025, с. 24–27; ESTV (VST 35 %).</p>`,
+ full:`
+<h4>Qualifizierte Beteiligungen (від 10 %)</h4>
+<p>Хто має щонайменше 10 % капіталу компанії, платить податок лише з частини дивідендів: ZH відраховує 50 %, Bund — 30 % (тобто оподатковується 70 %). Позначка «Q» у Wertschriftenverzeichnis.</p>
+<h4>Іноземні дивіденди</h4>
+<p>Іноземна держава теж утримує свій податок. Частину можна повернути або зарахувати (для США — через форму DA-1). Це для досвідчених колег.</p>
+<h4>Коли продаж акцій — уже не «приватно»</h4>
+<p>Дуже часті угоди, великі кредити для купівлі акцій, короткий термін володіння можуть перетворити людину на «професійного трейдера». Тоді прибуток оподатковується. Рішення приймає Steueramt.</p>
+<h4>ETF / фонди</h4>
+<p>Фонди, які не виплачують, а реінвестують дохід (thesaurierend), однаково дають оподатковуваний дохід. Значення беруть з Kursliste ESTV.</p>
+<p class="small muted">Джерела: Wegleitung ZH 2025, с. 17, 24–27.</p>`,
+ vocab:['die Dividende','der Zins','der Bruttoertrag','die Verrechnungssteuer zurückfordern','der Kapitalgewinn','der Kapitalverlust','die qualifizierte Beteiligung','thesaurierend','ausschüttend','das Staking'],
+ caseHtml:`
+<p><b>Ситуація:</b> Herr Wyss, ledig, Zürich. Steuerauszug 2025:</p>
+<ol class="doclist">
+ <li>UBS-Konto: Zinsen <b>150</b>; Saldo 31.12. <b>30’000</b></li>
+ <li>Nestlé-Aktien: Dividende brutto <b>800</b> (gutgeschrieben 520); Wert 31.12. <b>12’000</b></li>
+ <li>Apple-Aktien (USA): Dividende <b>200</b>; Wert 31.12. <b>9’000</b></li>
+ <li>ETF verkauft im Mai: Gewinn <b>4’000</b></li>
+</ol>
+<p><b>Ваші завдання:</b></p>
+<ol class="small">
+ <li>Що з цього — дохід і скільки разом?</li>
+ <li>Що в колонці A, що в B?</li>
+ <li>Скільки VST повернуть?</li>
+</ol>`,
+ caseQs:['Дохід разом','Колонки A / B','VST до повернення'],
+ caseModel:`
+<p><b>1. Дохід:</b> 150 + 800 + 200 = <b>1’150</b>. Прибуток ETF 4’000 — не оподатковується.</p>
+<p><b>2.</b> <b>A:</b> Nestlé (800). <b>B:</b> UBS-рахунок (150, менше за 200, без VST), Apple (200).</p>
+<p><b>3.</b> 35 % × 800 = <b>280</b> (800 − 520).</p>
+<p><b>Майно:</b> 30’000 + 12’000 + 9’000 = 51’000.</p>
+<p class="small muted">Пастки: внести 520 замість 800; оподаткувати прибуток ETF; UBS у колонку A.</p>`,
+ deutsch:`
+<p><b>Тема дня: пояснити клієнту Verrechnungssteuer.</b></p>
+<div class="panel" style="font-size:.97rem">
+<p><b>Herr Wyss:</b> Warum habe ich nur 520 Franken bekommen?<br>
+<b>Sie:</b> Die Bank <b>hat</b> 35 Prozent Verrechnungssteuer <b>abgezogen</b>.<br>
+<b>Herr Wyss:</b> Ist das Geld weg?<br>
+<b>Sie:</b> Nein. <b>Wenn Sie</b> die Dividende korrekt <b>deklarieren</b>, erhalten Sie die 280 Franken zurück.<br>
+<b>Herr Wyss:</b> Und der Gewinn aus dem ETF?<br>
+<b>Sie:</b> <b>Private Kapitalgewinne sind steuerfrei.</b></p>
+</div>
+<div class="tbl"><table>
+<tr><th>Фраза</th><th>Значення</th></tr>
+<tr><td>Die Bank hat … abgezogen.</td><td>Банк утримав …</td></tr>
+<tr><td>Wenn Sie … deklarieren, …</td><td>Якщо ви задекларуєте …, …</td></tr>
+<tr><td>Sie erhalten … zurück.</td><td>Вам повернуть …</td></tr>
+<tr><td>Private Kapitalgewinne sind steuerfrei.</td><td>Приватний прибуток від продажу не оподатковується.</td></tr>
+</table></div>
+<p class="small"><b>Граматика:</b> після <i>wenn</i> дієслово в кінці, а головне речення починається з дієслова: «Wenn Sie … <b>deklarieren</b>, <b>erhalten</b> Sie …»</p>
+<h4>Вправа: вставте слово</h4>
+<div id="gapEx" class="gap"></div>
+<div class="row" style="margin-top:8px"><button class="btn ghost" id="gapCheck">Перевірити</button><span id="gapRes" class="muted small"></span></div>`,
+ gaps:[
+  {pre:'Die Bank hat 35 Prozent',opts:['abgezogen','abziehen','abgezieht'],a:0,post:'.'},
+  {pre:'Wenn Sie die Dividende korrekt deklarieren,',opts:['erhalten','Sie erhalten','erhaltet'],a:0,post:'Sie das Geld zurück.'},
+  {pre:'Private Kapitalgewinne sind',opts:['steuerfrei','steuerbar','besteuern'],a:0,post:'.'},
+  {pre:'Bitte deklarieren Sie den',opts:['Bruttobetrag','Nettobetrag','Betrag netto'],a:0,post:'der Dividende.'},
+  {pre:'Der Kapitalverlust ist nicht',opts:['abzugsfähig','abzugsfähige','abzug'],a:0,post:'.'}
+ ],
+ check:[
+  {area:'Theorie',q:'Клієнт отримав на рахунок 1’300 швейцарського дивіденду (після VST). Яка сума брутто?',o:['1’300','2’000','1’755','3’714'],a:1,ex:'1’300 — це 65 %. 1’300 ÷ 0.65 = 2’000.'},
+  {area:'Theorie',q:'Клієнт продав акції з прибутком 10’000 (приватно, рідкісні угоди). Податок на дохід?',o:['10’000 як дохід','0, приватний прибуток не оподатковується','35 % VST','Половина'],a:1,ex:'Приватні Kapitalgewinne не оподатковуються. Майно на 31.12 вносимо.'},
+  {area:'Theorie',q:'Відсотки на швейцарському рахунку — 120 за рік. Є VST?',o:['Так, 35 %','Ні, до 200 немає VST, але дохід декларуємо','Ні, і не декларуємо','Лише 10 %'],a:1,ex:'Відсотки до 200 на рік VST не мають. Дохід однаково вносимо.'},
+  {area:'Повторення · День 12',q:'Новий зимовий сад на будинку. Відраховуємо?',o:['Так','Ні, це додає вартість','Лише Pauschale','50 %'],a:1,ex:'Повторення з Дня 12: wertvermehrend — не відраховується.'},
+  {area:'Повторення · День 12',q:'Eigenmietwert 30’000, чеків 4’000 (ZH). Що беремо?',o:['4’000','Pauschale 6’000','30’000','0'],a:1,ex:'Повторення з Дня 12: 20 % × 30’000 = 6’000 більше за 4’000.'}
+ ]
+},
+14:{
+ theory:`
+<p class="big">Сьогодні ви — <b>друга пара очей</b>. Колега заповнила декларацію. Ваше завдання: знайти помилки до того, як її підпише клієнт.</p>
+
+<h4>Чеклист перевірки (від загального до деталей)</h4>
+<div class="steps">
+ <div><span><b>1. Особисте:</b> сімейний стан, діти, громада на 31.12</span></div>
+ <div><span><b>2. Доходи:</b> усі Lohnausweise, брутто дивідендів, Eigenmietwert</span></div>
+ <div><span><b>3. Abzüge:</b> кожен ≤ максимуму; нічого не забуто (3 %, другий дохід)</span></div>
+ <div><span><b>4. Майно і борги:</b> на 31.12; Hausrat і 3a не вносимо</span></div>
+ <div class="hl"><span><b>5. Порівняння з минулим роком:</b> великі зміни мають пояснення?</span></div>
+</div>
+
+<h4>Найчастіші помилки (з ваших тижнів)</h4>
+<div class="tbl"><table>
+<tr><th>Помилка</th><th>Як помітити</th></tr>
+<tr><td>Забута Pauschale 3 %</td><td>У кожного найманого працівника є цей рядок</td></tr>
+<tr><td>Сума понад максимум</td><td>3a 7’258; Fahrkosten 5’200 / 3’300; Verpflegung 3’200</td></tr>
+<tr><td>Дивіденд нетто замість брутто</td><td>Сума в декларації ≠ Steuerauszug</td></tr>
+<tr><td>Борг або майно не на 31.12</td><td>Дата документа</td></tr>
+<tr><td>Згадка клієнта без документа</td><td>Перечитайте лист клієнта</td></tr>
+</table></div>
+
+<h4>Як повідомити про помилку</h4>
+<p class="small">Коротко, з фактом і джерелом: «Ziffer 3.1: 3a 8’000 → max. 7’258 (Wegleitung 2025).» Без «ти помилилася».</p>
+
+<h4>Запам’ятайте 3 речі</h4>
+<ol class="remember">
+ <li><span>Перевіряйте <b>за чеклистом</b>, а не «на око».</span></li>
+ <li><span>Порівнюйте з <b>торішнім рішенням</b>: різниця підкаже помилку.</span></li>
+ <li><span>Кожну правку — з <b>джерелом</b>.</span></li>
+</ol>
+<div class="callout level" style="margin-top:14px"><b>Що від вас чекатимуть як від Praktikantin:</b> знайти й записати помилки. Виправляє й підписує перевірку Teamleiterin.</div>`,
+ full:`
+<h4>Чому «друга пара очей»</h4>
+<p>У Treuhand відповідальність за якість лежить на фірмі. Більшість офісів працюють за <b>Vier-Augen-Prinzip</b>: хто готує, той не перевіряє сам себе. Перевірки фіксують (ініціали, дата), щоб було видно, хто що перевірив.</p>
+<h4>Аналітична перевірка</h4>
+<p>Порівняйте ключові цифри з минулим роком: дохід, Abzüge, майно. Зміна понад ~10–20 % без пояснення — сигнал перевірити документи. Приклад: майно зросло на 40’000, а дохід лише 70’000 — звідки гроші? Спадщина? Тоді потрібні документи.</p>`,
+ vocab:['die Kontrolle','das Vier-Augen-Prinzip','die Abweichung','der Vorjahresvergleich','plausibel','die Korrektur','der Hinweis','übersehen','überprüfen','die Unterschrift'],
+ caseHtml:`
+<p><b>Ситуація:</b> перевірте декларацію <b>2025</b> подружжя Graf (Zürich), яку підготувала колега. Обоє працюють, 1 дитина (2020), будинок.</p>
+<div class="tbl"><table>
+<tr><th>Рядок у чернетці</th><th class="num">Сума</th><th>Документ</th></tr>
+<tr><td>Lohn Herr Graf</td><td class="num">95’000</td><td>Lohnausweis ✓</td></tr>
+<tr><td>Lohn Frau Graf</td><td class="num">40’000</td><td>Lohnausweis ✓</td></tr>
+<tr><td>Dividende Swisscom</td><td class="num">650</td><td>Steuerauszug: brutto 1’000</td></tr>
+<tr><td>Eigenmietwert</td><td class="num">—</td><td>Bewertung: 22’000</td></tr>
+<tr><td>Fahrkosten Herr Graf</td><td class="num">6’000</td><td>Auto, без пояснення</td></tr>
+<tr><td>Berufsauslagen 3 %</td><td class="num">лише Herr</td><td></td></tr>
+<tr><td>Säule 3a Frau Graf</td><td class="num">8’000</td><td>Bescheinigung 8’000</td></tr>
+<tr><td>Kinderabzug</td><td class="num">—</td><td></td></tr>
+<tr><td>Hypothek (Schulden)</td><td class="num">520’000</td><td>Bank: 1.1. 520’000 / 31.12. 500’000</td></tr>
+</table></div>
+<p><b>Завдання:</b> знайдіть усі помилки й напишіть коротку правку для кожної.</p>`,
+ caseQs:['Список помилок','Що ще спитати в клієнтів'],
+ caseModel:`
+<ol>
+ <li>Дивіденд: <b>1’000</b> брутто, а не 650 (колонка A, VST 350 повернуть).</li>
+ <li><b>Eigenmietwert 22’000</b> бракує в доходах.</li>
+ <li>Fahrkosten <b>6’000</b> → максимум ZH 5’200, Bund 3’300. До того ж авто — лише у винятках (потрібне пояснення); інакше беремо вартість громадського транспорту.</li>
+ <li>Pauschale 3 % <b>для Frau Graf</b> теж: 3 % × 40’000 = 1’200 → мінімум <b>2’000</b>.</li>
+ <li>3a Frau Graf: <b>7’258</b>, а не 8’000.</li>
+ <li><b>Kinderabzug</b> бракує: ZH 9’300, Bund 6’800.</li>
+ <li>Hypothek: <b>500’000</b> на 31.12, а не 520’000.</li>
+ <li>Бракує <b>Abzug за другий дохід</b> (обоє працюють).</li>
+</ol>
+<p><b>Спитати:</b> чому авто (час / здоров’я)? Hypothekarzinsen і ремонт? Kita? Чи повернуть надлишок 3a (742)?</p>`,
+ deutsch:`
+<p><b>Тема дня: коротко й ввічливо повідомити колезі про помилки.</b></p>
+<div class="panel" style="font-size:.97rem">
+<p><b>Sie:</b> Hoi Sandra, ich habe die Erklärung Graf <b>kontrolliert</b>. <b>Mir sind</b> ein paar Punkte <b>aufgefallen</b>.<br>
+<b>Sandra:</b> Oh, welche?<br>
+<b>Sie:</b> Der Eigenmietwert <b>fehlt</b>, und die Säule 3a ist <b>auf</b> 7’258 <b>zu kürzen</b>. Ich habe dir eine Liste <b>mit Quellen</b> geschickt.<br>
+<b>Sandra:</b> Danke, das <b>habe ich übersehen</b>!</p>
+</div>
+<div class="tbl"><table>
+<tr><th>Фраза</th><th>Значення</th></tr>
+<tr><td>Mir sind ein paar Punkte aufgefallen.</td><td>Я помітила кілька моментів.</td></tr>
+<tr><td>… fehlt.</td><td>… бракує.</td></tr>
+<tr><td>… ist auf … zu kürzen.</td><td>… треба зменшити до …</td></tr>
+<tr><td>Das habe ich übersehen.</td><td>Я це пропустила.</td></tr>
+</table></div>
+<p class="small"><b>Граматика:</b> «Mir <b>ist</b> … aufgefallen» / «Mir <b>sind</b> … aufgefallen» — дієслово узгоджується з тим, <b>що</b> помітили.</p>
+<h4>Вправа: вставте слово</h4>
+<div id="gapEx" class="gap"></div>
+<div class="row" style="margin-top:8px"><button class="btn ghost" id="gapCheck">Перевірити</button><span id="gapRes" class="muted small"></span></div>`,
+ gaps:[
+  {pre:'Mir',opts:['sind','ist','habe'],a:0,post:'ein paar Punkte aufgefallen.'},
+  {pre:'Der Eigenmietwert',opts:['fehlt','fehlen','gefehlt'],a:0,post:'.'},
+  {pre:'Die Säule 3a ist auf 7’258',opts:['zu kürzen','kürzen','gekürzt zu'],a:0,post:'.'},
+  {pre:'Das habe ich',opts:['übersehen','übersieht','übersah'],a:0,post:'.'},
+  {pre:'Ich habe die Erklärung',opts:['kontrolliert','kontrollieren','kontrolliere'],a:0,post:'.'}
+ ],
+ check:[
+  {area:'Theorie',q:'Майно клієнта зросло з 50’000 до 150’000, дохід 80’000. Що робите?',o:['Нічого','Питаєте, звідки гроші (спадщина, дарування?)','Зменшуєте майно','Видаляєте рядок'],a:1,ex:'Різке зростання без пояснення — сигнал. Спадщина чи дарування потребують документів.'},
+  {area:'Theorie',q:'Хто остаточно виправляє й підписує перевірку в Treuhand?',o:['Praktikantin','Teamleiterin / відповідальна особа','Клієнт','Steueramt'],a:1,ex:'Praktikantin знаходить і записує. Відповідає й підписує досвідчена людина.'},
+  {area:'Theorie',q:'Як найкраще написати правку?',o:['«Тут помилка»','«3a 8’000 → max. 7’258 (Wegleitung 2025)»','Виправити мовчки','Сказати клієнту'],a:1,ex:'Коротко: рядок, правильна сума, джерело.'},
+  {area:'Повторення · День 13',q:'Дивіденд Swisscom: на рахунок прийшло 650. Що вносимо?',o:['650','1’000','350','0'],a:1,ex:'Повторення з Дня 13: брутто = 650 ÷ 0.65 = 1’000.'},
+  {area:'Повторення · День 11',q:'Обоє з подружжя працюють. Що часто забувають?',o:['Abzug за другий дохід','Hausrat','Kirchensteuer','VST'],a:0,ex:'Повторення з Дня 11: Sonderabzug bei Erwerbstätigkeit beider Ehegatten.'}
+ ]
+},
+15:{
+ theory:`
+<p class="big">Головна ідея: <b>Bilanz</b> — це «фото» фірми на 31.12 (що має і кому винна). <b>Erfolgsrechnung</b> — «фільм» за рік (заробила чи втратила). Як у декларації людини!</p>
+
+<h4>Bilanz: дві сторони завжди рівні</h4>
+<div class="tbl"><table>
+<tr><th>Aktiven (що фірма має)</th><th class="num">CHF</th><th>Passiven (звідки гроші)</th><th class="num">CHF</th></tr>
+<tr><td>Kasse, Bank</td><td class="num">30’000</td><td>Kreditoren (борги постачальникам)</td><td class="num">15’000</td></tr>
+<tr><td>Debitoren (клієнти винні)</td><td class="num">20’000</td><td>Bankdarlehen (кредит)</td><td class="num">25’000</td></tr>
+<tr><td>Mobiliar, Fahrzeuge</td><td class="num">50’000</td><td><b>Eigenkapital</b> (власні гроші)</td><td class="num">60’000</td></tr>
+<tr><td><b>Total</b></td><td class="num"><b>100’000</b></td><td><b>Total</b></td><td class="num"><b>100’000</b></td></tr>
+</table></div>
+<p class="small"><b>Eigenkapital = Aktiven − Fremdkapital.</b> Як Reinvermögen у людини.</p>
+
+<h4>Erfolgsrechnung: результат за рік</h4>
+<div class="steps">
+ <div><span>Ertrag (виручка від послуг)</span><b class="num">200’000</b></div>
+ <div><span>− Aufwand (зарплати, оренда, матеріали)</span><b class="num">170’000</b></div>
+ <div class="hl"><span>= Gewinn (прибуток)</span><b class="num">30’000</b></div>
+</div>
+<p class="small">Прибуток <b>збільшує Eigenkapital</b>. Збиток — зменшує.</p>
+
+<h4>Запам’ятайте 3 речі</h4>
+<ol class="remember">
+ <li><span>Bilanz = 📸 на 31.12, Erfolgsrechnung = 🎬 за рік.</span></li>
+ <li><span>Aktiven <b>завжди</b> = Passiven.</span></li>
+ <li><span>Прибуток іде в Eigenkapital.</span></li>
+</ol>
+<div class="callout level" style="margin-top:14px"><b>Що від вас чекатимуть як від Praktikantin:</b> читати Bilanz і Erfolgsrechnung клієнта й розуміти, до якої сторони належить рахунок.</div>`,
+ full:`
+<h4>Порядок у Bilanz (Швейцарія)</h4>
+<p>Aktiven: спершу <b>Umlaufvermögen</b> (гроші, Debitoren, запаси — швидко стає грошима), потім <b>Anlagevermögen</b> (меблі, машини, нерухомість — довго). Passiven: спершу <b>Fremdkapital</b> (короткострокове, потім довгострокове), потім <b>Eigenkapital</b>.</p>
+<h4>Обов’язок вести облік</h4>
+<p>Компанії (GmbH, AG) ведуть повну бухгалтерію. Einzelunternehmen з оборотом менше 500’000 CHF можуть вести спрощений облік: лише доходи, витрати й майно (OR 957).</p>`,
+ vocab:['die Bilanz','die Erfolgsrechnung','die Aktiven','die Passiven','das Eigenkapital','das Fremdkapital','das Umlaufvermögen','das Anlagevermögen','der Ertrag','der Aufwand'],
+ caseHtml:`
+<p><b>Ситуація:</b> Malerei Rossi GmbH, 31.12.2025. Розкладіть рахунки по Bilanz або Erfolgsrechnung.</p>
+<ol class="doclist">
+ <li>Bank 18’000 · Debitoren 12’000 · Fahrzeug 25’000</li>
+ <li>Kreditoren 9’000 · Bankdarlehen 20’000</li>
+ <li>Umsatz 180’000 · Löhne 120’000 · Miete 24’000 · Material 21’000</li>
+</ol>
+<p><b>Ваші завдання:</b></p>
+<ol class="small">
+ <li>Що в Aktiven, що в Passiven, що в Erfolgsrechnung?</li>
+ <li>Скільки Gewinn?</li>
+ <li>Скільки Eigenkapital на 31.12?</li>
+</ol>`,
+ caseQs:['Aktiven / Passiven / ER','Gewinn','Eigenkapital'],
+ caseModel:`
+<p><b>1.</b> Aktiven: Bank, Debitoren, Fahrzeug = 55’000. Passiven (Fremdkapital): Kreditoren, Darlehen = 29’000. Erfolgsrechnung: Umsatz, Löhne, Miete, Material.</p>
+<p><b>2.</b> 180’000 − 120’000 − 24’000 − 21’000 = <b>15’000</b></p>
+<p><b>3.</b> 55’000 − 29’000 = <b>26’000</b> (уже разом із прибутком 2025).</p>`,
+ deutsch:`
+<p><b>Тема дня: читати цифри вголос.</b></p>
+<div class="panel" style="font-size:.97rem">
+<p><b>Teamleiterin:</b> Wie sieht die Bilanz der Rossi GmbH aus?<br>
+<b>Sie:</b> <b>Die Aktiven betragen</b> 55’000 Franken. <b>Dem stehen</b> 29’000 Franken Fremdkapital <b>gegenüber</b>.<br>
+<b>Teamleiterin:</b> Und der Erfolg?<br>
+<b>Sie:</b> Die GmbH <b>hat einen Gewinn von</b> 15’000 Franken <b>erzielt</b>.</p>
+</div>
+<div class="tbl"><table>
+<tr><th>Фраза</th><th>Значення</th></tr>
+<tr><td>Die Aktiven betragen …</td><td>Активи становлять …</td></tr>
+<tr><td>Dem stehen … gegenüber.</td><td>Їм протистоять …</td></tr>
+<tr><td>einen Gewinn / Verlust erzielen</td><td>отримати прибуток / збиток</td></tr>
+</table></div>
+<h4>Вправа: вставте слово</h4>
+<div id="gapEx" class="gap"></div>
+<div class="row" style="margin-top:8px"><button class="btn ghost" id="gapCheck">Перевірити</button><span id="gapRes" class="muted small"></span></div>`,
+ gaps:[
+  {pre:'Die Aktiven',opts:['betragen','beträgt','betragt'],a:0,post:'55’000 Franken.'},
+  {pre:'Die GmbH hat einen Gewinn',opts:['erzielt','erzielen','erzielte'],a:0,post:'.'},
+  {pre:'Dem stehen 29’000 Franken Fremdkapital',opts:['gegenüber','gegen','über'],a:0,post:'.'},
+  {pre:'Die Bilanz zeigt den Stand',opts:['per','um','im'],a:0,post:'31. Dezember.'},
+  {pre:'Der Gewinn erhöht das',opts:['Eigenkapital','Fremdkapital','Umlaufvermögen'],a:0,post:'.'}
+ ],
+ check:[
+  {area:'Buchhaltung',q:'Debitoren — це…',o:['Борги фірми постачальникам','Гроші, які клієнти винні фірмі','Власний капітал','Витрати'],a:1,ex:'Debitoren — Aktiven: фірма ще отримає ці гроші.'},
+  {area:'Buchhaltung',q:'Aktiven 200’000, Fremdkapital 150’000. Eigenkapital?',o:['350’000','50’000','150’000','0'],a:1,ex:'Eigenkapital = Aktiven − Fremdkapital.'},
+  {area:'Buchhaltung',q:'Оренда офісу — це…',o:['Aktiven','Passiven','Aufwand в Erfolgsrechnung','Eigenkapital'],a:2,ex:'Оренда — витрата за період.'},
+  {area:'Повторення · День 13',q:'Приватна особа продала акції з прибутком. Податок на дохід?',o:['Так, усе','Ні, приватний Kapitalgewinn не оподатковується','35 %','Лише Bund'],a:1,ex:'Повторення з Дня 13.'},
+  {area:'Повторення · День 14',q:'Що робимо при перевірці декларації першим?',o:['Майно','Особисте: стан, діти, громада на 31.12','Підпис','MWST'],a:1,ex:'Повторення з Дня 14: від загального до деталей.'}
+ ]
+},
+16:{
+ theory:`
+<p class="big">Головна ідея: кожна операція записується <b>двічі</b>: на одному рахунку в <b>Soll</b>, на іншому в <b>Haben</b>. Суми завжди рівні.</p>
+
+<h4>Чотири правила</h4>
+<div class="tbl"><table>
+<tr><th>Тип рахунку</th><th>Збільшення</th><th>Зменшення</th></tr>
+<tr><td>Aktiv (Bank, Debitoren)</td><td><b>Soll</b></td><td>Haben</td></tr>
+<tr><td>Passiv (Kreditoren, Darlehen)</td><td><b>Haben</b></td><td>Soll</td></tr>
+<tr><td>Aufwand (витрати)</td><td><b>Soll</b></td><td>—</td></tr>
+<tr><td>Ertrag (доходи)</td><td><b>Haben</b></td><td>—</td></tr>
+</table></div>
+
+<h4>Buchungssatz: «Soll an Haben»</h4>
+<div class="tbl"><table>
+<tr><th>Що сталося</th><th>Soll</th><th>Haben</th><th class="num">CHF</th></tr>
+<tr><td>Клієнт оплатив рахунок на банк</td><td>1020 Bank</td><td>1100 Debitoren</td><td class="num">2’000</td></tr>
+<tr><td>Отримали рахунок за оренду</td><td>6000 Raumaufwand</td><td>2000 Kreditoren</td><td class="num">1’800</td></tr>
+<tr><td>Оплатили оренду з банку</td><td>2000 Kreditoren</td><td>1020 Bank</td><td class="num">1’800</td></tr>
+<tr><td>Виставили рахунок клієнту</td><td>1100 Debitoren</td><td>3400 Dienstleistungsertrag</td><td class="num">5’000</td></tr>
+</table></div>
+
+<h4>Kontenplan KMU: перша цифра підказує</h4>
+<div class="tbl"><table>
+<tr><th>Клас</th><th>Що</th></tr>
+<tr><td>1</td><td>Aktiven (1000 Kasse, 1020 Bank, 1100 Debitoren)</td></tr>
+<tr><td>2</td><td>Passiven (2000 Kreditoren, 2800 Eigenkapital)</td></tr>
+<tr><td>3</td><td>Ertrag (виручка)</td></tr>
+<tr><td>4–6</td><td>Aufwand (4 матеріали, 5 персонал, 6 інші витрати)</td></tr>
+<tr><td>7–9</td><td>інше й закриття</td></tr>
+</table></div>
+
+<h4>Запам’ятайте 3 речі</h4>
+<ol class="remember">
+ <li><span>Гроші <b>прийшли</b> на банк → Bank у <b>Soll</b>.</span></li>
+ <li><span>Гроші <b>пішли</b> з банку → Bank у <b>Haben</b>.</span></li>
+ <li><span>Витрата — <b>Soll</b>, дохід — <b>Haben</b>.</span></li>
+</ol>
+<div class="callout level" style="margin-top:14px"><b>Що від вас чекатимуть як від Praktikantin:</b> складати прості Buchungssätze і знаходити рахунки в Kontenplan. bexio робить багато з цього сам, але ви маєте розуміти, що він записав.</div>`,
+ full:`
+<h4>Чому «Soll» і «Haben»</h4>
+<p>Це історичні назви лівої й правої сторін рахунку. Не перекладайте їх буквально («має бути» / «має») — просто запам’ятайте: Soll ліворуч, Haben праворуч.</p>
+<h4>Перевірка балансу</h4>
+<p>Сума всіх Soll = сума всіх Haben. Якщо ні, десь помилка в записі. Програма не дасть зберегти незбалансований запис.</p>
+<h4>Kontenplan клієнта</h4>
+<p>Більшість KMU використовує <b>Kontenrahmen KMU</b>, але номери рахунків у конкретного клієнта можуть відрізнятися. Завжди відкривайте його Kontenplan.</p>`,
+ vocab:['das Soll','das Haben','der Buchungssatz','buchen','das Konto','der Kontenplan','der Kontenrahmen KMU','der Beleg','das Journal','der Saldo'],
+ caseHtml:`
+<p><b>Ситуація:</b> складіть Buchungssätze для IT-фірми (Kontenplan KMU).</p>
+<ol class="doclist">
+ <li>1 · Rechnung an Kunde für Beratung: 3’000</li>
+ <li>2 · Kunde bezahlt diese Rechnung auf die Bank</li>
+ <li>3 · Kauf eines Laptops, bar bezahlt: 1’500 (Konto 1520 Büromaschinen/IT)</li>
+ <li>4 · Bank belastet Spesen: 20 (Konto 6940 Bankspesen)</li>
+</ol>
+<p><b>Завдання:</b> для кожного — Soll, Haben, сума.</p>`,
+ caseQs:['Buchungssätze 1–4'],
+ caseModel:`
+<div class="tbl"><table>
+<tr><th>#</th><th>Soll</th><th>Haben</th><th class="num">CHF</th></tr>
+<tr><td>1</td><td>1100 Debitoren</td><td>3400 Dienstleistungsertrag</td><td class="num">3’000</td></tr>
+<tr><td>2</td><td>1020 Bank</td><td>1100 Debitoren</td><td class="num">3’000</td></tr>
+<tr><td>3</td><td>1520 IT</td><td>1000 Kasse</td><td class="num">1’500</td></tr>
+<tr><td>4</td><td>6940 Bankspesen</td><td>1020 Bank</td><td class="num">20</td></tr>
+</table></div>
+<p class="small muted">Пастка: у №2 клієнт платить <b>Debitoren</b>, а не Ertrag (дохід уже записано в №1).</p>`,
+ deutsch:`
+<p><b>Тема дня: проговорити проводку.</b></p>
+<div class="panel" style="font-size:.97rem">
+<p><b>Teamleiterin:</b> Wie verbuchst du die Bankspesen?<br>
+<b>Sie:</b> <b>Bankspesen an Bank</b>, 20 Franken.<br>
+<b>Teamleiterin:</b> Und die Zahlung des Kunden?<br>
+<b>Sie:</b> Bank an Debitoren. Der Ertrag <b>wurde</b> schon mit der Rechnung <b>gebucht</b>.</p>
+</div>
+<div class="tbl"><table>
+<tr><th>Фраза</th><th>Значення</th></tr>
+<tr><td>A an B</td><td>Soll A, Haben B</td></tr>
+<tr><td>Wie verbuchst du …?</td><td>Як ти проведеш …?</td></tr>
+<tr><td>… wurde schon gebucht.</td><td>… уже проведено.</td></tr>
+</table></div>
+<h4>Вправа: вставте слово</h4>
+<div id="gapEx" class="gap"></div>
+<div class="row" style="margin-top:8px"><button class="btn ghost" id="gapCheck">Перевірити</button><span id="gapRes" class="muted small"></span></div>`,
+ gaps:[
+  {pre:'Bank',opts:['an','auf','zu'],a:0,post:'Debitoren, 3’000 Franken.'},
+  {pre:'Der Ertrag wurde schon',opts:['gebucht','buchen','bucht'],a:0,post:'.'},
+  {pre:'Wie',opts:['verbuchst','verbuchen','verbucht'],a:0,post:'du die Bankspesen?'},
+  {pre:'Eine Zunahme der Aktiven steht im',opts:['Soll','Haben','Saldo'],a:0,post:'.'},
+  {pre:'Ein Ertrag steht im',opts:['Haben','Soll','Konto'],a:0,post:'.'}
+ ],
+ check:[
+  {area:'Buchhaltung',q:'Клієнт заплатив готівкою 500 за рахунок, виставлений раніше.',o:['Kasse an Debitoren','Debitoren an Kasse','Kasse an Ertrag','Ertrag an Kasse'],a:0,ex:'Kasse збільшується (Soll), Debitoren зменшуються (Haben).'},
+  {area:'Buchhaltung',q:'Рахунок 2000 — це…',o:['Kasse','Kreditoren','Ertrag','Löhne'],a:1,ex:'Клас 2 — Passiven. 2000 — Kreditoren.'},
+  {area:'Buchhaltung',q:'Витрата записується в…',o:['Soll','Haben','Будь-де','Не записується'],a:0,ex:'Aufwand — Soll.'},
+  {area:'Повторення · День 15',q:'Прибуток за рік…',o:['Зменшує Eigenkapital','Збільшує Eigenkapital','Не впливає','Йде в Kreditoren'],a:1,ex:'Повторення з Дня 15.'},
+  {area:'Повторення · bexio',q:'У bexio ручну проводку вносять…',o:['Нетто','Брутто, з MWST','Без MWST','Лише MWST'],a:1,ex:'Повторення з курсу bexio: суми вносять брутто.'}
+ ]
+},
+17:{
+ theory:`
+<p class="big">Головна ідея: <b>Debitoren</b> — нам винні клієнти, <b>Kreditoren</b> — винні ми. Кожен рахунок проходить шлях від виставлення до оплати.</p>
+
+<h4>Шлях рахунка клієнту (Debitor)</h4>
+<div class="steps">
+ <div><span>1. Рахунок: Debitoren an Ertrag</span><b>📄</b></div>
+ <div><span>2. Строк оплати (часто 30 днів)</span><b>⏳</b></div>
+ <div><span>3a. Оплатили: Bank an Debitoren</span><b>✅</b></div>
+ <div class="hl"><span>3b. Не оплатили: 1. Mahnung → 2. Mahnung → Betreibung</span><b>⚠</b></div>
+</div>
+
+<h4>Що має бути в рахунку</h4>
+<div class="tbl"><table>
+<tr><th>Обов’язково</th><th>Чому</th></tr>
+<tr><td>Ім’я й адреса обох сторін</td><td>хто кому</td></tr>
+<tr><td>Дата, номер рахунку</td><td>для пошуку й строків</td></tr>
+<tr><td>Опис послуги / товару, період</td><td>що саме</td></tr>
+<tr><td>Сума, ставка MWST, MWST-номер (якщо платник MWST)</td><td>щоб клієнт міг повернути Vorsteuer</td></tr>
+<tr><td>QR-частина для оплати</td><td>оплата й автоматичний Abgleich</td></tr>
+</table></div>
+
+<h4>Mahnung: тон зростає</h4>
+<div class="tbl"><table>
+<tr><th>Етап</th><th>Тон</th></tr>
+<tr><td>Zahlungserinnerung</td><td>дружнє нагадування</td></tr>
+<tr><td>1. Mahnung</td><td>новий строк</td></tr>
+<tr><td>2. Mahnung</td><td>попередження про Betreibung</td></tr>
+<tr><td>Betreibung</td><td>примусове стягнення (через Betreibungsamt)</td></tr>
+</table></div>
+
+<h4>Запам’ятайте 3 речі</h4>
+<ol class="remember">
+ <li><span>Перед Mahnung — <b>перевірте банк</b>: можливо, вже заплатили.</span></li>
+ <li><span>Debitoren — Aktiv, Kreditoren — Passiv.</span></li>
+ <li><span>Список відкритих позицій (<de>OP-Liste</de>) — щотижня.</span></li>
+</ol>
+<div class="callout level" style="margin-top:14px"><b>Що від вас чекатимуть як від Praktikantin:</b> вести OP-Liste, готувати нагадування на погодження, вносити рахунки постачальників.</div>`,
+ full:`
+<h4>Відсотки за прострочку</h4>
+<p>За замовчуванням закон (OR 104) передбачає 5 % річних за прострочку, якщо в договорі не вказано інше. Збори за Mahnung можна вимагати, лише якщо про них домовлено (наприклад, в AGB).</p>
+<h4>Delkredere</h4>
+<p>Якщо частина Debitoren, імовірно, не буде оплачена, на кінець року роблять резерв (<de>Delkredere</de>). Це тема Jahresabschluss (день 20).</p>
+<h4>Skonto</h4>
+<p>Знижка за швидку оплату, напр. «2 % Skonto innert 10 Tagen». Якщо клієнт скористався, різницю проводять як зменшення виручки.</p>`,
+ vocab:['der Debitor','der Kreditor','die offene Posten-Liste (OP-Liste)','die Zahlungsfrist','fällig','überfällig','die Zahlungserinnerung','die Betreibung','das Skonto','das Delkredere'],
+ caseHtml:`
+<p><b>Ситуація:</b> 15.03.2026. OP-Liste клієнта:</p>
+<div class="tbl"><table>
+<tr><th>Kunde</th><th>Rechnung</th><th>fällig</th><th class="num">CHF</th></tr>
+<tr><td>Bäckerei Lutz</td><td>RE-301</td><td>10.01.2026</td><td class="num">1’200</td></tr>
+<tr><td>Kanzlei Weber</td><td>RE-305</td><td>28.02.2026</td><td class="num">3’400</td></tr>
+<tr><td>Hotel Alpina</td><td>RE-309</td><td>31.03.2026</td><td class="num">2’000</td></tr>
+</table></div>
+<p>У банку є неопрацьований платіж 3’400 з текстом «Weber».</p>
+<p><b>Завдання:</b></p>
+<ol class="small">
+ <li>Що робимо з кожним рахунком?</li>
+ <li>Напишіть одне речення нагадування Bäckerei Lutz німецькою.</li>
+</ol>`,
+ caseQs:['Дія для кожного рахунку','Речення нагадування'],
+ caseModel:`
+<p><b>1.</b> Lutz: прострочено 2 місяці → <b>1. Mahnung</b> (або друга, якщо вже нагадували) на погодження Teamleiterin. Weber: <b>звести платіж</b> 3’400 у банку, не нагадувати! Alpina: ще не прострочено → нічого.</p>
+<p><b>2.</b> <i>«Leider haben wir für die Rechnung RE-301 vom … noch keine Zahlung erhalten. Wir bitten Sie, den Betrag von CHF 1’200 bis 31. März 2026 zu überweisen.»</i></p>`,
+ deutsch:`
+<p><b>Тема дня: ввічливе нагадування.</b></p>
+<div class="panel" style="font-size:.97rem">
+<p><i>Sehr geehrte Damen und Herren<br>
+<b>Bei der Durchsicht unserer Buchhaltung</b> haben wir festgestellt, dass die Rechnung RE-301 <b>noch offen ist</b>. <b>Sollte sich Ihre Zahlung</b> mit diesem Schreiben <b>gekreuzt haben</b>, betrachten Sie es bitte als gegenstandslos.<br>
+Freundliche Grüsse</i></p>
+</div>
+<div class="tbl"><table>
+<tr><th>Фраза</th><th>Значення</th></tr>
+<tr><td>Bei der Durchsicht unserer Buchhaltung …</td><td>Переглядаючи нашу бухгалтерію …</td></tr>
+<tr><td>… ist noch offen</td><td>… ще не оплачено</td></tr>
+<tr><td>Sollte sich Ihre Zahlung … gekreuzt haben, …</td><td>Якщо ваш платіж розминувся з цим листом, …</td></tr>
+<tr><td>… betrachten Sie es als gegenstandslos</td><td>… вважайте його неактуальним</td></tr>
+</table></div>
+<h4>Вправа: вставте слово</h4>
+<div id="gapEx" class="gap"></div>
+<div class="row" style="margin-top:8px"><button class="btn ghost" id="gapCheck">Перевірити</button><span id="gapRes" class="muted small"></span></div>`,
+ gaps:[
+  {pre:'Die Rechnung RE-301 ist noch',opts:['offen','auf','geöffnet'],a:0,post:'.'},
+  {pre:'Wir bitten Sie, den Betrag bis 31. März zu',opts:['überweisen','überwiesen','überweist'],a:0,post:'.'},
+  {pre:'Sollte sich Ihre Zahlung mit diesem Schreiben',opts:['gekreuzt','kreuzen','kreuzt'],a:0,post:'haben, …'},
+  {pre:'Leider haben wir noch keine Zahlung',opts:['erhalten','erhält','erhielten'],a:0,post:'.'},
+  {pre:'Die Rechnung ist seit zwei Monaten',opts:['überfällig','fällig','gefallen'],a:0,post:'.'}
+ ],
+ check:[
+  {area:'Buchhaltung',q:'Клієнт каже, що заплатив. Ваш перший крок?',o:['Mahnung','Перевірити банк і OP-Liste','Betreibung','Видалити рахунок'],a:1,ex:'Спершу перевіряємо надходження.'},
+  {area:'Buchhaltung',q:'Kreditoren — це…',o:['Aktiv','Passiv: ми винні','Ertrag','Eigenkapital'],a:1,ex:'Kreditoren — борги фірми постачальникам.'},
+  {area:'Buchhaltung',q:'Що потрібно в рахунку, щоб клієнт міг повернути Vorsteuer?',o:['Лише сума','MWST-номер і ставка MWST','Логотип','Телефон'],a:1,ex:'Без MWST-номера й ставки клієнт не може відрахувати Vorsteuer.'},
+  {area:'Повторення · День 16',q:'Клієнт оплатив рахунок на банк.',o:['Bank an Debitoren','Debitoren an Bank','Bank an Ertrag','Ertrag an Bank'],a:0,ex:'Повторення з Дня 16.'},
+  {area:'Повторення · День 16',q:'Рахунок класу 6 — це…',o:['Aktiv','Passiv','Aufwand','Ertrag'],a:2,ex:'Повторення з Дня 16: 4–6 — Aufwand.'}
+ ]
+},
+18:{
+ theory:`
+<p class="big">Головна ідея: MWST платить <b>кінцевий споживач</b>. Фірма лише збирає її з клієнтів і віднімає те, що сама заплатила постачальникам (<de>Vorsteuer</de>).</p>
+
+<h4>Ставки (з 2024)</h4>
+<div class="tbl"><table>
+<tr><th>Ставка</th><th>Для чого</th></tr>
+<tr><td><b>8.1 %</b></td><td>більшість товарів і послуг</td></tr>
+<tr><td><b>2.6 %</b></td><td>їжа, книги, ліки</td></tr>
+<tr><td><b>3.8 %</b></td><td>готелі (ночівля)</td></tr>
+<tr><td>без MWST</td><td>напр. оренда житла, медицина, освіта (ausgenommen)</td></tr>
+</table></div>
+
+<h4>Приклад: скільки заплатити ESTV</h4>
+<div class="steps">
+ <div><span>Продажі нетто 10’000 → MWST 8.1 %</span><b class="num">810</b></div>
+ <div><span>− Vorsteuer з покупок нетто 4’000 (8.1 %)</span><b class="num">324</b></div>
+ <div class="hl"><span>= до сплати ESTV</span><b class="num">486</b></div>
+</div>
+
+<h4>Хто платить MWST</h4>
+<p class="small">Фірма з оборотом від <b>100’000 CHF</b> на рік (по всьому світу) мусить зареєструватися. Менше — може добровільно.</p>
+
+<h4>Два методи</h4>
+<div class="tbl"><table>
+<tr><th></th><th>effektiv</th><th>Saldosteuersatz</th></tr>
+<tr><td>Як</td><td>MWST продажів − Vorsteuer</td><td>оборот × фіксована галузева ставка, без Vorsteuer</td></tr>
+<tr><td>Для кого</td><td>усі</td><td>до 5’024’000 обороту і до 108’000 податку</td></tr>
+<tr><td>Звіт</td><td>щокварталу</td><td>раз на пів року</td></tr>
+</table></div>
+
+<h4>Запам’ятайте 3 речі</h4>
+<ol class="remember">
+ <li><span>MWST з брутто: брутто × 8.1 / 108.1 (не × 8.1 %).</span></li>
+ <li><span>Vorsteuer — лише з <b>правильного</b> рахунку (MWST-номер, ставка).</span></li>
+ <li><span>Оборот від 100’000 → обов’язкова реєстрація.</span></li>
+</ol>
+<div class="callout level" style="margin-top:14px"><b>Що від вас чекатимуть як від Praktikantin:</b> перевіряти ставки в рахунках, звіряти MWST-звіт із Kontenblätter (1170 Vorsteuer, 2200 MWST).</div>
+<p class="small muted">Джерела: ESTV, «Grundsätze der Mehrwertsteuer» (Stand 2025); MWSTG Art. 10, 37.</p>`,
+ full:`
+<h4>Vereinbart чи vereinnahmt</h4>
+<p><b>Vereinbartes Entgelt</b> (стандарт): MWST рахують, коли виставили рахунок. <b>Vereinnahmtes Entgelt</b>: коли отримали гроші. Метод фіксують при реєстрації.</p>
+<h4>Bezugsteuer</h4>
+<p>Купили послугу з-за кордону (напр. софт)? Іноді MWST треба нарахувати самим: <de>Bezugsteuer</de>.</p>
+<h4>Річна звітність</h4>
+<p>З 2025 року за певних умов можна звітувати раз на рік з авансовими платежами. Умови й зміни дивіться на estv.admin.ch.</p>
+<p class="small muted">Джерела: ESTV MWST; Teilrevision MWSTG 2025.</p>`,
+ vocab:['die Mehrwertsteuer (MWST)','die Vorsteuer','die Umsatzsteuer','der Normalsatz','der reduzierte Satz','die Saldosteuersatzmethode','die effektive Methode','die MWST-Nummer','die MWST-Abrechnung','die Bezugsteuer'],
+ caseHtml:`
+<p><b>Ситуація:</b> Grafikbüro Lang (effektive Methode), Q1 2026.</p>
+<ol class="doclist">
+ <li>Rechnungen an Kunden brutto (8.1 %): <b>32’430</b></li>
+ <li>Lieferantenrechnungen brutto (8.1 %): <b>5’405</b> (eine davon über 1’081 ohne MWST-Nummer)</li>
+ <li>Büromiete (ohne MWST): <b>3’000</b></li>
+</ol>
+<p><b>Ваші завдання:</b></p>
+<ol class="small">
+ <li>MWST із продажів.</li>
+ <li>Vorsteuer (увага на рахунок без номера).</li>
+ <li>Скільки заплатити ESTV?</li>
+</ol>`,
+ caseQs:['MWST продажів','Vorsteuer','До сплати'],
+ caseModel:`
+<p><b>1.</b> 32’430 × 8.1 / 108.1 = <b>2’430</b></p>
+<p><b>2.</b> Правильні рахунки: 5’405 − 1’081 = 4’324 → × 8.1 / 108.1 = <b>324</b>. Рахунок без MWST-номера — спершу попросити виправлений рахунок. Оренда без MWST — Vorsteuer немає.</p>
+<p><b>3.</b> 2’430 − 324 = <b>2’106</b> (+81, якщо надійде виправлений рахунок: тоді 2’025).</p>`,
+ deutsch:`
+<p><b>Тема дня: попросити виправлений рахунок.</b></p>
+<div class="panel" style="font-size:.97rem">
+<p><i>Guten Tag<br>
+Auf Ihrer Rechnung Nr. 118 <b>fehlt</b> Ihre MWST-Nummer. <b>Damit wir</b> die Vorsteuer <b>abziehen können</b>, bitten wir Sie um eine <b>korrigierte Rechnung</b>.<br>
+Besten Dank und freundliche Grüsse</i></p>
+</div>
+<div class="tbl"><table>
+<tr><th>Фраза</th><th>Значення</th></tr>
+<tr><td>Auf Ihrer Rechnung fehlt …</td><td>У вашому рахунку бракує …</td></tr>
+<tr><td>Damit wir … können, …</td><td>Щоб ми могли …, …</td></tr>
+<tr><td>eine korrigierte Rechnung</td><td>виправлений рахунок</td></tr>
+</table></div>
+<h4>Вправа: вставте слово</h4>
+<div id="gapEx" class="gap"></div>
+<div class="row" style="margin-top:8px"><button class="btn ghost" id="gapCheck">Перевірити</button><span id="gapRes" class="muted small"></span></div>`,
+ gaps:[
+  {pre:'Auf Ihrer Rechnung',opts:['fehlt','fehlen','gefehlt'],a:0,post:'die MWST-Nummer.'},
+  {pre:'Damit wir die Vorsteuer abziehen',opts:['können','könnten wir','kann'],a:0,post:', …'},
+  {pre:'Wir bitten Sie um eine',opts:['korrigierte','korrigiert','korrigieren'],a:0,post:'Rechnung.'},
+  {pre:'Der Normalsatz',opts:['beträgt','betragen','beträgst'],a:0,post:'8.1 Prozent.'},
+  {pre:'Die MWST-Abrechnung ist quartalsweise',opts:['einzureichen','einreichen','eingereicht zu'],a:0,post:'.'}
+ ],
+ check:[
+  {area:'MWST',q:'Брутто 1’081 (8.1 %). Скільки MWST?',o:['87.56','81.00','108.10','8.10'],a:1,ex:'1’081 × 8.1 / 108.1 = 81.'},
+  {area:'MWST',q:'Фірма заробляє 80’000 на рік. Мусить реєструватися в MWST?',o:['Так','Ні, менше 100’000 (але може добровільно)','Лише в ZH','Так, від 50’000'],a:1,ex:'Обов’язково — від 100’000 обороту.'},
+  {area:'MWST',q:'Що таке Vorsteuer?',o:['MWST, яку фірма заплатила постачальникам і може відняти','Податок на прибуток','Штраф','Аванс'],a:0,ex:'Vorsteuer віднімають від MWST із продажів.'},
+  {area:'Повторення · День 17',q:'Платіж клієнта вже в банку, але рахунок ще «відкритий». Mahnung?',o:['Так','Ні, спершу звести платіж','Betreibung','Видалити'],a:1,ex:'Повторення з Дня 17.'},
+  {area:'Повторення · Excel',q:'Яка формула MWST з брутто в D2?',o:['=D2*8.1%','=RUNDEN(D2*8.1/108.1;2)','=D2/8.1','=D2-8.1'],a:1,ex:'Повторення з курсу Excel.'}
+ ]
+},
+19:{
+ theory:`
+<p class="big">Головна ідея: з <b>брутто</b> зарплати знімаються соціальні внески (і QSt, якщо є) → <b>нетто</b>. Роботодавець платить ще й <b>свою</b> частину.</p>
+
+<h4>Ставки 2026</h4>
+<div class="tbl"><table>
+<tr><th>Внесок</th><th>Працівник</th><th>Роботодавець</th></tr>
+<tr><td><b>AHV/IV/EO</b> (пенсія, інвалідність, компенсація)</td><td>5.3 %</td><td>5.3 %</td></tr>
+<tr><td><b>ALV</b> (безробіття, до 148’200 на рік)</td><td>1.1 %</td><td>1.1 %</td></tr>
+<tr><td><b>BVG</b> (Pensionskasse)</td><td colspan="2">за правилами каси; роботодавець — щонайменше половину</td></tr>
+<tr><td><b>UVG</b> (нещасні випадки)</td><td>NBU (поза роботою)</td><td>BU (на роботі)</td></tr>
+<tr><td>FAK (дитячі виплати)</td><td>—</td><td>✓ (ставка каси)</td></tr>
+<tr><td>Quellensteuer</td><td>✓ (якщо B, L, S…)</td><td>—</td></tr>
+</table></div>
+
+<h4>Приклад: місячна зарплата 6’000, 40 років, без QSt</h4>
+<div class="steps">
+ <div><span>Bruttolohn</span><b class="num">6’000.00</b></div>
+ <div><span>− AHV/IV/EO 5.3 %</span><b class="num">318.00</b></div>
+ <div><span>− ALV 1.1 %</span><b class="num">66.00</b></div>
+ <div><span>− NBU (умовно 1.2 %, ставка страховика)</span><b class="num">72.00</b></div>
+ <div><span>− BVG (див. нижче)</span><b class="num">189.75</b></div>
+ <div class="hl"><span>= Nettolohn</span><b class="num">5’354.25</b></div>
+</div>
+
+<h4>BVG: мінімум за законом (2026)</h4>
+<p class="small">Річна зарплата 72’000 − <de>Koordinationsabzug</de> 26’460 = <b>45’540</b> застрахованої зарплати. Вік 35–44 → 10 % = 4’554 на рік, половина працівнику → 189.75 на місяць. Каса може мати кращий план.</p>
+
+<h4>Запам’ятайте 3 речі</h4>
+<ol class="remember">
+ <li><span>AHV/IV/EO і ALV: <b>навпіл</b> між працівником і роботодавцем.</span></li>
+ <li><span>BVG — з річної зарплати від <b>22’680</b> (2026).</span></li>
+ <li><span>QSt утримує роботодавець і перераховує в Steueramt.</span></li>
+</ol>
+<div class="callout level" style="margin-top:14px"><b>Що від вас чекатимуть як від Praktikantin:</b> перевіряти Lohnabrechnungen, вносити зміни (нові працівники, діти, адреса) і готувати Lohnausweis на кінець року.</div>
+<p class="small muted">Джерела: BSV, «Beträge gültig ab 1. Januar 2026»; ahv-iv.ch, Merkblatt 2.01. Ставка NBU у прикладі умовна.</p>`,
+ full:`
+<h4>BVG: ставки за віком (мінімум, % від застрахованої зарплати)</h4>
+<div class="tbl"><table>
+<tr><th>Вік</th><th>Ставка</th></tr>
+<tr><td>25–34</td><td>7 %</td></tr>
+<tr><td>35–44</td><td>10 %</td></tr>
+<tr><td>45–54</td><td>15 %</td></tr>
+<tr><td>55–65</td><td>18 %</td></tr>
+</table></div>
+<h4>Lohnausweis: головні Ziffern</h4>
+<p>1 — Lohn; 8 — Bruttolohn total; 9 — AHV/IV/EO/ALV/NBUV; 10 — BVG; <b>11 — Nettolohn</b>; 12 — Quellensteuer; 13 — Spesen; 15 — Bemerkungen. Поля F (безкоштовний проїзд) і G (Kantine) впливають на Abzüge в декларації.</p>
+<h4>KTG</h4>
+<p>Страхування заробітку на випадок хвороби (Krankentaggeld) не обов’язкове за законом, але часто є в договорі або GAV. Хто скільки платить — за договором.</p>`,
+ vocab:['der Bruttolohn','der Nettolohn','die AHV','die ALV','die BVG / Pensionskasse','der Koordinationsabzug','die UVG','der Nichtberufsunfall (NBU)','die Familienausgleichskasse (FAK)','der Arbeitgeberbeitrag'],
+ caseHtml:`
+<p><b>Ситуація:</b> перевірте Lohnabrechnung за березень 2026. Працівниця 30 років, дозвіл C, Bruttolohn <b>5’000</b>/міс.</p>
+<div class="tbl"><table>
+<tr><th>Рядок</th><th class="num">CHF</th></tr>
+<tr><td>AHV/IV/EO 5.3 %</td><td class="num">265.00</td></tr>
+<tr><td>ALV 2.2 %</td><td class="num">110.00</td></tr>
+<tr><td>NBU 1.0 %</td><td class="num">50.00</td></tr>
+<tr><td>BVG</td><td class="num">140.00</td></tr>
+<tr><td>Quellensteuer</td><td class="num">300.00</td></tr>
+</table></div>
+<p><b>Завдання:</b> знайдіть помилки й порахуйте правильний Nettolohn (BVG і NBU вважаємо правильними).</p>`,
+ caseQs:['Помилки','Правильний Nettolohn'],
+ caseModel:`
+<p><b>Помилки:</b> ALV працівника — <b>1.1 %</b> = 55.00, а не 2.2 %. <b>Quellensteuer</b> з дозволом C не утримують → 0.</p>
+<p><b>Nettolohn:</b> 5’000 − 265 − 55 − 50 − 140 = <b>4’490.00</b></p>`,
+ deutsch:`
+<p><b>Тема дня: питання працівника про зарплату.</b></p>
+<div class="panel" style="font-size:.97rem">
+<p><b>Mitarbeiterin:</b> Warum <b>wird mir</b> Quellensteuer <b>abgezogen</b>? Ich habe den C-Ausweis.<br>
+<b>Sie:</b> Da haben Sie recht. <b>Das war ein Fehler.</b> Wir <b>korrigieren</b> das mit der nächsten Lohnzahlung und <b>erstatten</b> Ihnen den Betrag <b>zurück</b>.</p>
+</div>
+<div class="tbl"><table>
+<tr><th>Фраза</th><th>Значення</th></tr>
+<tr><td>Da haben Sie recht.</td><td>Тут ви маєте рацію.</td></tr>
+<tr><td>Das war ein Fehler.</td><td>Це була помилка.</td></tr>
+<tr><td>Wir erstatten Ihnen den Betrag zurück.</td><td>Ми повернемо вам цю суму.</td></tr>
+</table></div>
+<h4>Вправа: вставте слово</h4>
+<div id="gapEx" class="gap"></div>
+<div class="row" style="margin-top:8px"><button class="btn ghost" id="gapCheck">Перевірити</button><span id="gapRes" class="muted small"></span></div>`,
+ gaps:[
+  {pre:'Warum wird mir Quellensteuer',opts:['abgezogen','abziehen','abzieht'],a:0,post:'?'},
+  {pre:'Da haben Sie',opts:['recht','richtig','Rechte'],a:0,post:'.'},
+  {pre:'Wir erstatten Ihnen den Betrag',opts:['zurück','wieder','retour zu'],a:0,post:'.'},
+  {pre:'Der Arbeitgeber trägt die',opts:['Hälfte','Halbe','Halb'],a:0,post:'der AHV-Beiträge.'},
+  {pre:'Der Nettolohn',opts:['beträgt','betragen','betrug sich'],a:0,post:'4’490 Franken.'}
+ ],
+ check:[
+  {area:'Lohn',q:'Яку частку AHV/IV/EO платить працівник (2026)?',o:['10.6 %','5.3 %','8.7 %','1.1 %'],a:1,ex:'Разом 10.6 %, навпіл: по 5.3 %.'},
+  {area:'Lohn',q:'Річна зарплата 20’000 (2026). Обов’язкова BVG?',o:['Так','Ні, менше 22’680','Лише роботодавець','Лише ALV'],a:1,ex:'Поріг входу в BVG 2026 — 22’680.'},
+  {area:'Lohn',q:'Хто платить BU (нещасний випадок на роботі)?',o:['Працівник','Роботодавець','Навпіл','Держава'],a:1,ex:'BU — роботодавець, NBU — зазвичай працівник.'},
+  {area:'Повторення · День 18',q:'Брутто 2’162 (8.1 %). MWST?',o:['162','175.12','216.20','81'],a:0,ex:'Повторення з Дня 18: 2’162 × 8.1 / 108.1 = 162.'},
+  {area:'Повторення · День 10',q:'Працівник з дозволом C. Quellensteuer?',o:['Так','Ні, звичайна декларація','Лише 50 %','Лише Bund'],a:1,ex:'Повторення з Дня 10.'}
+ ]
+},
+20:{
+ theory:`
+<p class="big">Головна ідея: на 31.12 фірма робить <b>корективи</b>, щоб прибуток року був чесним: зменшує вартість речей, відкладає на ризики й «переносить» доходи та витрати в правильний рік.</p>
+
+<div class="tbl"><table>
+<tr><th>Що</th><th>Навіщо</th><th>Приклад</th></tr>
+<tr><td><b>Abschreibung</b></td><td>речі старіють</td><td>Авто 30’000, 5 років → 6’000 на рік</td></tr>
+<tr><td><b>Rückstellung</b></td><td>майбутня витрата вже ймовірна</td><td>Суд із клієнтом: резерв 5’000</td></tr>
+<tr><td><b>Transitorische Aktiven</b></td><td>заплатили наперед за наступний рік</td><td>Страховка 1.10–30.9 оплачена: 9 місяців — 2026</td></tr>
+<tr><td><b>Transitorische Passiven</b></td><td>витрата 2025, рахунок прийде в 2026</td><td>Електрика за грудень</td></tr>
+</table></div>
+
+<h4>Приклад: страховка 1’200 за 01.10.2025–30.09.2026</h4>
+<div class="steps">
+ <div><span>Витрата 2025 (3 міс.)</span><b class="num">300</b></div>
+ <div class="hl"><span>Transitorische Aktiven (9 міс. → 2026)</span><b class="num">900</b></div>
+</div>
+<p class="small">Buchung 31.12: <b>Transitorische Aktiven an Versicherungsaufwand 900</b>.</p>
+
+<h4>Abschreibung: Buchungssatz</h4>
+<p class="small"><b>Abschreibungen an Fahrzeuge 6’000</b> (витрата ↑, вартість авто ↓).</p>
+
+<h4>Запам’ятайте 3 речі</h4>
+<ol class="remember">
+ <li><span>Кожна витрата — у <b>свій</b> рік.</span></li>
+ <li><span>Abschreibung зменшує вартість і прибуток.</span></li>
+ <li><span>Rückstellung — лише для <b>реального</b> ризику, з поясненням.</span></li>
+</ol>
+<div class="callout level" style="margin-top:14px"><b>Що від вас чекатимуть як від Praktikantin:</b> зібрати документи для Abschluss (виписки на 31.12, OP-списки, інвентар) і підготувати прості Abgrenzungen.</div>`,
+ full:`
+<h4>Методи Abschreibung</h4>
+<p><b>Linear</b>: щороку однакова сума від ціни купівлі. <b>Degressiv</b>: щороку відсоток від залишку (спершу більше, потім менше). Податкові максимальні ставки визначає ESTV (Merkblatt для бізнесу); у межах ставок їх визнає податкова.</p>
+<h4>Delkredere</h4>
+<p>Резерв на сумнівних Debitoren. Часто 5–10 % від Debitoren — це поширена практика, а не закон. Обговорюйте з відповідальною особою.</p>
+<h4>Порядок Abschluss</h4>
+<p>Звести банки → OP-списки → інвентар → Abgrenzungen → Abschreibungen → Rückstellungen → MWST перевірити → Bilanz і Erfolgsrechnung → податки.</p>`,
+ vocab:['der Jahresabschluss','die Abschreibung','linear','degressiv','die Rückstellung','die Abgrenzung','die transitorischen Aktiven','die transitorischen Passiven','das Inventar','die Bewertung'],
+ caseHtml:`
+<p><b>Ситуація:</b> Abschluss 31.12.2025, Einzelfirma Koch.</p>
+<ol class="doclist">
+ <li>Lieferwagen gekauft 1.1.2025 für 40’000, Nutzungsdauer 5 Jahre (linear)</li>
+ <li>Miete Januar 2026 (2’000) schon im Dezember 2025 bezahlt und als Aufwand gebucht</li>
+ <li>Telefonrechnung Dezember 2025 (150) kommt erst im Januar 2026</li>
+</ol>
+<p><b>Завдання:</b> для кожного — Buchungssatz на 31.12.2025 і сума.</p>`,
+ caseQs:['Buchungssätze 1–3'],
+ caseModel:`
+<div class="tbl"><table>
+<tr><th>#</th><th>Soll</th><th>Haben</th><th class="num">CHF</th></tr>
+<tr><td>1</td><td>Abschreibungen</td><td>Fahrzeuge</td><td class="num">8’000</td></tr>
+<tr><td>2</td><td>Transitorische Aktiven</td><td>Raumaufwand</td><td class="num">2’000</td></tr>
+<tr><td>3</td><td>Telefonaufwand</td><td>Transitorische Passiven</td><td class="num">150</td></tr>
+</table></div>`,
+ deutsch:`
+<p><b>Тема дня: попросити документи для Abschluss.</b></p>
+<div class="panel" style="font-size:.97rem">
+<p><i>Für den Jahresabschluss 2025 <b>benötigen wir</b> folgende Unterlagen: die Kontoauszüge <b>per 31.12.</b>, die Liste der offenen Rechnungen und das Inventar. <b>Gibt es</b> Rechnungen für 2025, die <b>erst</b> im Januar <b>eintreffen</b>?</i></p>
+</div>
+<div class="tbl"><table>
+<tr><th>Фраза</th><th>Значення</th></tr>
+<tr><td>Wir benötigen folgende Unterlagen:</td><td>Нам потрібні такі документи:</td></tr>
+<tr><td>Gibt es …?</td><td>Чи є …?</td></tr>
+<tr><td>… die erst im Januar eintreffen</td><td>… які надійдуть лише в січні</td></tr>
+</table></div>
+<h4>Вправа: вставте слово</h4>
+<div id="gapEx" class="gap"></div>
+<div class="row" style="margin-top:8px"><button class="btn ghost" id="gapCheck">Перевірити</button><span id="gapRes" class="muted small"></span></div>`,
+ gaps:[
+  {pre:'Für den Jahresabschluss',opts:['benötigen','benötigt','benötige'],a:0,post:'wir folgende Unterlagen.'},
+  {pre:'Gibt es Rechnungen, die erst im Januar',opts:['eintreffen','treffen ein','eingetroffen'],a:0,post:'?'},
+  {pre:'Der Lieferwagen wird über fünf Jahre',opts:['abgeschrieben','abschreiben','abschreibt'],a:0,post:'.'},
+  {pre:'Wir bilden eine',opts:['Rückstellung','Rückstellen','Rückgestellt'],a:0,post:'für den Prozess.'},
+  {pre:'Die Miete Januar wird',opts:['abgegrenzt','abgrenzen','abgrenzt'],a:0,post:'.'}
+ ],
+ check:[
+  {area:'Abschluss',q:'Комп’ютер 3’000, 3 роки, лінійно. Abschreibung на рік?',o:['3’000','1’000','300','1’500'],a:1,ex:'3’000 ÷ 3 = 1’000.'},
+  {area:'Abschluss',q:'Рахунок за грудень прийде в січні. Що робимо на 31.12?',o:['Нічого','Transitorische Passiven','Transitorische Aktiven','Abschreibung'],a:1,ex:'Витрата 2025, рахунок пізніше → transitorische Passiven.'},
+  {area:'Abschluss',q:'Rückstellung — це…',o:['Резерв на ймовірну майбутню витрату','Прибуток','Вартість авто','Борг банку'],a:0,ex:'Rückstellung — для реального ризику.'},
+  {area:'Повторення · День 19',q:'ALV працівника (2026)?',o:['2.2 %','1.1 %','5.3 %','0.5 %'],a:1,ex:'Повторення з Дня 19.'},
+  {area:'Повторення · День 16',q:'Abschreibung на авто: Soll?',o:['Fahrzeuge','Abschreibungen','Bank','Ertrag'],a:1,ex:'Abschreibungen an Fahrzeuge.'}
+ ]
+},
+21:{
+ theory:`
+<p class="big">Сьогодні — <b>тиждень 3 у дії</b>: перевірка документа, проводки й зарплата. Як справжня робота в Treuhand.</p>
+
+<h4>Перевірка документа (Belegprüfung) за 5 кроків</h4>
+<div class="steps">
+ <div><span><b>1. Справжній?</b> Отримувач = наш клієнт, дата 2025/2026</span></div>
+ <div><span><b>2. Повний?</b> Номер, опис, сума, MWST-номер, ставка</span></div>
+ <div><span><b>3. Арифметика?</b> Нетто + MWST = брутто</span></div>
+ <div><span><b>4. Не двічі?</b> Шукаємо номер в Kreditoren</span></div>
+ <div class="hl"><span><b>5. Рахунок?</b> Правильний Konto і рік</span></div>
+</div>
+
+<h4>Типові «червоні прапорці»</h4>
+<div class="tbl"><table>
+<tr><th>Що бачимо</th><th>Що робимо</th></tr>
+<tr><td>Рахунок на ім’я власника приватно</td><td>Питаємо: це витрата фірми?</td></tr>
+<tr><td>Копія вже внесеного рахунку</td><td>Не вносимо двічі</td></tr>
+<tr><td>MWST 8.1 % на продукти харчування</td><td>Перевіряємо: має бути 2.6 %</td></tr>
+<tr><td>Касовий чек без опису</td><td>Просимо пояснення</td></tr>
+</table></div>
+
+<h4>Запам’ятайте</h4>
+<ol class="remember">
+ <li><span>Немає документа — <b>немає проводки</b>.</span></li>
+ <li><span>Сумнів → <b>питання</b>, а не здогадка.</span></li>
+</ol>`,
+ full:`
+<h4>Строк зберігання</h4>
+<p>Бухгалтерські книги й документи зберігають <b>10 років</b> (OR 958f). Електронно — можна, якщо документ не можна непомітно змінити.</p>`,
+ vocab:['die Belegprüfung','der Kassenbeleg','die Quittung','doppelt erfasst','die Privatausgabe','geschäftsmässig begründet','die Aufbewahrungspflicht','die Rechnungsnummer','die Gutschrift','die Stornierung'],
+ caseHtml:`
+<p><b>Ситуація:</b> клієнт Café Sonne GmbH приніс документи за квітень 2026.</p>
+<ol class="doclist">
+ <li>1 · Rechnung Bäckerei Frei, Brot und Gipfeli: 540.00 inkl. 8.1 % MWST</li>
+ <li>2 · Rechnung Elektro AG Nr. 5512: 1’081.00 inkl. 8.1 % (bereits im März erfasst)</li>
+ <li>3 · Rechnung Möbelhaus an «Herr Peter Sonne» privat: Sofa 2’400</li>
+ <li>4 · Lohn Kellnerin April: brutto 4’200 (C-Ausweis, 28 Jahre; NBU 1 %, BVG 120)</li>
+</ol>
+<p><b>Ваші завдання:</b></p>
+<ol class="small">
+ <li>Що не так у документах 1–3 і що робите?</li>
+ <li>Nettolohn для №4.</li>
+</ol>`,
+ caseQs:['Документи 1–3','Nettolohn №4'],
+ caseModel:`
+<p><b>1.</b> Хліб — продукти: має бути <b>2.6 %</b>. Просимо виправлений рахунок / перевіряємо. <b>2.</b> Уже внесено → <b>не вносимо двічі</b>. <b>3.</b> Приватний рахунок на власника → питаємо; диван удома — <b>не витрата фірми</b>.</p>
+<p><b>4.</b> AHV 5.3 % = 222.60; ALV 1.1 % = 46.20; NBU 1 % = 42.00; BVG 120.00. 4’200 − 430.80 = <b>3’769.20</b>.</p>`,
+ deutsch:`
+<p><b>Тема дня: питання клієнту про незрозумілий документ.</b></p>
+<div class="panel" style="font-size:.97rem">
+<p><i>Guten Tag Herr Sonne<br>
+Uns <b>liegt</b> eine Rechnung des Möbelhauses über CHF 2’400 <b>vor</b>, die auf Sie privat <b>ausgestellt ist</b>. <b>Handelt es sich um</b> eine Geschäftsausgabe der GmbH? Falls ja, <b>bitten wir um</b> eine kurze Erklärung.<br>
+Freundliche Grüsse</i></p>
+</div>
+<div class="tbl"><table>
+<tr><th>Фраза</th><th>Значення</th></tr>
+<tr><td>Uns liegt … vor.</td><td>У нас є … (документ)</td></tr>
+<tr><td>… die auf Sie ausgestellt ist</td><td>… виписаний на вас</td></tr>
+<tr><td>Handelt es sich um …?</td><td>Чи йдеться про …?</td></tr>
+</table></div>
+<h4>Вправа: вставте слово</h4>
+<div id="gapEx" class="gap"></div>
+<div class="row" style="margin-top:8px"><button class="btn ghost" id="gapCheck">Перевірити</button><span id="gapRes" class="muted small"></span></div>`,
+ gaps:[
+  {pre:'Uns liegt eine Rechnung',opts:['vor','an','zu'],a:0,post:'.'},
+  {pre:'Handelt es sich',opts:['um','über','an'],a:0,post:'eine Geschäftsausgabe?'},
+  {pre:'Die Rechnung ist auf Sie privat',opts:['ausgestellt','ausstellen','ausstellt'],a:0,post:'.'},
+  {pre:'Diese Rechnung wurde bereits',opts:['erfasst','erfassen','erfasste'],a:0,post:'.'},
+  {pre:'Falls ja, bitten wir',opts:['um','für','nach'],a:0,post:'eine kurze Erklärung.'}
+ ],
+ check:[
+  {area:'Buchhaltung',q:'Документа немає, але клієнт каже «я заплатив 300 за ремонт». Проводимо?',o:['Так','Ні, просимо документ','Так, з MWST','Половину'],a:1,ex:'Немає документа — немає проводки.'},
+  {area:'Buchhaltung',q:'Скільки років зберігають документи (OR 958f)?',o:['3','5','10','20'],a:2,ex:'10 років.'},
+  {area:'MWST',q:'Ставка MWST на хліб?',o:['8.1 %','2.6 %','3.8 %','0 %'],a:1,ex:'Продукти харчування — 2.6 %.'},
+  {area:'Повторення · День 20',q:'Оренда січня 2026 оплачена в грудні 2025. На 31.12?',o:['Transitorische Aktiven','Transitorische Passiven','Abschreibung','Нічого'],a:0,ex:'Повторення з Дня 20.'},
+  {area:'Повторення · День 19',q:'Bruttolohn 5’000, AHV/IV/EO працівника?',o:['530','265','55','110'],a:1,ex:'Повторення з Дня 19: 5.3 % × 5’000 = 265.'}
+ ]
+},
+22:{
+ theory:`
+<p class="big">Головна ідея: <b>Einzelunternehmen</b> — це людина сама (податок як у приватної особи). <b>GmbH</b> і <b>AG</b> — окремі «особи» з власним податком на прибуток.</p>
+
+<div class="tbl"><table>
+<tr><th></th><th>Einzelunternehmen</th><th>GmbH</th><th>AG</th></tr>
+<tr><td>Мінімальний капітал</td><td>—</td><td>20’000</td><td>100’000 (оплатити щонайменше 50’000)</td></tr>
+<tr><td>Відповідальність</td><td>усім приватним майном</td><td>майном фірми</td><td>майном фірми</td></tr>
+<tr><td>Податок</td><td>прибуток = дохід власника</td><td colspan="2">Gewinnsteuer + Kapitalsteuer фірми; власник — на зарплату / дивіденди</td></tr>
+<tr><td>AHV</td><td>як самозайнятий</td><td colspan="2">з зарплати (як працівник)</td></tr>
+</table></div>
+
+<h4>Податки фірми (ZH, 2025)</h4>
+<div class="tbl"><table>
+<tr><th>Податок</th><th>Як рахують</th></tr>
+<tr><td>Bund (DBSt)</td><td>8.5 % від прибутку</td></tr>
+<tr><td>Kanton + Gemeinde</td><td>простий податок 7 % × Steuerfuss (Kanton 98 % + громада)</td></tr>
+<tr><td>Kapitalsteuer</td><td>0.75 ‰ від власного капіталу × Steuerfuss</td></tr>
+</table></div>
+
+<h4>Подвійне оподаткування</h4>
+<div class="steps">
+ <div><span>1. GmbH платить Gewinnsteuer з прибутку</span></div>
+ <div><span>2. Залишок виплачує як дивіденд власнику</span></div>
+ <div class="hl"><span>3. Власник платить податок на дивіденд (від 10 % — частково: ZH 50 %, Bund 70 %)</span></div>
+</div>
+
+<h4>Запам’ятайте 3 речі</h4>
+<ol class="remember">
+ <li><span>Einzelunternehmen = одна декларація (людини) + Erfolgsrechnung фірми.</span></li>
+ <li><span>GmbH/AG = <b>дві</b> декларації: фірми й власника.</span></li>
+ <li><span>Капітал: GmbH 20’000, AG 100’000.</span></li>
+</ol>
+<div class="callout level" style="margin-top:14px"><b>Що від вас чекатимуть як від Praktikantin:</b> знати форму клієнта й не плутати декларацію фірми з декларацією власника.</div>
+<p class="small muted">Джерела: OR 621, 632, 773; DBG Art. 68; ZH: простий податок 7 % (2024–2025; зниження до 6 % відхилено на голосуванні 18.05.2025), Kapitalsteuer 0.75 ‰. Перевіряйте ставки на рік.</p>`,
+ full:`
+<h4>Зарплата чи дивіденд?</h4>
+<p>Власник GmbH може отримати гроші як зарплату (AHV, але витрата фірми) або як дивіденд (без AHV, але після Gewinnsteuer і частково оподатковується). Податкова стежить, щоб зарплата була «нормальною» для ринку. Це рішення досвідчених колег.</p>
+<h4>Ефективна ставка DBSt</h4>
+<p>Податок фірми сам є витратою, тому 8.5 % від прибутку «до податку» — це приблизно 7.8 % ефективно.</p>`,
+ vocab:['das Einzelunternehmen','die GmbH','die AG','das Stammkapital','das Aktienkapital','die Gewinnsteuer','die Kapitalsteuer','die Haftung','die wirtschaftliche Doppelbelastung','der Gesellschafter'],
+ caseHtml:`
+<p><b>Ситуація:</b> Herr Baumann, кравець у Winterthur, оборот 180’000, прибуток 70’000. Питає: «Мені відкрити GmbH?»</p>
+<p><b>Ваші завдання:</b></p>
+<ol class="small">
+ <li>Як оподатковується зараз (Einzelunternehmen)?</li>
+ <li>Що зміниться з GmbH (податки, AHV, капітал)?</li>
+ <li>Яку відповідь дасте сьогодні як Praktikantin?</li>
+</ol>`,
+ caseQs:['Зараз','З GmbH','Ваша відповідь'],
+ caseModel:`
+<p><b>1.</b> Прибуток 70’000 — його дохід у приватній декларації; AHV як самозайнятий.</p>
+<p><b>2.</b> GmbH: капітал 20’000; GmbH платить Gewinnsteuer; він отримує зарплату (AHV, QSt ні) і/або дивіденди; дві декларації; повна бухгалтерія; відповідальність обмежена.</p>
+<p><b>3.</b> Не даємо рекомендації самі: <i>«Das hängt von mehreren Faktoren ab. Ich bespreche Ihre Frage mit meiner Teamleiterin, und wir melden uns bei Ihnen.»</i></p>`,
+ deutsch:`
+<div class="panel" style="font-size:.97rem">
+<p><b>Herr Baumann:</b> Lohnt sich eine GmbH für mich?<br>
+<b>Sie:</b> <b>Das hängt von mehreren Faktoren ab</b>, zum Beispiel vom Gewinn und von der Haftung. <b>Ich bespreche</b> Ihre Frage <b>mit</b> meiner Teamleiterin <b>und melde mich</b> bis Freitag.</p>
+</div>
+<div class="tbl"><table>
+<tr><th>Фраза</th><th>Значення</th></tr>
+<tr><td>Das hängt von … ab.</td><td>Це залежить від …</td></tr>
+<tr><td>Ich bespreche … mit …</td><td>Я обговорю … з …</td></tr>
+<tr><td>Ich melde mich bis …</td><td>Я зв’яжуся з вами до …</td></tr>
+</table></div>
+<h4>Вправа: вставте слово</h4>
+<div id="gapEx" class="gap"></div>
+<div class="row" style="margin-top:8px"><button class="btn ghost" id="gapCheck">Перевірити</button><span id="gapRes" class="muted small"></span></div>`,
+ gaps:[
+  {pre:'Das hängt von mehreren Faktoren',opts:['ab','an','auf'],a:0,post:'.'},
+  {pre:'Ich',opts:['bespreche','bespricht','besprechen'],a:0,post:'Ihre Frage mit meiner Teamleiterin.'},
+  {pre:'Das Stammkapital einer GmbH',opts:['beträgt','betragen','betrug'],a:0,post:'mindestens 20’000 Franken.'},
+  {pre:'Die GmbH',opts:['haftet','haften','gehaftet'],a:0,post:'nur mit ihrem Vermögen.'},
+  {pre:'Ich melde mich',opts:['bis','seit','um'],a:0,post:'Freitag.'}
+ ],
+ check:[
+  {area:'Unternehmen',q:'Мінімальний капітал GmbH?',o:['0','20’000','50’000','100’000'],a:1,ex:'GmbH — 20’000.'},
+  {area:'Unternehmen',q:'Хто платить податок з прибутку Einzelunternehmen?',o:['Фірма','Власник у приватній декларації','Ніхто','Лише Bund'],a:1,ex:'Einzelunternehmen не є окремою особою для податку.'},
+  {area:'Unternehmen',q:'Ставка DBSt на прибуток AG/GmbH?',o:['8.5 %','8.1 %','35 %','0.75 ‰'],a:0,ex:'DBG Art. 68: 8.5 %.'},
+  {area:'Повторення · День 21',q:'Рахунок на приватне ім’я власника GmbH. Що робимо?',o:['Проводимо','Питаємо, чи це витрата фірми','Видаляємо','Платимо'],a:1,ex:'Повторення з Дня 21.'},
+  {area:'Повторення · День 18',q:'Оборот 120’000. MWST?',o:['Обов’язкова реєстрація','Не треба','Лише Saldo','Лише в ZH'],a:0,ex:'Повторення з Дня 18: від 100’000.'}
+ ]
+},
+23:{
+ theory:`
+<p class="big">Головна ідея: <b>самозайнята</b> людина працює на свій ризик і для різних клієнтів. <b>Найнята</b> — підпорядкована роботодавцю. Від цього залежать AHV, податки й документи.</p>
+
+<div class="tbl"><table>
+<tr><th>Ознака</th><th>Selbständig</th><th>Unselbständig</th></tr>
+<tr><td>Ризик</td><td>свій (може втратити гроші)</td><td>зарплата гарантована</td></tr>
+<tr><td>Клієнти</td><td>кілька</td><td>один роботодавець</td></tr>
+<tr><td>Вказівки</td><td>сама вирішує як</td><td>підпорядкування</td></tr>
+<tr><td>Офіс, обладнання</td><td>свої</td><td>роботодавця</td></tr>
+<tr><td>AHV</td><td>сама платить через SVA</td><td>з зарплати, навпіл</td></tr>
+<tr><td>Податки</td><td>прибуток із Erfolgsrechnung</td><td>Lohnausweis</td></tr>
+</table></div>
+<p class="small">Статус визначає <b>AHV-каса</b> (у ZH — SVA Zürich) за всією картиною, а не людина сама.</p>
+
+<h4>Самозайнята в декларації</h4>
+<div class="steps">
+ <div><span>Виручка</span><b class="num">90’000</b></div>
+ <div><span>− витрати бізнесу (матеріали, оренда, авто частково…)</span><b class="num">25’000</b></div>
+ <div class="hl"><span>= прибуток → дохід у декларації</span><b class="num">65’000</b></div>
+</div>
+<p class="small">Pauschale 3 % тут <b>немає</b>: лише фактичні витрати бізнесу з документами.</p>
+
+<h4>Запам’ятайте 3 речі</h4>
+<ol class="remember">
+ <li><span>Статус визначає AHV-каса, не договір із назвою «freelance».</span></li>
+ <li><span>Самозайнята: <b>немає</b> Pauschale 3 %, є фактичні витрати бізнесу.</span></li>
+ <li><span>Оборот менше 500’000 → можна спрощений облік.</span></li>
+</ol>
+<div class="callout level" style="margin-top:14px"><b>Що від вас чекатимуть як від Praktikantin:</b> зібрати доходи й витрати самозайнятого, розділити бізнес і приватне.</div>
+<p class="small muted">Джерела: ahv-iv.ch Merkblatt 2.02; OR 957.</p>`,
+ full:`
+<h4>Нюанси</h4>
+<ul>
+ <li>Авто для бізнесу й приватно: приватна частка — не витрата бізнесу.</li>
+ <li>Самозайнятий може платити більше в 3a (до 20 % від прибутку, максимум 36’288 у 2025), якщо немає Pensionskasse.</li>
+ <li>Змішані випадки: людина найнята і має підробіток як самозайнята. Обидва доходи в одній декларації.</li>
+</ul>`,
+ vocab:['selbständig erwerbend','unselbständig erwerbend','die SVA','das Unternehmerrisiko','die Weisungsgebundenheit','der Auftraggeber','die Geschäftsausgabe','der Privatanteil','die vereinfachte Buchführung','der Geschäftsabschluss'],
+ caseHtml:`
+<p><b>Ситуація:</b> Frau Nowak (Zürich) — графічна дизайнерка.</p>
+<ol class="doclist">
+ <li>Працює 100 % для однієї агенції, в їхньому офісі, на їхньому комп’ютері, за їхніми вказівками</li>
+ <li>Агенція платить їй «Honorar» без AHV і просить сама платити податки</li>
+</ol>
+<p><b>Ваші завдання:</b></p>
+<ol class="small">
+ <li>Selbständig чи unselbständig? Чому?</li>
+ <li>Чим це ризиковано для неї?</li>
+ <li>Що порадите?</li>
+</ol>`,
+ caseQs:['Статус і чому','Ризики','Порада'],
+ caseModel:`
+<p><b>1.</b> Найімовірніше <b>unselbständig</b>: один замовник, підпорядкування, чуже обладнання, без підприємницького ризику.</p>
+<p><b>2.</b> Немає AHV від роботодавця, ALV, BVG, UVG. Може бути доплата AHV пізніше.</p>
+<p><b>3.</b> Обговорити з Teamleiterin; рекомендувати перевірити статус у SVA Zürich.</p>`,
+ deutsch:`
+<div class="panel" style="font-size:.97rem">
+<p><b>Sie:</b> <b>Für wie viele Auftraggeber</b> arbeiten Sie? <b>Tragen Sie</b> ein eigenes Risiko? <b>Wer bestimmt</b>, wie Sie arbeiten?</p>
+</div>
+<div class="tbl"><table>
+<tr><th>Фраза</th><th>Значення</th></tr>
+<tr><td>Für wie viele Auftraggeber …?</td><td>На скількох замовників …?</td></tr>
+<tr><td>ein eigenes Risiko tragen</td><td>нести власний ризик</td></tr>
+<tr><td>Wer bestimmt, wie …?</td><td>Хто вирішує, як …?</td></tr>
+</table></div>
+<h4>Вправа: вставте слово</h4>
+<div id="gapEx" class="gap"></div>
+<div class="row" style="margin-top:8px"><button class="btn ghost" id="gapCheck">Перевірити</button><span id="gapRes" class="muted small"></span></div>`,
+ gaps:[
+  {pre:'Für wie viele Auftraggeber',opts:['arbeiten','arbeitet','gearbeitet'],a:0,post:'Sie?'},
+  {pre:'Tragen Sie ein eigenes',opts:['Risiko','Riskant','Risiken'],a:0,post:'?'},
+  {pre:'Wer bestimmt, wie Sie',opts:['arbeiten','arbeiten Sie','arbeitest'],a:0,post:'?'},
+  {pre:'Die SVA entscheidet über den',opts:['Status','Statusse','Statuten'],a:0,post:'.'},
+  {pre:'Der Privatanteil ist nicht',opts:['abzugsfähig','abzugsfähige','abziehen'],a:0,post:'.'}
+ ],
+ check:[
+  {area:'Selbständig',q:'Хто визначає статус самозайнятості для AHV?',o:['Сама людина','AHV-каса (SVA)','Клієнт','Банк'],a:1,ex:'Рішення ухвалює AHV-каса.'},
+  {area:'Selbständig',q:'Чи є Pauschale 3 % для самозайнятої?',o:['Так','Ні, лише фактичні витрати бізнесу','Так, 5 %','Лише в ZH'],a:1,ex:'Pauschale 3 % — для найманих.'},
+  {area:'Selbständig',q:'Ознака самозайнятості?',o:['Один роботодавець','Власний ризик і кілька клієнтів','Фіксована зарплата','Офіс роботодавця'],a:1,ex:'Ризик і кілька замовників.'},
+  {area:'Повторення · День 22',q:'Хто платить податок з прибутку GmbH?',o:['Власник','GmbH сама','Ніхто','Kanton'],a:1,ex:'Повторення з Дня 22.'},
+  {area:'Повторення · День 22',q:'Мінімальний капітал AG?',o:['20’000','50’000','100’000','0'],a:2,ex:'Повторення з Дня 22.'}
+ ]
+},
+24:{
+ theory:`
+<p class="big">Головна ідея: <b>оптимізація</b> — законно; <b>Hinterziehung</b> (ухилення) — штраф; <b>Betrug</b> (шахрайство з документами) — кримінал.</p>
+
+<div class="tbl"><table>
+<tr><th></th><th>Що</th><th>Приклад</th><th>Наслідок</th></tr>
+<tr><td>✅ <b>Steueroptimierung</b></td><td>законні Abzüge</td><td>3a, Einkauf у PK, правильний час ремонту</td><td>менше податку</td></tr>
+<tr><td>⚠ <b>Steuerhinterziehung</b></td><td>не задекларували</td><td>забули/приховали рахунок за кордоном</td><td>Nachsteuer + відсотки + штраф (зазвичай 1×, від ⅓ до 3×)</td></tr>
+<tr><td>❌ <b>Steuerbetrug</b></td><td>фальшиві документи</td><td>змінений Lohnausweis, фіктивні рахунки</td><td>кримінальна справа: до 3 років або грошова кара</td></tr>
+</table></div>
+
+<h4>Selbstanzeige: «виправити самому»</h4>
+<p class="small">Якщо клієнт сам (до того, як Steueramt дізнався) розповідає все й співпрацює — <b>перший раз без штрафу</b>. Платить лише Nachsteuer і відсотки.</p>
+
+<h4>Ваша роль</h4>
+<div class="callout note"><b>Важливо:</b> Treuhand <b>ніколи</b> не допомагає приховувати дохід чи змінювати документи. Якщо клієнт просить — ви кажете «ні» і повідомляєте Teamleiterin.</div>
+
+<h4>Запам’ятайте 3 речі</h4>
+<ol class="remember">
+ <li><span>Оптимізація — так. Приховування — ні.</span></li>
+ <li><span>Selbstanzeige — <b>один раз</b> без штрафу.</span></li>
+ <li><span>Підозріле прохання → <b>одразу</b> до Teamleiterin.</span></li>
+</ol>
+<p class="small muted">Джерела: DBG Art. 175, 181a, 186.</p>`,
+ full:`
+<h4>Строки</h4>
+<p>Nachsteuer можна вимагати до <b>10 років</b> після кінця податкового року. Спроба ухилення карається штрафом у розмірі ⅔ від штрафу за завершене ухилення.</p>
+<h4>Спадкоємці</h4>
+<p>Спадкоємці можуть зробити спрощену Selbstanzeige за померлого: Nachsteuer лише за 3 роки + відсотки, без штрафу.</p>`,
+ vocab:['die Steueroptimierung','die Steuerhinterziehung','der Steuerbetrug','die Selbstanzeige','die Nachsteuer','die Busse','straflos','die Urkundenfälschung','verschweigen','legal'],
+ caseHtml:`
+<p><b>Ситуація:</b> три клієнти.</p>
+<ol class="doclist">
+ <li>A · Хоче вкласти 7’258 у 3a до 31.12, щоб платити менше</li>
+ <li>B · «Не вносьте мій рахунок у Німеччині, там лише 40’000»</li>
+ <li>C · Признається, що 5 років не декларував квартиру в Україні, хоче «чисто»</li>
+</ol>
+<p><b>Завдання:</b> для кожного — що це і що робимо.</p>`,
+ caseQs:['A','B','C'],
+ caseModel:`
+<p><b>A:</b> законна оптимізація → так, нагадати про строк 31.12.</p>
+<p><b>B:</b> це було б ухилення → <b>відмова</b>, пояснити обов’язок декларувати все майно, повідомити Teamleiterin.</p>
+<p><b>C:</b> можлива <b>Selbstanzeige</b> (перший раз без штрафу) → передати досвідченому колезі. Іноземна нерухомість звільняється від податку в CH, але враховується для ставки, і її треба декларувати.</p>`,
+ deutsch:`
+<div class="panel" style="font-size:.97rem">
+<p><b>Kunde:</b> Lassen Sie das deutsche Konto einfach weg.<br>
+<b>Sie:</b> <b>Das dürfen wir leider nicht.</b> <b>Sie sind verpflichtet</b>, Ihr gesamtes Vermögen anzugeben. Ich <b>informiere</b> meine Teamleiterin.</p>
+</div>
+<div class="tbl"><table>
+<tr><th>Фраза</th><th>Значення</th></tr>
+<tr><td>Das dürfen wir leider nicht.</td><td>На жаль, ми не маємо права.</td></tr>
+<tr><td>Sie sind verpflichtet, … anzugeben.</td><td>Ви зобов’язані вказати …</td></tr>
+</table></div>
+<h4>Вправа: вставте слово</h4>
+<div id="gapEx" class="gap"></div>
+<div class="row" style="margin-top:8px"><button class="btn ghost" id="gapCheck">Перевірити</button><span id="gapRes" class="muted small"></span></div>`,
+ gaps:[
+  {pre:'Das',opts:['dürfen','können','sollen'],a:0,post:'wir leider nicht.'},
+  {pre:'Sie sind verpflichtet, Ihr Vermögen',opts:['anzugeben','angeben','angegeben'],a:0,post:'.'},
+  {pre:'Eine erstmalige Selbstanzeige bleibt',opts:['straflos','strafbar','bestraft'],a:0,post:'.'},
+  {pre:'Er hat Einkommen',opts:['verschwiegen','verschweigt','verschweigen'],a:0,post:'.'},
+  {pre:'Die Nachsteuer wird mit Zins',opts:['erhoben','erheben','erhebt'],a:0,post:'.'}
+ ],
+ check:[
+  {area:'Steuerstrafrecht',q:'Клієнт змінив суму в Lohnausweis. Це…',o:['Оптимізація','Hinterziehung','Steuerbetrug','Нормально'],a:2,ex:'Фальшивий документ — Steuerbetrug.'},
+  {area:'Steuerstrafrecht',q:'Перша Selbstanzeige…',o:['Без штрафу, але Nachsteuer і відсотки','Без нічого','Подвійний штраф','В’язниця'],a:0,ex:'DBG Art. 175 Abs. 3.'},
+  {area:'Steuerstrafrecht',q:'Внесок у 3a, щоб платити менше — це…',o:['Ухилення','Законна оптимізація','Шахрайство','Заборонено'],a:1,ex:'Законний Abzug.'},
+  {area:'Повторення · День 23',q:'Самозайнята: Pauschale 3 %?',o:['Так','Ні','5 %','Лише Bund'],a:1,ex:'Повторення з Дня 23.'},
+  {area:'Повторення · День 12',q:'Нерухомість за кордоном у декларації CH…',o:['Не вказують','Вказують (для ставки), але податок там','Податок у CH повністю','Лише Bund'],a:1,ex:'Freistellung із Progressionsvorbehalt.'}
+ ]
+},
+25:{
+ theory:`
+<p class="big">Головна ідея: хто живе в Швейцарії, декларує <b>весь світовий</b> дохід і майно. <b>DBA</b> (угода між країнами) вирішує, хто з двох країн має право брати податок.</p>
+
+<div class="tbl"><table>
+<tr><th>Що за кордоном</th><th>У декларації CH</th></tr>
+<tr><td>Рахунок / акції</td><td>✅ майно й дохід; податок у CH</td></tr>
+<tr><td>Нерухомість</td><td>✅ вказати; податок там, а в CH лише впливає на ставку</td></tr>
+<tr><td>Зарплата за роботу там</td><td>залежить від DBA → питати колегу</td></tr>
+<tr><td>Пенсія з-за кордону</td><td>✅ зазвичай дохід у CH (залежить від DBA)</td></tr>
+</table></div>
+
+<h4>«Вплив на ставку» (Progressionsvorbehalt)</h4>
+<div class="steps">
+ <div><span>Дохід у CH</span><b class="num">60’000</b></div>
+ <div><span>Дохід від квартири за кордоном (там оподатковано)</span><b class="num">10’000</b></div>
+ <div class="hl"><span>Податок CH: з <b>60’000</b>, але за <b>ставкою для 70’000</b></span><b>✓</b></div>
+</div>
+
+<h4>Запам’ятайте 3 речі</h4>
+<ol class="remember">
+ <li><span>Живе в CH → декларує <b>усе</b>, що має у світі.</span></li>
+ <li><span>Нерухомість за кордоном: податок там, але вказати в CH.</span></li>
+ <li><span>DBA-питання — до досвідченого колеги.</span></li>
+</ol>
+<div class="callout level" style="margin-top:14px"><b>Що від вас чекатимуть як від Praktikantin:</b> завжди питати клієнтів-іноземців про рахунки, майно й доходи за кордоном.</div>`,
+ full:`
+<h4>Ansässigkeit</h4>
+<p>Людина вважається резидентом CH, якщо живе тут із наміром залишитися (Wohnsitz) або перебуває тут довше певного строку з роботою. Якщо обидві країни вважають людину своєю, DBA має правила «tie-breaker» (постійне житло, центр життєвих інтересів…).</p>
+<h4>Курс валют</h4>
+<p>Іноземне майно перераховують за курсом ESTV на 31.12 (Kursliste).</p>`,
+ vocab:['das Doppelbesteuerungsabkommen (DBA)','die Ansässigkeit','der Wohnsitzstaat','der Quellenstaat','die unbeschränkte Steuerpflicht','der Progressionsvorbehalt','die Steuerausscheidung','ausländische Einkünfte','die Freistellung','die Anrechnung'],
+ caseHtml:`
+<p><b>Ситуація:</b> Frau Kovalenko, статус B (NOV), Zürich, 2025.</p>
+<ol class="doclist">
+ <li>Квартира в Києві, здає в оренду: дохід 3’000 CHF</li>
+ <li>Рахунок у Privatbank: 4’000 CHF на 31.12</li>
+ <li>Lohn у CH: 70’000 brutto</li>
+</ol>
+<p><b>Завдання:</b> що з цього вносимо і як?</p>`,
+ caseQs:['Квартира','Рахунок','Lohn'],
+ caseModel:`
+<p><b>Квартира:</b> вказати дохід і вартість; податок за DBA — в Україні; у CH — для ставки.</p>
+<p><b>Рахунок:</b> майно 4’000 (за курсом ESTV на 31.12) і відсотки як дохід у CH.</p>
+<p><b>Lohn:</b> звичайно, з Lohnausweis; утримана QSt зараховується.</p>`,
+ deutsch:`
+<div class="panel" style="font-size:.97rem">
+<p><b>Sie:</b> <b>Besitzen Sie</b> Vermögen oder Einkünfte <b>im Ausland</b>? Auch Konten, Wohnungen oder Renten <b>müssen angegeben werden</b>.</p>
+</div>
+<h4>Вправа: вставте слово</h4>
+<div id="gapEx" class="gap"></div>
+<div class="row" style="margin-top:8px"><button class="btn ghost" id="gapCheck">Перевірити</button><span id="gapRes" class="muted small"></span></div>`,
+ gaps:[
+  {pre:'',opts:['Besitzen','Besitzt','Besessen'],a:0,post:'Sie Vermögen im Ausland?'},
+  {pre:'Auch Konten müssen',opts:['angegeben','angeben','angibt'],a:0,post:'werden.'},
+  {pre:'Die Wohnung wird für den Satz',opts:['berücksichtigt','berücksichtigen','berücksichtig'],a:0,post:'.'},
+  {pre:'Das DBA regelt, welcher Staat besteuern',opts:['darf','dürfen','durfte er'],a:0,post:'.'},
+  {pre:'Der Kurs per 31.12. stammt aus der',opts:['Kursliste','Kurs','Kursen'],a:0,post:'der ESTV.'}
+ ],
+ check:[
+  {area:'International',q:'Людина живе в ZH, має рахунок у Польщі. Декларує?',o:['Ні','Так, майно й дохід','Лише дохід','Лише понад 100’000'],a:1,ex:'Резидент декларує світове майно.'},
+  {area:'International',q:'Що таке Progressionsvorbehalt?',o:['Іноземний дохід не оподатковується в CH, але піднімає ставку','Подвійний податок','Знижка','Штраф'],a:0,ex:'Ставка — з урахуванням усього доходу.'},
+  {area:'International',q:'Хто визначає, яка країна оподатковує?',o:['Клієнт','DBA між країнами','Банк','Treuhand'],a:1,ex:'Doppelbesteuerungsabkommen.'},
+  {area:'Повторення · День 24',q:'Клієнт просить не вносити іноземний рахунок.',o:['Погодитися','Відмовити й повідомити Teamleiterin','Внести половину','Ігнорувати'],a:1,ex:'Повторення з Дня 24.'},
+  {area:'Повторення · День 8',q:'Іноземне майно перераховуємо за курсом…',o:['Купівлі','ESTV на 31.12','Середнім','Сьогоднішнім'],a:1,ex:'Kursliste ESTV на 31.12.'}
+ ]
+},
+26:{
+ theory:`
+<p class="big">Головна ідея: після подання Steueramt <b>рахує й вирішує</b>. Не згодні — <b>30 днів</b> на Einsprache. Пропустили — рішення остаточне.</p>
+
+<div class="steps">
+ <div><span><b>1.</b> Подали декларацію</span></div>
+ <div><span><b>2.</b> Steueramt може надіслати питання (<de>Auflage</de>) або пропозицію (<de>Einschätzungsvorschlag</de>)</span></div>
+ <div><span><b>3.</b> Рішення: Einschätzungsentscheid (ZH) / Veranlagungsverfügung (Bund)</span></div>
+ <div class="hl"><span><b>4.</b> Не згодні → <b>Einsprache за 30 днів</b>, письмово, з поясненням і доказами</span></div>
+ <div><span><b>5.</b> Далі: Rekurs / Beschwerde до Steuerrekursgericht ZH, потім суди</span></div>
+</div>
+
+<h4>Строки, які треба знати</h4>
+<div class="tbl"><table>
+<tr><th>Строк</th><th>Що</th></tr>
+<tr><td><b>30 днів</b></td><td>Einsprache</td></tr>
+<tr><td>5 років (макс. 15)</td><td>Steueramt може винести рішення</td></tr>
+<tr><td>10 років</td><td>Nachsteuer, якщо щось приховали</td></tr>
+</table></div>
+
+<h4>Як перевіряти рішення</h4>
+<p class="small">Порівняйте <b>кожну цифру</b> рішення з поданою декларацією. Різниця? Steueramt мусить її пояснити (напр. «Fahrkosten gekürzt»).</p>
+
+<h4>Запам’ятайте 3 речі</h4>
+<ol class="remember">
+ <li><span>Рішення прийшло → <b>одразу</b> записати дату й строк 30 днів.</span></li>
+ <li><span>Einsprache — з <b>доказами</b>.</span></li>
+ <li><span>Не встигаєте — Einsprache однаково до строку, документи пізніше.</span></li>
+</ol>
+<p class="small muted">Джерела: DBG Art. 120, 132, 152; Wegleitung ZH 2025.</p>`,
+ full:`
+<h4>Strafverfahren</h4>
+<p>Якщо Steueramt підозрює ухилення, відкривається окрема процедура: Nachsteuer + Strafsteuer. Клієнт має право мовчати щодо штрафу, але Nachsteuer однаково рахують. Такі справи веде досвідчений фахівець.</p>
+<h4>Revision</h4>
+<p>Остаточне рішення змінюють лише у вузьких випадках (нові факти, які не могли знати раніше). «Забули» — не причина.</p>`,
+ vocab:['die Einsprache','die Einsprachefrist','der Rekurs','die Beschwerde','der Einschätzungsvorschlag','die Begründung','das Beweismittel','die Verjährung','die Revision','das Strafverfahren'],
+ caseHtml:`
+<p><b>Ситуація:</b> 3 листопада 2026 клієнт приніс Einschätzungsentscheid 2025, датований 20 жовтня 2026.</p>
+<div class="tbl"><table>
+<tr><th>Рядок</th><th class="num">Декларація</th><th class="num">Рішення</th></tr>
+<tr><td>Fahrkosten</td><td class="num">5’200</td><td class="num">1’200</td></tr>
+<tr><td>Weiterbildung</td><td class="num">4’000</td><td class="num">0</td></tr>
+</table></div>
+<p>Примітка Steueramt: «Fahrkosten: ÖV zumutbar. Weiterbildung: keine Belege.»</p>
+<p><b>Завдання:</b> до якої дати Einsprache? Що робимо з кожним рядком?</p>`,
+ caseQs:['Строк','Fahrkosten','Weiterbildung'],
+ caseModel:`
+<p><b>Строк:</b> 30 днів від отримання (рішення від 20.10; рахуємо від дня доставки) → орієнтовно до <b>19–20 листопада 2026</b>. Записати в календар!</p>
+<p><b>Fahrkosten:</b> питаємо клієнта, чому авто (час понад 1 годину, здоров’я?). Якщо є причина — Einsprache з поясненням.</p>
+<p><b>Weiterbildung:</b> надіслати рахунок і підтвердження оплати → Einsprache з документами.</p>`,
+ deutsch:`
+<div class="panel" style="font-size:.97rem">
+<p><i>Gegen den Einschätzungsentscheid 2025 vom 20. Oktober 2026 <b>erheben wir Einsprache</b>. <b>Wir beantragen</b>, die Weiterbildungskosten von CHF 4’000 <b>zum Abzug zuzulassen</b>. Die Belege <b>liegen bei</b>.</i></p>
+</div>
+<h4>Вправа: вставте слово</h4>
+<div id="gapEx" class="gap"></div>
+<div class="row" style="margin-top:8px"><button class="btn ghost" id="gapCheck">Перевірити</button><span id="gapRes" class="muted small"></span></div>`,
+ gaps:[
+  {pre:'Gegen den Entscheid',opts:['erheben','heben','erhebt'],a:0,post:'wir Einsprache.'},
+  {pre:'Die Belege liegen',opts:['bei','an','vor uns'],a:0,post:'.'},
+  {pre:'Wir beantragen, die Kosten zum Abzug',opts:['zuzulassen','zulassen','zugelassen'],a:0,post:'.'},
+  {pre:'Die Einsprachefrist',opts:['beträgt','betragen','betrug'],a:0,post:'30 Tage.'},
+  {pre:'Der Entscheid ist',opts:['rechtskräftig','rechtskräftige','Rechtskraft'],a:0,post:'.'}
+ ],
+ check:[
+  {area:'Verfahren',q:'Строк Einsprache?',o:['10 днів','30 днів','60 днів','1 рік'],a:1,ex:'30 днів.'},
+  {area:'Verfahren',q:'Einsprache без документів, бо їх ще немає. Що робимо?',o:['Чекаємо документи й пропускаємо строк','Подаємо Einsprache в строк, документи пізніше','Нічого','Дзвонимо'],a:1,ex:'Строк важливіший.'},
+  {area:'Verfahren',q:'Скільки років можна вимагати Nachsteuer?',o:['3','5','10','Без обмежень'],a:2,ex:'10 років (DBG 152).'},
+  {area:'Повторення · День 25',q:'Квартира за кордоном: податок…',o:['У CH','Там, але вказати в CH для ставки','Ніде','Подвійний'],a:1,ex:'Повторення з Дня 25.'},
+  {area:'Повторення · День 6',q:'Fristerstreckung просять…',o:['Після 31.03','До спливу строку','Після Mahnung','Не просять'],a:1,ex:'Повторення з Дня 6.'}
+ ]
+},
+27:{
+ theory:`
+<p class="big">Головна ідея: клієнт довіряє нам <b>найприватніше</b>: зарплату, борги, здоров’я. Тому — <b>конфіденційність, безпека, чіткі доручення</b>.</p>
+
+<h4>Vollmacht: без неї ми не діємо</h4>
+<div class="tbl"><table>
+<tr><th>Що дає</th><th>Без неї</th></tr>
+<tr><td>Говорити зі Steueramt від імені клієнта</td><td>Steueramt не дасть інформації</td></tr>
+<tr><td>Отримувати рішення й питання</td><td>Листи йдуть лише клієнту</td></tr>
+</table></div>
+
+<h4>Захист даних (revDSG, з 01.09.2023)</h4>
+<ul>
+ <li>Не надсилати документи клієнта на приватну пошту чи в WhatsApp.</li>
+ <li>Не обговорювати клієнтів поза роботою (навіть без імен).</li>
+ <li>Блокувати екран, коли відходите.</li>
+ <li>Підозрілий лист «від банку / Steueramt» з посиланням → не клацати, показати IT.</li>
+</ul>
+
+<h4>Перевірка документів клієнта</h4>
+<div class="steps">
+ <div><span><b>Повні?</b> Усі сторінки, обидва Lohnausweise</span></div>
+ <div><span><b>Правильний рік?</b> 2025, а не 2024</span></div>
+ <div><span><b>Правильна людина?</b> Ім’я, AHV-номер</span></div>
+ <div class="hl"><span><b>Читабельні?</b> Фото не розмите</span></div>
+</div>
+
+<h4>Запам’ятайте 3 речі</h4>
+<ol class="remember">
+ <li><span>Без Vollmacht — не діємо від імені клієнта.</span></li>
+ <li><span>Дані клієнта — лише робочими каналами.</span></li>
+ <li><span>Не знаєте відповіді — «Ich kläre das ab und melde mich».</span></li>
+</ol>`,
+ full:`
+<h4>Зберігання</h4>
+<p>Бухгалтерські документи — 10 років (OR 958f). Податкові документи приватних клієнтів зазвичай зберігають так само довго через строки Nachsteuer.</p>
+<h4>Конфіденційність</h4>
+<p>Обов’язок мовчати випливає з договору з клієнтом і з трудового договору. Порушення може коштувати роботи й призвести до відповідальності.</p>`,
+ vocab:['die Vollmacht','der Mandant','das Mandat','die Vertraulichkeit','der Datenschutz','die Schweigepflicht','abklären','die Mandatsvereinbarung','die Phishing-Mail','vollständig'],
+ caseHtml:`
+<p><b>Ситуація:</b> три ситуації за день.</p>
+<ol class="doclist">
+ <li>A · Дзвонить «дружина клієнта» і просить суму його податку</li>
+ <li>B · Клієнт надсилає фото документів у ваш приватний WhatsApp</li>
+ <li>C · Лист «Steueramt Zürich» з посиланням «Rückerstattung bestätigen» з адреси @gmail.com</li>
+</ol>
+<p><b>Завдання:</b> що робите в кожній?</p>`,
+ caseQs:['A','B','C'],
+ caseModel:`
+<p><b>A:</b> не даємо інформацію без Vollmacht / згоди клієнта (навіть подружжю, якщо декларації окремі). Ввічливо просимо, щоб звернувся сам клієнт.</p>
+<p><b>B:</b> просимо надсилати лише через офіційний канал фірми (портал / робочу пошту); приватні копії видалити.</p>
+<p><b>C:</b> фішинг: не клацати, повідомити IT / Teamleiterin.</p>`,
+ deutsch:`
+<div class="panel" style="font-size:.97rem">
+<p><b>Sie:</b> <b>Ohne Vollmacht dürfen wir</b> Ihnen leider <b>keine Auskunft geben</b>. <b>Ich kläre das ab</b> und melde mich bei Ihrem Mann.</p>
+</div>
+<h4>Вправа: вставте слово</h4>
+<div id="gapEx" class="gap"></div>
+<div class="row" style="margin-top:8px"><button class="btn ghost" id="gapCheck">Перевірити</button><span id="gapRes" class="muted small"></span></div>`,
+ gaps:[
+  {pre:'Ohne Vollmacht dürfen wir keine Auskunft',opts:['geben','gibt','gegeben'],a:0,post:'.'},
+  {pre:'Ich kläre das',opts:['ab','an','auf'],a:0,post:'und melde mich.'},
+  {pre:'Bitte senden Sie die Unterlagen',opts:['über','mit','von'],a:0,post:'unser Kundenportal.'},
+  {pre:'Die Unterlagen sind nicht',opts:['vollständig','voll','vollständige'],a:0,post:'.'},
+  {pre:'Wir behandeln Ihre Daten',opts:['vertraulich','vertraut','vertrauen'],a:0,post:'.'}
+ ],
+ check:[
+  {area:'Mandant',q:'Хто може отримати інформацію про податок клієнта?',o:['Будь-хто з родини','Клієнт або людина з його Vollmacht','Колеги з інших фірм','Сусід'],a:1,ex:'Лише з дозволу клієнта.'},
+  {area:'Mandant',q:'Лист з підозрілим посиланням «від Steueramt».',o:['Клацнути','Не клацати, повідомити IT','Переслати клієнту','Відповісти'],a:1,ex:'Фішинг.'},
+  {area:'Mandant',q:'Не знаєте відповіді на питання клієнта.',o:['Вигадати','«Ich kläre das ab und melde mich»','Мовчати','Покласти слухавку'],a:1,ex:'Чесно й професійно.'},
+  {area:'Повторення · День 26',q:'Строк Einsprache?',o:['30 днів','10 днів','1 рік','90 днів'],a:0,ex:'Повторення з Дня 26.'},
+  {area:'Повторення · День 21',q:'Строк зберігання бухгалтерських документів?',o:['3 роки','10 років','1 рік','Назавжди'],a:1,ex:'Повторення з Дня 21.'}
+ ]
+},
+28:{
+ theory:`
+<p class="big">Симуляція: клієнтка приносить пакет документів. Ваше завдання — <b>прийняти, розібрати й написати, чого бракує</b>.</p>
+
+<h4>Прийом за 4 кроки</h4>
+<div class="steps">
+ <div><span><b>1. Особисте:</b> зміни в сім’ї, адреса, робота, дозвіл</span></div>
+ <div><span><b>2. Розкласти</b> по 4 кошиках + бізнес / нерухомість</span></div>
+ <div><span><b>3. Звірити</b> з торішньою декларацією: що було, а тепер немає?</span></div>
+ <div class="hl"><span><b>4. Лист</b> з переліком того, чого бракує, і строком</span></div>
+</div>
+
+<h4>Питання, які ставимо завжди</h4>
+<div class="tbl"><table>
+<tr><th>Тема</th><th>Питання</th></tr>
+<tr><td>Робота</td><td>Нова робота, підробіток, безробіття?</td></tr>
+<tr><td>Сім’я</td><td>Шлюб, розлучення, діти, Kita?</td></tr>
+<tr><td>Гроші</td><td>Нові рахунки, крипта, спадщина, подарунки?</td></tr>
+<tr><td>Житло</td><td>Переїзд, купівля, ремонт?</td></tr>
+<tr><td>За кордоном</td><td>Рахунки, майно, доходи?</td></tr>
+</table></div>`,
+ full:`<p>Цей день повторює дні 3, 6, 8, 11–13, 25. Якщо щось забули — поверніться до відповідного дня.</p>`,
+ vocab:['die Unterlagen','das Erstgespräch','die Checkliste','nachreichen','die Frist setzen','die Änderung','der Umzug','die Erbschaft','die Schenkung','der Zusatzverdienst'],
+ caseHtml:`
+<p><b>Ситуація:</b> 5 березня 2026. Frau Petrenko (статус B, NOV з 2024), Zürich, приносить для 2025:</p>
+<ol class="doclist">
+ <li>Lohnausweis 2025 (Firma A, Januar–Juni)</li>
+ <li>Steuerauszug UBS 2025</li>
+ <li>Bescheinigung Säule 3a: 7’258</li>
+ <li>Торішня декларація 2024: там була ще квартира в Україні й рахунок Revolut</li>
+</ol>
+<p>Каже: «З липня я працюю у Firma B. У жовтні народилася донька. Восени ходила на курс німецької для роботи».</p>
+<p><b>Завдання:</b> список того, чого бракує, і лист клієнтці німецькою.</p>`,
+ caseQs:['Чого бракує','Лист німецькою'],
+ caseModel:`
+<p><b>Бракує:</b> Lohnausweis Firma B (липень–грудень); документи про доньку (для QSt-тарифу й Kinderabzug); Kita (якщо є); курс німецької: рахунок + оплата (Weiterbildung, якщо для роботи); квартира в Україні (дохід, вартість); виписка Revolut на 31.12; Krankenkasse; Fahrkosten.</p>
+<p><i>«Guten Tag Frau Petrenko<br>Vielen Dank für Ihre Unterlagen. Für die Steuererklärung 2025 benötigen wir noch: den Lohnausweis der Firma B, die Geburtsurkunde Ihrer Tochter, die Kursbestätigung und Rechnung des Deutschkurses, Angaben zur Wohnung in der Ukraine, den Kontoauszug Revolut per 31.12.2025 sowie Ihre Krankenkassenprämien. Könnten Sie uns diese bitte bis 20. März 2026 senden?<br>Freundliche Grüsse»</i></p>`,
+ deutsch:`
+<p><b>Тема дня: перше знайомство з клієнткою.</b></p>
+<div class="tbl"><table>
+<tr><th>Фраза</th><th>Значення</th></tr>
+<tr><td>Was hat sich seit letztem Jahr geändert?</td><td>Що змінилося з минулого року?</td></tr>
+<tr><td>Könnten Sie uns … bis … nachreichen?</td><td>Чи могли б ви донести … до …?</td></tr>
+<tr><td>Gibt es noch weitere Konten?</td><td>Чи є ще інші рахунки?</td></tr>
+</table></div>
+<h4>Вправа: вставте слово</h4>
+<div id="gapEx" class="gap"></div>
+<div class="row" style="margin-top:8px"><button class="btn ghost" id="gapCheck">Перевірити</button><span id="gapRes" class="muted small"></span></div>`,
+ gaps:[
+  {pre:'Was hat sich seit letztem Jahr',opts:['geändert','ändert','ändern'],a:0,post:'?'},
+  {pre:'Könnten Sie uns den Lohnausweis',opts:['nachreichen','nachgereicht','reicht nach'],a:0,post:'?'},
+  {pre:'Gibt es noch weitere',opts:['Konten','Konto','Kontos'],a:0,post:'?'},
+  {pre:'Für die Steuererklärung',opts:['benötigen','benötigt','benötige'],a:0,post:'wir noch folgende Unterlagen.'},
+  {pre:'Bitte senden Sie uns die Unterlagen',opts:['bis','seit','ab'],a:0,post:'20. März.'}
+ ],
+ check:[
+  {area:'Simulation',q:'Клієнтка змінила роботу посеред року. Що потрібно?',o:['Один Lohnausweis','Lohnausweis від кожного роботодавця','Нічого','Лише договір'],a:1,ex:'Кожен роботодавець видає свій.'},
+  {area:'Simulation',q:'Торік був рахунок Revolut, цього року документа немає. Що робимо?',o:['Нічого','Питаємо: закрили чи забули?','Видаляємо','Вносимо торішню суму'],a:1,ex:'Звірка з минулим роком.'},
+  {area:'Simulation',q:'Народилася дитина на QSt. Що ще перевірити?',o:['Нічого','Код тарифу QSt (кількість дітей)','MWST','AHV'],a:1,ex:'Код тарифу змінюється.'},
+  {area:'Повторення · День 27',q:'Документи клієнт надіслав у приватний WhatsApp.',o:['ОК','Попросити офіційний канал','Переслати всім','Ігнорувати'],a:1,ex:'Повторення з Дня 27.'},
+  {area:'Повторення · День 11',q:'Дитина народилася в жовтні. Kinderabzug за весь рік?',o:['Так, важить ситуація на 31.12','Лише 3 місяці','Ні','Наступного року'],a:0,ex:'Повторення з Дня 11.'}
+ ]
+},
+29:{
+ theory:`
+<p class="big">Симуляція: <b>один день у Treuhand</b>. Завдань більше, ніж часу. Вміння ставити пріоритети — половина роботи.</p>
+
+<h4>Як вирішити, що першим</h4>
+<div class="tbl"><table>
+<tr><th>Пріоритет</th><th>Що</th></tr>
+<tr><td>🔴 1</td><td><b>Строк</b> сьогодні / завтра (Einsprache, Fristerstreckung, MWST)</td></tr>
+<tr><td>🟠 2</td><td>Те, що <b>блокує</b> колег або клієнта</td></tr>
+<tr><td>🟡 3</td><td>Звичайна робота з плану</td></tr>
+<tr><td>🟢 4</td><td>Прибирання, архів, навчання</td></tr>
+</table></div>
+
+<h4>Корисні звички</h4>
+<ul>
+ <li>Строки — <b>одразу</b> в календар (з нагадуванням за кілька днів).</li>
+ <li>Після дзвінка — коротка нотатка в досьє клієнта.</li>
+ <li>Наприкінці дня — що зроблено, що на завтра.</li>
+</ul>`,
+ full:`<p>Не бійтеся питати: «Was hat Priorität?» Teamleiterin краще знає строки всієї команди.</p>`,
+ vocab:['die Priorität','dringend','wichtig','die Aufgabe','der Termin','die Pendenz','die Aktennotiz','erledigen','delegieren','der Rückruf'],
+ caseHtml:`
+<p><b>Ситуація:</b> понеділок, 30 березня 2026, 8:00. Ваш список:</p>
+<ol class="doclist">
+ <li>A · Клієнт Huber: документи ще не всі → строк декларації 31.03</li>
+ <li>B · Einsprache клієнтки Meier: строк 2 квітня</li>
+ <li>C · Відсортувати архів 2024</li>
+ <li>D · Колега чекає ваші Abgrenzungen, щоб закрити рік клієнта до обіду</li>
+ <li>E · Передзвонити новому клієнту щодо пропозиції</li>
+</ol>
+<p><b>Завдання:</b> розставте пріоритети й поясніть.</p>`,
+ caseQs:['Порядок і чому'],
+ caseModel:`
+<p><b>1. A</b> — Fristerstreckung для Huber <b>сьогодні</b> (строк завтра). <b>2. D</b> — колега чекає до обіду. <b>3. B</b> — Einsprache, строк 2 квітня (почати сьогодні). <b>4. E</b> — передзвонити (сьогодні, але не терміново). <b>5. C</b> — архів, коли буде час.</p>`,
+ deutsch:`
+<div class="panel" style="font-size:.97rem">
+<p><b>Sie:</b> Martina, ich habe heute viele Pendenzen. <b>Was hat Priorität</b>: die Abgrenzungen oder die Einsprache Meier?<br>
+<b>Martina:</b> Zuerst die Abgrenzungen, ich brauche sie bis Mittag.<br>
+<b>Sie:</b> Gut, <b>ich erledige</b> das zuerst.</p>
+</div>
+<h4>Вправа: вставте слово</h4>
+<div id="gapEx" class="gap"></div>
+<div class="row" style="margin-top:8px"><button class="btn ghost" id="gapCheck">Перевірити</button><span id="gapRes" class="muted small"></span></div>`,
+ gaps:[
+  {pre:'Was hat',opts:['Priorität','Prioritäten','prioritär'],a:0,post:'?'},
+  {pre:'Ich',opts:['erledige','erledigt','erledigen'],a:0,post:'das zuerst.'},
+  {pre:'Ich brauche die Abgrenzungen',opts:['bis','seit','um zu'],a:0,post:'Mittag.'},
+  {pre:'Bitte',opts:['rufen','ruft','gerufen'],a:0,post:'Sie mich zurück.'},
+  {pre:'Ich habe eine Aktennotiz',opts:['erstellt','erstellen','erstellte'],a:0,post:'.'}
+ ],
+ check:[
+  {area:'Arbeitstag',q:'Що першим: архів чи Fristerstreckung зі строком завтра?',o:['Архів','Fristerstreckung','Однаково','Нічого'],a:1,ex:'Строки — найвищий пріоритет.'},
+  {area:'Arbeitstag',q:'Після телефонної розмови з клієнтом…',o:['Нічого','Коротка нотатка в досьє','Забути','Розповісти друзям'],a:1,ex:'Aktennotiz.'},
+  {area:'Arbeitstag',q:'Не знаєте, що важливіше?',o:['Вгадати','Спитати Teamleiterin','Нічого не робити','Робити все одночасно'],a:1,ex:'«Was hat Priorität?»'},
+  {area:'Повторення · День 28',q:'Клієнтка змінила роботу. Скільки Lohnausweise?',o:['1','Від кожного роботодавця','0','Лише останній'],a:1,ex:'Повторення з Дня 28.'},
+  {area:'Повторення · День 26',q:'Рішення Steueramt прийшло. Перше, що робимо?',o:['Кладемо в архів','Записуємо строк 30 днів','Платимо','Нічого'],a:1,ex:'Повторення з Дня 26.'}
+ ]
+},
+30:{
+ theory:`
+<p class="big">🎓 <b>Фінальний іспит.</b> 12 питань з усіх тижнів + великий кейс. Не поспішайте: помилки потраплять у «Fehler», і ви зможете їх повторити.</p>
+
+<h4>Що ви вже знаєте</h4>
+<div class="tbl"><table>
+<tr><th>Тиждень</th><th>Головне</th></tr>
+<tr><td>1</td><td>3 рівні, 4 кошики, Abzüge з максимумами, строк 31.03</td></tr>
+<tr><td>2</td><td>Майно на 31.12, тариф і Steuerfuss, QSt/NOV, сім’ї, житло, VST</td></tr>
+<tr><td>3</td><td>Bilanz, Soll/Haben, Debitoren, MWST, зарплата, Abschluss</td></tr>
+<tr><td>4</td><td>Форми фірм, самозайнятість, штрафи, міжнародне, Einsprache, клієнти</td></tr>
+</table></div>
+
+<div class="callout level" style="margin-top:14px"><b>Рівень Praktikantin:</b> ви збираєте, вносите, перевіряєте й ставите правильні питання. <b>Рівень Treuhänderin:</b> радить, підписує й відповідає. Це наступний крок — через досвід і, можливо, Fachausweis.</div>`,
+ full:`<p>Після курсу: повторюйте Karteikarten (Leitner) кілька хвилин щодня і розділ «Fehler» раз на тиждень. Додатково — міні-курси bexio та Excel.</p>`,
+ vocab:['der Fachausweis','die Weiterbildung','die Berufserfahrung','das Praktikum','die Einarbeitung','die Rückmeldung','selbständig arbeiten','nachfragen','die Verantwortung','der Arbeitsalltag'],
+ caseHtml:`
+<p><b>Великий кейс:</b> Herr und Frau Schmid, Zürich, 2025. Обоє працюють (він 85’000 Nettolohn, вона 30’000; її дохід після Abzüge 24’000), 1 дитина (2021), Kita 12’000. Квартира: Eigenmietwert 20’000, Hypothekarzinsen 7’000, ремонт за чеками 2’000. Швейцарські дивіденди: на рахунок прийшло 650. Крипта: купили за 5’000, на 31.12 коштує 8’000.</p>
+<p><b>Завдання (колонка ZH):</b></p>
+<ol class="small">
+ <li>Які сімейні Abzüge (Kinder, Kita, другий дохід)?</li>
+ <li>Що з квартирою (дохід / Abzüge)?</li>
+ <li>Що з дивідендами й криптою?</li>
+</ol>`,
+ caseQs:['Сімейні Abzüge','Квартира','Дивіденди й крипта'],
+ caseModel:`
+<p><b>1.</b> Kinderabzug 9’300; Kita 12’000; другий дохід 6’100.</p>
+<p><b>2.</b> +20’000 Eigenmietwert; −7’000 відсотки; ремонт: Pauschale 20 % × 20’000 = 4’000 > 2’000 → −4’000.</p>
+<p><b>3.</b> Дивіденд брутто 650 ÷ 0.65 = <b>1’000</b> (колонка A; VST 350 повернуть). Крипта: майно <b>8’000</b> на 31.12; приріст вартості не є доходом.</p>`,
+ deutsch:`
+<p><b>Фінальна вправа:</b> речення з усього курсу.</p>
+<h4>Вправа: вставте слово</h4>
+<div id="gapEx" class="gap"></div>
+<div class="row" style="margin-top:8px"><button class="btn ghost" id="gapCheck">Перевірити</button><span id="gapRes" class="muted small"></span></div>`,
+ gaps:[
+  {pre:'Massgebend ist der Wert',opts:['per','um','seit'],a:0,post:'31. Dezember.'},
+  {pre:'Der Abzug',opts:['senkt','sinkt','gesenkt'],a:0,post:'das steuerbare Einkommen.'},
+  {pre:'Gegen den Entscheid erheben wir',opts:['Einsprache','Einsprechen','Einspruch tun'],a:0,post:'.'},
+  {pre:'Ohne Vollmacht dürfen wir keine Auskunft',opts:['geben','gegeben','gibt'],a:0,post:'.'},
+  {pre:'Ich melde mich, sobald ich alle Unterlagen',opts:['habe','hab ich','haben'],a:0,post:'.'}
+ ],
+ check:[
+  {area:'Woche 1',q:'Строк декларації в ZH?',o:['31.12','31.03','30.04','30.09'],a:1,ex:'31 березня наступного року.'},
+  {area:'Woche 1',q:'Nettolohn 50’000. Pauschale 3 %?',o:['1’500','2’000','4’000','0'],a:1,ex:'1’500 менше за мінімум 2’000.'},
+  {area:'Woche 1',q:'3a 2025 з Pensionskasse, внесли 8’000. Abzug?',o:['8’000','7’258','36’288','0'],a:1,ex:'Максимум 7’258.'},
+  {area:'Woche 2',q:'Майно рахуємо…',o:['За ціною купівлі','За вартістю на 31.12','Середнє','Не рахуємо'],a:1,ex:'«Фото» на 31.12.'},
+  {area:'Woche 2',q:'Добровільна NOV — заява до…',o:['31.12','31.03 наступного року','30.06','Будь-коли'],a:1,ex:'До 31 березня.'},
+  {area:'Woche 2',q:'Дивіденд: на рахунок 1’300. У декларацію?',o:['1’300','2’000','700','0'],a:1,ex:'1’300 ÷ 0.65.'},
+  {area:'Woche 3',q:'Клієнт оплатив рахунок на банк.',o:['Debitoren an Bank','Bank an Debitoren','Bank an Ertrag','Ertrag an Debitoren'],a:1,ex:'Bank ↑ Soll, Debitoren ↓ Haben.'},
+  {area:'Woche 3',q:'Брутто 1’081 з 8.1 %. MWST?',o:['87.56','81','108.10','8.10'],a:1,ex:'× 8.1 / 108.1.'},
+  {area:'Woche 3',q:'AHV/IV/EO працівника 2026?',o:['10.6 %','5.3 %','1.1 %','8.1 %'],a:1,ex:'Навпіл: 5.3 %.'},
+  {area:'Woche 4',q:'Строк Einsprache?',o:['10 днів','30 днів','60 днів','1 рік'],a:1,ex:'30 днів.'},
+  {area:'Woche 4',q:'Клієнт просить приховати рахунок.',o:['Погодитися','Відмовити й повідомити Teamleiterin','Внести половину','Нічого'],a:1,ex:'Ніколи не допомагаємо приховувати.'},
+  {area:'Woche 4',q:'Хто може отримати інформацію про податок клієнта?',o:['Будь-хто з родини','Клієнт або людина з Vollmacht','Сусід','Банк'],a:1,ex:'Лише з дозволу клієнта.'}
+ ]
+}
+};
 
 /* ---------- views ---------- */
 const app=document.getElementById('app');
@@ -1678,7 +3687,7 @@ document.getElementById('tabs').addEventListener('click',e=>{const b=e.target.cl
 function renderPlan(){
   const d=S.diag;
   let h=`<div class="eyebrow">Навчальний план</div><h2>30 днів до першого робочого дня</h2>
-  <p class="lead">Щодня ~20 хв: Fachtheorie 7 · Fachwortschatz 4 · Praktischer Fall 4 · Deutschtraining 4 · Wissenscheck 1–2. Уроки відкриваються по одному: завершіть день і напишіть у чат «День N» — я додам наступний урок сюди, з урахуванням ваших відповідей і помилок.</p>
+  <p class="lead">Щодня ~20 хв: Fachtheorie 7 · Fachwortschatz 4 · Praktischer Fall 4 · Deutschtraining 4 · Wissenscheck 1–2. Усі 30 днів відкриті: проходьте по порядку у своєму темпі. Відповіді на кейси можна вставити в чат для перевірки.</p>
   <div class="panel row" style="justify-content:space-between;margin:16px 0 24px">
    <div>${d?`<b>Діагностика пройдена:</b> ${d.total}/15 · Steuern ${d.by.Steuern}/5 · Buchhaltung ${d.by.Buchhaltung}/5 · Deutsch ${d.by.Deutsch}/5`:'<b>Крок 1:</b> пройдіть діагностичний тест (≈10 хв), щоб я налаштувала складність.'}</div>
    <button class="btn accent" onclick="setView('${d?'lesson':'diagnose'}',{day:1})">${d?'Відкрити урок':'Почати діагностику'}</button></div>
@@ -1745,7 +3754,7 @@ function renderLesson(){
   <div class="prose">${L.deutsch}</div>
   <div class="secHead"><span class="k">E</span><h3>Wissenscheck</h3><span class="t">≈2 хв</span></div>
   <div class="stack" id="wc"></div>
-  <div class="panel row" style="margin-top:28px;justify-content:space-between"><span>${S.done[n]?'<b>День завершено.</b> Напишіть у чат «День '+(n+1)+'».':'Пройшли всі блоки? Позначте день.'}</span>
+  <div class="panel row" style="margin-top:28px;justify-content:space-between"><span>${S.done[n]?(n<30?'<b>День завершено.</b> Далі — День '+(n+1)+'.':'<b>🎓 Курс завершено!</b> Повторюйте Karteikarten і Fehler.'):'Пройшли всі блоки? Позначте день.'}</span>
    <button class="btn ${S.done[n]?'ghost':'accent'}" id="doneBtn">${S.done[n]?'Скасувати позначку':'Позначити день завершеним'}</button></div>`;
   app.querySelectorAll('textarea[data-k]').forEach(t=>t.addEventListener('input',()=>{S.drafts[t.dataset.k]=t.value;save()}));
   document.getElementById('showModel').onclick=()=>{const m=document.getElementById('model');m.hidden=!m.hidden};
